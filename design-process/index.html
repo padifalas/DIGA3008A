@@ -3,25 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <meta name="description" content="Dive into the detailed design process behind the creation of Padi Falas-Maifala's portfolio website. Learn about wireframes, user flows, and brand identity development.">
+    <meta name="keywords" content="design process, wireframes, user experience mapping, portfolio development">
+    <meta name="author" content="Padi Falas-Maifala">
+    <meta property="og:title" content="Design Process | Padi Falas-Maifala Portfolio">
+    <meta property="og:description" content="Explore the detailed design process behind the creation of this portfolio website.">
+
+
+    <title>Design-Process</title>
+    <link href="../styles.css" rel="stylesheet" /> <!-- Global CSS  -->
+    <link href="design-process.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-    <header>  Design-Process </header>
+
 
     <nav>
         <ul>
-            <li> <a href="index.html">Home</a></li>
-            <li> <a href="../essays/index.html">Essays</a></li>
-            <li> <a href="../blogs/index.html">Blogs</a></li>
-            <li> <a href="../portfolio/index.html">Portfolio</a></li>
-            <li>Design-Process</li>
-            <li> <a href="../about/index.html">About</a></li>
+            <li><a href="../index.html">Home</a></li>
+            
+            <li><a href="../essays/index.html">Essays</a></li>
+            <li><a href="../blogs/index.html">Blogs</a></li>
+            
+            <li class="dropdown">
+                <a href="../portfolio/index.html">Portfolio ▾</a>
+                <ul class="dropdown-content">
+                    <li style="--i:1"><a href="portfolio/game-dev.html">Game Development</a></li>
+                    <li style="--i:2"><a href="portfolio/narratives.html">Writing & Interactivity</a></li>
+                </ul>
+            </li>
+            <li class="active">Design Process</li>
+            <li><a href="../index.html#about">About</a></li>
+            
         </ul>
     </nav>
    
 <main>
-   <h1>Design Process</h1>
+ 
    <article class="h-entry">
     <section class="e-content">
         <h2>User Alignment</h2>
@@ -252,6 +271,21 @@
     
 
     
-<footer>&copy;Padi Falas-Maifala Portfolio</footer>
+<footer>
+    &copy; Padi Falas-Maifala Portfolio
+    
+    <section class="social-icons">
+        <a href="https://padifalass.itch.io" target="_blank" aria-label="Itch.io">
+            <i class="fab fa-itch-io"></i>
+        </a>
+        <a href="https://github.com/padifalas" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/padi-maifala" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+
+        </a>
+    </section>
+</footer>
 </body>
 </html>

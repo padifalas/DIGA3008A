@@ -3,30 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Padi Falas-Maifala's portfolio website showcasing web design, game development, and interactive storytelling skills.">
+    <meta name="keywords" content="web design, game development, portfolio, interactive media, storytelling, Padi Falas-Maifala">
+    <meta name="author" content="Padi Falas-Maifala">
+    <meta property="og:title" content="Padi Falas-Maifala - Web & Game Designer and Storyteller">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
     <title>Homepage</title>
 </head>
 
 <body>
-    <header>  Padi Website </header>
-
+    <header>
+        
+    </header>
+    
     <nav>
         <ul>
-            <li>Home</li>
-            <li> <a href="essays/index.html">Essays</a></li>
-            <li> <a href="blogs/index.html">Blogs</a></li>
-            <li> <a href="portfolio/index.html">Portfilo</a></li>
-            <li> <a href="design-process/index.html">Design-Process</a></li>
-            <li> <a href="about/index.html">About</a></li>
+            <!-- profile icon and website name -->
+            <li class="website-branding">
+                <img src="images/profile-icon.png" alt="Profile Icon" width="40" height="40">
+                <h3>Padi Falas-Maifala</h3>
+                </li>
+         
+            
+
+            
+            <li class="active">Home</li>
+            <li><a href="essays/index.html">Essays</a></li>
+            <li><a href="blogs/index.html">Blogs</a></li>
+            <li class="dropdown">
+                <a href="portfolio/index.html">Portfolio ▾</a>
+                <ul class="dropdown-content">
+                    <li style="--i:1"><a href="portfolio/game-dev.html">Game Development</a></li>
+                    <li style="--i:2"><a href="portfolio/narratives.html">Writing & Interactivity</a></li>
+                </ul>
+            </li>
+            <li><a href="design-process/index.html">Design-Process</a></li>
+            <li><a href="#about">About</a></li>
+            
         </ul>
     </nav>
-   
-<main>
-    <img src="images/Stitch.jpg" width="300" height="400" alt="blue illustration of stitch">
-</main>
- 
-    
+        
+    <main>
+        <section class="artistic-circle circle-left">
+            <div class="circle-text">Web Designer</div>
+        </section>
+                
+        <section class="artistic-circle circle-right">
+            <div class="circle-text">Storyteller</div>
+        </section>
+                
+        <section class="feature-bar">hello... i'm padi</section>
+                
+        <section class="content-section">
+            <article class="content-block left-block">
+                <h2 class="content-title">Game Design</h2>
+                <p class="content-text"></p>
+                <section class="content-tag"></section>
+            </article>
+                        
+            <section class="content-block">
+                <img src="images/portfolio-icon.png" width="300" height="400" alt="Game design, web design and storyteller icon">
+                            
+            </section>
+                        
+            <article class="content-block right-block">
+                <h2 class="content-title">Interactive Media</h2>
+                <p class="content-text"></p>
+               
+            </article>
+        </section>
 
+        <!-- about section -->
+        <section id="about" class="content-section">
+            <h2 class="section-title">About Me</h2>
+            <section class="about-container">
+                <section class="about-image">
+                    <img src="images/profile-photo.png" alt="Padi Falas-Maifala Profile Photo" width="300">
+                </section>
+
+                <section class="about-text">
+                    <p>Hello! I'm Padi Falas-Maifala, a passionate web designer and storyteller with a focus on interactive media and game design.</p>
+                    <p>With experience in both digital design and narrative creation, I love crafting immersive experiences that blend technology with compelling storytelling.</p>
+                    <p>I'm constantly exploring new ways to create meaningful interactions through my work in game development and interactive media projects.</p>
+                    <section class="skills">
+                        <h3>Skills:</h3>
+                        <ul>
+                            <li>Web Design & Development</li>
+                            <li>Game Design</li>
+                            <li>Interactive Storytelling</li>
+                            <li>User Experience Design</li>
+                            
+                        </ul>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </main>
+  
+    <footer>
+        &copy; Padi Falas-Maifala Portfolio
+        
+        <section class="social-icons">
+            <a href="https://padifalass.itch.io" target="_blank" aria-label="Itch.io">
+                <i class="fab fa-itch-io"></i>
+            </a>
+            <a href="https://github.com/padifalas" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/padi-maifala" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+
+            </a>
+        </section>
+    </footer>
     
-<footer>&copy;Padi Falas-Maifala Portfolio</footer>
 </body>
 </html>

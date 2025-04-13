@@ -4,29 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Essays</title>
+    <link href="../styles.css" rel="stylesheet" /> <!-- Global CSS  -->
+    <link href="essays.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-    <header>  Essays </header>
-
+  
     <nav>
         <ul>
-            <li> <a href="../index.html">Home</a></li>
-            <li>Essays</li>
-            <li> <a href="../blogs/index.html">Blogs</a></li>
-            <li> <a href="../portfolio/index.html">Portfilo</a></li>
-            <li> <a href="../design-process/index.html">Design-Process</a></li>
-            <li> <a href="../about/index.html">About</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li class="active">Essays</li>
+            <li><a href="../blogs/index.html">Blogs</a></li>
+
+            <li class="dropdown">
+                <a href="../portfolio/index.html">Portfolio ▾</a>
+                <ul class="dropdown-content">
+                    <li style="--i:1"><a href="portfolio/game-dev.html">Game Development</a></li>
+                    <li style="--i:2"><a href="portfolio/narratives.html">Writing & Interactivity</a></li>
+                </ul>
+            </li>
+            <li><a href="../design-process/index.html">Design-Process</a></li>
+            <li><a href="../index.html#about">About</a></li>
         </ul>
     </nav>
    
 <main>
-   <h1>Essays</h1>
+  
 </main>
  
     
 
     
-<footer>&copy;Padi Falas-Maifala Portfolio</footer>
+<footer>
+    &copy; Padi Falas-Maifala Portfolio
+    
+    <section class="social-icons">
+        <a href="https://padifalass.itch.io" target="_blank" aria-label="Itch.io">
+            <i class="fab fa-itch-io"></i>
+        </a>
+        <a href="https://github.com/padifalas" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/padi-maifala" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+
+        </a>
+    </section>
+</footer>
 </body>
 </html>

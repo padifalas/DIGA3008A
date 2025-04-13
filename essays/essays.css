@@ -1,0 +1,19 @@
+
+
+/* main Content - for essay page */
+main {
+    flex: 1;
+    padding: 0 5%;
+    margin-bottom: 40px;
+}
+
+main:before {
+    content: "Essays";
+    font-family: var(--header-font);
+    font-size: 72px;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+    padding: 60px 0 30px;
+    letter-spacing: 2px;
+}

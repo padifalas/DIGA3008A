@@ -3,43 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <meta name="description" content="Explore insightful blogs on web development, media theory, interaction design, and website design processes. Learn and reflect on creative and technical journeys.">
+    <meta name="keywords" content="Blogs, Web Development, Media Theory, Interaction Design, Website Design Process, UX Design">
+    <meta name="author" content="Padi Falas-Maifala">
+    <meta property="og:title" content="Blogs - Padi Falas-Maifala Portfolio">
+    <meta property="og:description" content="Discover blogs covering topics like GitHub setup, hypertext media theories, interaction design principles, and iterative website design processes.">
+
+    <link href="../styles.css" rel="stylesheet" /> <!-- Global CSS  -->
+    <link href="blogs.css" rel="stylesheet" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <title>Blogs</title>
 </head>
 
-<header>
-
-</header>
-
 <body>
     <nav>
-    <ul>
-        <li> <a href="../index.html">Home</a></li>
-        <li> <a href="../essays/index.html">Essays</a></li>
-        <li>Blogs</li>
-    
-        <li> <a href="../portfolio/index.html">Portfolio</a></li>
-        <li> <a href="../design-process/index.html">Design-Process</a></li>
-        <li> <a href="../about/index.html">About</a></li>
-    </ul>
-</nav>
-<main> 
-    <h2>Blogs</h2>
-    <nav>
-    <li> <a href="../blogs/blog01.html" target="_blank"><b>Blog 01: Setting Up GitHub - A Web Publishing Experience</b></a></li>
-    <li> <a href="../blogs/blog02.html" target="_blank"><b>Blog 02: Hypertext and the Laws of Media</b></a></li>
-    <li> <a href="../blogs/blog03.html" target="_blank"><b>Blog 3: Interaction Design</b></a></li>
-    <li> <a href="../blogs/blog04.html" target="_blank"><b>Blog 4: Website Design Process & Reflection - IxD Process </b></a></li>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../essays/index.html">Essays</a></li>
+            <li class="active">Blogs</li>
+
+            <li class="dropdown">
+                <a href="../portfolio/index.html">Portfolio ▾</a>
+                <ul class="dropdown-content">
+                    <li style="--i:1"><a href="portfolio/game-dev.html">Game Development</a></li>
+                    <li style="--i:2"><a href="portfolio/narratives.html">Writing & Interactivity</a></li>
+                </ul>
+            </li>
+            <li><a href="../design-process/index.html">Design-Process</a></li>
+            <li><a href="../index.html#about">About</a></li>
+
+        </ul>
     </nav>
     
-        <br>
-        
-
-
-
-
-
+    <main> 
+        <h2 class="blog-subheading">Insights into Web Development, Media Theory, and Design Processes</h2>
+        <section class="blogss">
+         
+           
+            <div class="blog-grid">
+                <!-- Blog Card 1 -->
+                <div class="blog-card">
+                   
+                    <img src="../images/github.jpg" alt="GitHub Setup Blog Thumbnail">
+                    <div class="blog-card-content">
+                        <h3>Setting Up GitHub</h3>
+                        <div class="subhead">A Web Publishing Experience</div>
+                        <p>My journey learning how to set up GitHub and publish my first website online.</p>
+                        <div class="blog-card-tags">
+                            <span class="blog-tag">Web Development</span>
+                            <span class="blog-tag">GitHub</span>
+                        </div>
+                        <div class="main-takeaway">
+                            <strong>Main Takeaway:</strong> Version control is essential for web development projects.
+                        </div>
+                        <div class="card-buttons">
+                            <button class="btn btn-secondary">This Button dont work</button>
+                            <!-- <button class="btn btn-primary">Read More</button> -->
+                        </div>
+                    </div>
+                    <a href="../blogs/blog01.html" class="card-link" aria-label="Read blog about setting up GitHub"></a>
+                    
+                </div>
+                
+                <!-- Blog Card 2 -->
+                <div class="blog-card">
+                    
+                    <img src="../images/blog02-thumb.jpg" alt="Hypertext Laws of Media Thumbnail">
+                    <div class="blog-card-content">
+                        <h3>Hypertext and the Laws of Media</h3>
+                        <div class="subhead">Digital Communication Theory</div>
+                        <p>Exploring the relationship between hypertext and McLuhan's laws of media in the digital age.</p>
+                        <div class="blog-card-tags">
+                            <span class="blog-tag">Media Theory</span>
+                            <span class="blog-tag">Essays</span>
+                        </div>
+                        <div class="main-takeaway">
+                            <strong>Main Takeaway:</strong> McLuhan's theories remain relevant in understanding digital media.
+                        </div>
+                        <div class="card-buttons">
+                            <button class="btn btn-secondary">This Button dont work</button>
+                            <!-- <button class="btn btn-primary">Read More</button> -->
+                        </div>
+                    </div>
+                    <a href="../blogs/blog02.html" class="card-link" aria-label="Read blog about hypertext and laws of media"></a>
+                 
+                </div>
+                
+                <!-- Blog Card 3 -->
+                <div class="blog-card">
+                  
+                    <img src="../images/blog03-thumb.jpg" alt="Interaction Design Thumbnail">
+                    <div class="blog-card-content">
+                        <h3>Interaction Design</h3>
+                        <div class="subhead">Principles and Applications</div>
+                        <p>Understanding the principles of interaction design and their application in digital products.</p>
+                        <div class="blog-card-tags">
+                            <span class="blog-tag">Design</span>
+                            <span class="blog-tag">UX</span>
+                        </div>
+                        <div class="main-takeaway">
+                            <strong>Main Takeaway:</strong> User-centered design creates more effective digital experiences.
+                        </div>
+                        <div class="card-buttons">
+                            <button class="btn btn-secondary">This Button dont work</button>
+                            <!-- <button class="btn btn-primary">Read More</button> -->
+                        </div>
+                    </div>
+                    <a href="../blogs/blog03.html" class="card-link" aria-label="Read blog about interaction design"></a>
+                    
+                </div>
+                
+                <!-- Blog Card 4 -->
+                <div class="blog-card">
+                    
+                    <img src="../images/blog04-thumb.jpg" alt="Website Design Process Thumbnail">
+                    <div class="blog-card-content">
+                        <h3>Website Design Process</h3>
+                        <div class="subhead">IxD Process & Reflection</div>
+                        <p>A detailed reflection on my website design process using interaction design principles.</p>
+                        <div class="blog-card-tags">
+                            <span class="blog-tag">Process</span>
+                            <span class="blog-tag">Reflection</span>
+                        </div>
+                        <div class="main-takeaway">
+                            <strong>Main Takeaway:</strong> Iterative design improves final project outcomes.
+                        </div>
+                        <div class="card-buttons">
+                            <button class="btn btn-secondary">This Button dont work</button>
+                            <!-- <button class="btn btn-primary">Read More</button> -->
+                        </div>
+                    </div>
+                    <a href="../blogs/blog04.html" class="card-link" aria-label="Read blog about website design process"></a>
+                  
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>&copy;Padi Falas-Maifala Portfolio</footer>
+    <footer>
+        &copy; Padi Falas-Maifala Portfolio
+        
+        <section class="social-icons">
+            <a href="https://padifalass.itch.io" target="_blank" aria-label="Itch.io">
+                <i class="fab fa-itch-io"></i>
+            </a>
+            <a href="https://github.com/padifalas" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/padi-maifala" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+
+            </a>
+        </section>
+    </footer>
 </body>
 </html>

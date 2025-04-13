@@ -1,0 +1,33 @@
+:root {
+    /* design-process-specific variables --- MUST CHANGE */
+    --card-bg: #fff;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --card-hover-shadow: rgba(0, 0, 0, 0.2);
+    --primary-btn: #333;
+    --secondary-btn: #777;
+    --tag-bg: #e6f7ff;
+    --tag-text: #0073aa;
+    --card-1-bg: #e8f8e8;
+    --card-2-bg: #e6f0ff;
+    --card-3-bg: #f9f0ff;
+    --section-bg: #fff2f9;
+    --border-radius: 15px;
+}
+
+
+main {
+    flex: 1;
+    padding: 0 5%;
+    margin-bottom: 40px;
+}
+
+main:before {
+    content: "Design Process";
+    font-family: var(--header-font);
+    font-size: 72px;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+    padding: 60px 0 30px;
+    letter-spacing: 2px;
+}

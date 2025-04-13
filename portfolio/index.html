@@ -3,35 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+
+    <meta name="description" content="Explore Padi Falas-Maifala's portfolio showcasing game development projects, narrative design, and web development.">
+    <meta name="keywords" content="Portfolio, Game Development, Narrative Design, Web Development, Padi Falas-Maifala">
+    <meta name="author" content="Padi Falas-Maifala">
+
+    <title>Portfolio - Padi Falas-Maifala</title>
+    <link href="../styles.css" rel="stylesheet"> <!-- Global CSS -->
+    <link href="portfolio.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-    <header>  Portfolio </header>
-
-    <nav>
+    <nav aria-label="Main navigation">
         <ul>
-            <li> <a href="index.html">Home</a></li>
-            <li> <a href="../essays/index.html">Essays</a></li>
-            <li> <a href="../blogs/index.html">Blogs</a></li>
-            <li>Portfolio</li>
-            <li> <a href="../design-process/index.html">Design-Process</a></li>
-            <li> <a href="../about/index.html">About</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../essays/index.html">Essays</a></li>
+            <li><a href="../blogs/index.html">Blogs</a></li>
+            <li class="dropdown active">
+                <span>Portfolio ▾</span>
+                <ul class="dropdown-content">
+                    <li style="--i:1"><a href="../portfolio/game-dev.html">Game Development Projects</a></li>
+                    <li style="--i:2"><a href="../portfolio/narratives.html">Writing & Interactivity</a></li>
+                </ul>
+            </li>
+            <li><a href="../design-process/index.html">Design-Process</a></li>
+            <li><a href="../index.html#about">About</a></li>
         </ul>
     </nav>
-   
-<main>
-   <h1>Portfolio</h1>
-    <nav>
-    <li> <a href="../portfolio/game-dev.html" target="_blank">Game Development Projects</a></li>
-    <li> <a href="../portfolio/narratives.html" target="_blank">Narratives & Short Stories</a></li>
 
-    </nav>
-</main>
- 
-    
+    <main>
+        <!-- Game Development Projects Section -->
+        <h2 class="portfolio-subheading">Showcasing Game Development, Narrative Design, and Web Projects</h2>
+        <section class="portfolio-section" id="game-dev">
+            <h2>Game Development Projects</h2>
+            <ul class="project-grid">
+                <!-- Project 1 -->
+                <li class="project-card h-entry">
+            
+                    <img src="../images/broken-bonds.png" alt="3D Platform Game Screenshot" class="u-photo">
+                    <article class="project-content">
+                        <h3 class="p-name">Broken Bonds</h3>
+                        <p class="p-summary">3d game blah blah</p>
+                        <ul class="project-tags">
+                            <li class="project-tag p-category">Enviromental Storytelling</li>
+                            <li class="project-tag p-category">3D Platformer</li>
+                          
+                        </ul>
+                        <p class="p-description"></p>
+                        <div class="project-actions">
+                            <!-- <a href="game-dev.html#project1" class="btn btn-primary">View Project</a> -->
+                            <a href="https://padifalass.itch.io/broken-bonds" class="btn btn-secondary">Find on Itch.io</a>
+                        </div>
+                    </article>
+                   
+                </li>
 
-    
-<footer>&copy;Padi Falas-Maifala Portfolio</footer>
+                <!-- Project 2 -->
+                <li class="project-card h-entry">
+            
+                    <img src="../images/tuned-battle.png" alt="3D Platform Game Screenshot" class="u-photo">
+                    <article class="project-content">
+                        <h3 class="p-name">Tuned For Battle: A 2D Platformer</h3>
+                        <p class="p-summary">3d game blah blah</p>
+                        <ul class="project-tags">
+                            <li class="project-tag p-category">Game Jam</li>
+                            <li class="project-tag p-category">2D Platformer</li>
+                        </ul>
+                        <p class="p-description"></p>
+                        <div class="project-actions">
+                            <!-- <a href="game-dev.html#project1" class="btn btn-primary">View Project</a> -->
+                            <a href="https://padifalass.itch.io/tuned-for-battle-a-2d-platformer" class="btn btn-secondary">Find on Itch.io</a>
+                        </div>
+                    </article>
+               
+                </li>
+
+               
+            </ul>
+        </section>
+
+
+        <!-- Writing & Interactivity Section -->
+        <section class="portfolio-section" id="narratives">
+            <h2>Writing & Interactivity</h2>
+            <ul class="project-grid">
+                <!-- Project 1 -->
+                <li class="project-card h-entry">
+                   
+                    <img src="../images/narrative-project1.jpg" alt="Interactive story Screenshot" class="u-photo">
+                    <article class="project-content">
+                        <h3 class="p-name">The Door is Locked. Good.</h3>
+                        <p class="p-summary">This short-form essay explores how locked doors in games serve as powerful narrative tools, not just mechanical barriers.
+                             I reflect on how seemingly small design choices; like a door that won’t open; can create curiosity, tension, and a sense of worldbuilding. 
+                             It's a meditation on player psychology, storytelling through level design, and the quiet magic of being told "not yet."</p>
+
+                        <ul class="project-tags">
+                            <li class="project-tag p-category">Game Mechanics</li>
+                            <li class="project-tag p-category">Level Design</li>
+                            <li class="project-tag p-category">Player Psychology</li>
+
+                        </ul>
+                        <p class="p-description">A narrative reflection on the power of locked doors in games & how they build curiosity, tension, and world depth.</p>
+                        <p class="key-feature">Inspired while designing and developing a game for a personal project.</p>
+                        <section class="project-actions">
+                            <a href="https://open.substack.com/pub/padifalas/p/the-door-is-locked-good?r=5i57j7&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false" class="btn btn-primary" target="_blank">Read on Substack</a>
+                        </section>
+                    </article >
+                    
+                </li>
+
+                <!-- Project 2 -->
+                <!-- Project 1 -->
+                <li class="project-card h-entry">
+                   
+                    <img src="../images/narrative-project1.jpg" alt="Interactive story Screenshot" class="u-photo">
+                    <article class="project-content">
+                        <h3 class="p-name">How I Break My Worlds on Purpose</h3>
+                        <p class="p-summary">A reflection on the intentional flaws and oddities I build into game worlds — not as bugs, but as narrative texture. 
+                            This post explores how deliberate “imperfections” create friction, personality, and emotional depth in interactive spaces.</p>
+
+                        <ul class="project-tags">
+                            <li class="project-tag p-category">Narrative Design</li>
+                            <li class="project-tag p-category">Player Experience</li>
+                            <li class="project-tag p-category">Game Feel</li>
+
+                        </ul>
+                        <p class="p-description">Not every game world should run like a machine. 
+                            In this post, I unpack the idea of designing for texture — adding rules that bend, moments that contradict, and characters that repeat 
+                            themselves just enough to feel strange and real. When something “feels off” on purpose, it lingers.</p>
+
+                        <p class="key-feature">Explores: intentional friction, narrative texture, and how off-kilter design choices can enhance immersion.</p>
+                        <section class="project-actions">
+                            <a href="https://open.substack.com/pub/padifalas/p/how-i-break-my-worlds-on-purpose?r=5i57j7&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false" class="btn btn-primary" target="_blank">Read on Substack</a>
+                        </section>
+                    </article >
+                    
+                </li>
+                <!-- Project 3 -->
+                
+            </ul>
+        </section>
+
+         <!-- Web Dev stuff -->
+         <section class="portfolio-section" id="game-dev">
+            <h2>Web Development Projects</h2>
+            <ul class="project-grid">
+                <!-- Project 1 -->
+                <li class="project-card h-entry">
+            
+                    <img src="../images/game-project1.jpg" alt="3D Platform Game Screenshot" class="u-photo">
+                    <article class="project-content">
+                        <h3 class="p-name">Broken Bonds</h3>
+                        <p class="p-summary">3d game blah blah</p>
+                        <ul class="project-tags">
+                            <li class="project-tag p-category">Enviromental Storytelling</li>
+                            <li class="project-tag p-category">3D Platformer</li>
+                          
+                        </ul>
+                        <p class="p-description"></p>
+                        <div class="project-actions">
+                            <!-- <a href="game-dev.html#project1" class="btn btn-primary">View Project</a> -->
+                            <a href="#" class="btn btn-secondary">GitHub</a>
+                        </div>
+                    </article>
+                
+                </li>
+
+                <!-- Project 2 -->
+                <li class="project-card h-entry">
+            
+                    <img src="../images/game-project1.jpg" alt="3D Platform Game Screenshot" class="u-photo">
+                    <article class="project-content">
+                        <h3 class="p-name">Broken Bonds</h3>
+                        <p class="p-summary">3d game blah blah</p>
+                        <ul class="project-tags">
+                            <li class="project-tag p-category">Enviromental Storytelling</li>
+                            <li class="project-tag p-category">3D Platformer</li>
+                        </ul>
+                        <p class="p-description"></p>
+                        <div class="project-actions">
+                            <!-- <a href="game-dev.html#project1" class="btn btn-primary">View Project</a> -->
+                            <a href="#" class="btn btn-secondary">GitHub</a>
+                        </div>
+                    </article>
+                   
+                </li>
+
+               
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        &copy; Padi Falas-Maifala Portfolio
+        
+        <section class="social-icons">
+            <a href="https://padifalass.itch.io" target="_blank" aria-label="Itch.io">
+                <i class="fab fa-itch-io"></i>
+            </a>
+            <a href="https://github.com/padifalas" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/padi-maifala" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+
+            </a>
+        </section>
+    </footer>
 </body>
 </html>
