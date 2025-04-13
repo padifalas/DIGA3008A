@@ -1078,7 +1078,7 @@ main img {
         left: 0;
     }
 }
-/* Circular Elements */
+
 .artistic-circle {
     position: absolute;
     width: 80px;
@@ -1149,10 +1149,10 @@ footer {
 
 .social-icons a:hover {
     color: var(--highlight-color);
-    transform: scale(1.2); /* Slight enlargement on hover */
+    transform: scale(1.2); 
 }
 
-/* Buttons */
+/* buttons */
 .button {
     display: inline-block;
     padding: 8px 16px;
@@ -1201,11 +1201,11 @@ footer {
         justify-content: center;
         align-items: center;
         color: white;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Add depth */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
     }
     
     .artistic-circle:hover {
-        transform: scale(1.1); /* Slight enlargement on hover */
+        transform: scale(1.1); 
     }
     
 }
