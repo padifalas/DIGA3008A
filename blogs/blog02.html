@@ -4,17 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog02 - Hypertext and the Laws of Media</title>
+    <link href="blog-post.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <header>
-        <h1>Blog 02</h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../blogs/index.html">Blogs</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="blog-page">
+    <nav>
+        <div class="logo">
+            <img src="../images/profile-icon.png" alt="Padi Falas-Maifala Logo">
+            <h3>padi.codes</h3>
+        </div>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../essays/index.html">Essays</a></li>
+            <li class="dropdown active">
+                <a href="index.html">Blogs</a>
+                <ul class="dropdown-content">
+                    <li style="--i:0"><a href="blog01.html">Blog 1</a></li>
+                    <li style="--i:1" class="active"><a href="blog02.html">Blog 2</a></li>
+                    <li style="--i:2"><a href="blog03.html">Blog 3</a></li>
+                    <li style="--i:3"><a href="blog04.html">Blog 4</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="../portfolio/index.html">Portfolio</a>
+            </li>
+            <li><a href="../design-process/index.html">Design-Process</a></li>
+            <li><a href="../index.html#about">About</a></li>
+        </ul>
+    </nav>
 
     <main>
         <article class="h-entry">
@@ -97,9 +114,20 @@
             </footer>
         </article>
     </main>
-
-    <footer class="h-card">
-        <p class="p-copyright">&copy; <span class="p-name">Padi Falas-Maifala</span> Portfolio</p>
+    <footer>
+        &copy; 2025 Padi Falas-Maifala Portfolio
+        
+        <section class="social-icons">
+            <a href="https://padifalass.itch.io" target="_blank" aria-label="Itch.io">
+                <i class="fab fa-itch-io"></i>
+            </a>
+            <a href="https://github.com/padifalas" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/padi-maifala" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </section>
     </footer>
 </body>
 </html>

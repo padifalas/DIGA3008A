@@ -1,33 +1,242 @@
+
+
 :root {
-    /* design-process-specific variables --- MUST CHANGE */
-    --card-bg: #fff;
-    --card-shadow: rgba(0, 0, 0, 0.1);
-    --card-hover-shadow: rgba(0, 0, 0, 0.2);
-    --primary-btn: #333;
-    --secondary-btn: #777;
-    --tag-bg: #e6f7ff;
-    --tag-text: #0073aa;
-    --card-1-bg: #e8f8e8;
-    --card-2-bg: #e6f0ff;
-    --card-3-bg: #f9f0ff;
-    --section-bg: #fff2f9;
-    --border-radius: 15px;
+    
+    --process-bg: #f8f5f0;
+    --section-bg: #ffffff;
+    --section-border: rgba(0, 0, 0, 0.08);
+    --section-shadow: rgba(0, 0, 0, 0.05);
+    --section-hover-shadow: rgba(0, 0, 0, 0.1);
+    --heading-color: #333333;
+    --text-color: #4a4a4a;
+    --accent-color: #4d8c57; 
+    --secondary-accent: #a67c00; 
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
 }
 
+body {
+    background-color: var(--process-bg);
+}
 
+/* main content layout */
 main {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding: 0 30px;
+}
+
+/* main Content thatt specific to design process */
+body.design-process-page main {
     flex: 1;
     padding: 0 5%;
     margin-bottom: 40px;
+    padding-top: 60px; /* this will remove the extra space from animated content */
 }
 
-main:before {
-    content: "Design Process";
-    font-family: var(--header-font);
-    font-size: 72px;
-    font-weight: 400;
-    text-align: center;
+
+body.design-process-page main:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 60px 0 30px;
+    height: 150px;
+    background: var(--gradient-forest);
+    z-index: -1;
+    animation: none;
+}
+
+/* change the text content on design process page so it doesnt show what on main homepage */
+body.design-process-page main:after {
+    content: "Design Process";
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'Studio Ghibli', 'Marcellus', serif;
+    font-size: 60px;
+    font-weight: 700;
     letter-spacing: 2px;
+    color: var(--light-text);
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+    animation: none;
+    z-index: 1;
+}
+
+.process-subheading {
+    font-family: 'Studio Ghibli', 'Marcellus', serif;
+    font-size: 25px;
+    margin: 100px 0 30px;
+    color: var(--accent-color);
+    text-align: center;
+}
+
+/* content sections */
+.e-content {
+    background-color: var(--section-bg);
+    border-radius: var(--border-radius);
+    padding: 30px 40px;
+    margin-bottom: 30px;
+    border: 1px solid var(--section-border);
+    box-shadow: 0 4px 15px var(--section-shadow);
+    transition: var(--transition);
+}
+
+.e-content:hover {
+    box-shadow: 0 8px 25px var(--section-hover-shadow);
+    transform: translateY(-3px);
+}
+
+/* section headings */
+.e-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--heading-color);
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--accent-color);
+    position: relative;
+}
+
+.e-content h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--heading-color);
+    margin: 25px 0 15px;
+}
+
+/*  styling texts */
+.e-content p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 16px;
+}
+
+/*  styling for listss */
+.e-content ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.e-content li {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    position: relative;
+}
+
+/* code styling */
+.e-content code {
+    font-family: 'Source Code Pro', monospace;
+    background-color: #f5f5f5;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--secondary-accent);
+}
+
+/* imag styling */
+.e-content .u-photo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 25px 0;
+    border-radius: var(--border-radius);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.e-content .u-photo:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transform: scale(1.01);
+}
+
+
+.e-content strong {
+    font-weight: 600;
+    color: var(--heading-color);
+}
+
+/*  styling 4 links */
+.e-content a {
+    color: var(--accent-color);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.e-content a:hover {
+    border-bottom: 1px solid var(--accent-color);
+}
+
+/* this is so webste is responsive */
+@media screen and (max-width: 992px) {
+    body.design-process-page main:after {
+        font-size: 48px;
+    }
+    
+    .process-subheading {
+        margin-top: 80px;
+    }
+    
+    .e-content {
+        padding: 25px 30px;
+    }
+    
+    .e-content h2 {
+        font-size: 24px;
+    }
+    
+    .e-content h3 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        padding: 0 15px;
+    }
+    
+    .e-content {
+        padding: 20px 25px;
+    }
+    
+    .e-content h2 {
+        font-size: 22px;
+    }
+    
+    .e-content h3 {
+        font-size: 18px;
+    }
+    
+    .e-content p, .e-content li {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body.design-process-page main:after {
+        font-size: 36px;
+    }
+    
+    .process-subheading {
+        margin-top: 60px;
+        font-size: 20px;
+    }
+    
+    .e-content {
+        padding: 15px 20px;
+    }
+    
+    .e-content h2 {
+        font-size: 20px;
+    }
 }

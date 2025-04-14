@@ -14,18 +14,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-<body>
+<body class="portfolio-page">
     <nav aria-label="Main navigation">
+        <div class="logo">
+            <img src="../images/profile-icon.png" alt="Padi Falas-Maifala Logo">
+            <h3>padi.codes</h3>
+        </div>
+        
         <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="../essays/index.html">Essays</a></li>
             <li><a href="../blogs/index.html">Blogs</a></li>
             <li class="dropdown active">
-                <span>Portfolio ▾</span>
-                <ul class="dropdown-content">
+                <span>Portfolio</span>
+                <!-- <ul class="dropdown-content">
                     <li style="--i:1"><a href="../portfolio/game-dev.html">Game Development Projects</a></li>
                     <li style="--i:2"><a href="../portfolio/narratives.html">Writing & Interactivity</a></li>
-                </ul>
+                </ul> -->
             </li>
             <li><a href="../design-process/index.html">Design-Process</a></li>
             <li><a href="../index.html#about">About</a></li>
@@ -51,10 +56,10 @@
                           
                         </ul>
                         <p class="p-description"></p>
-                        <div class="project-actions">
-                            <!-- <a href="game-dev.html#project1" class="btn btn-primary">View Project</a> -->
+                        <section class="project-actions">
+                            
                             <a href="https://padifalass.itch.io/broken-bonds" class="btn btn-secondary">Find on Itch.io</a>
-                        </div>
+                        </section>
                     </article>
                    
                 </li>
@@ -64,11 +69,14 @@
             
                     <img src="../images/tuned-battle.png" alt="3D Platform Game Screenshot" class="u-photo">
                     <article class="project-content">
-                        <h3 class="p-name">Tuned For Battle: A 2D Platformer</h3>
-                        <p class="p-summary">3d game blah blah</p>
+                        <h3 class="p-name">Tuned For Battle</h3>
+                        <p class="p-summary">A rhythm-infused 2D platformer where players explore a vibrant world using music as their
+                             primary weapon. With fast-paced reflex-based gameplay and a heartfelt quest to become the ultimate musician,
+                              this game blends platforming action with musical combat in a colorful, immersive experience.</p>
                         <ul class="project-tags">
-                            <li class="project-tag p-category">Game Jam</li>
+                            <li class="project-tag p-category">Music-Based Combat</li>
                             <li class="project-tag p-category">2D Platformer</li>
+                            <li class="project-tag p-category">Indie</li>
                         </ul>
                         <p class="p-description"></p>
                         <div class="project-actions">
@@ -77,6 +85,28 @@
                         </div>
                     </article>
                
+                </li>
+
+                  <!-- Project 1 -->
+                  <li class="project-card h-entry">
+            
+                    <img src="../images/elementalist-game.png" alt="3D Platform Game Screenshot" class="u-photo">
+                    <article class="project-content">
+                        <h3 class="p-name">Elementalist: Matter & Magic</h3>
+                        <p class="p-summary">A 3D third-person prototype where you control a wizard attempting to escape a
+                             the dungeon of a castle by harnessing the power of materials around you.</p>
+                        <ul class="project-tags">
+                            <li class="project-tag p-category">Prototype</li>
+                            <li class="project-tag p-category">3D Platformer</li>
+                          
+                        </ul>
+                        <p class="p-description"></p>
+                        <div class="project-actions">
+                            <!-- <a href="game-dev.html#project1" class="btn btn-primary">View Project</a> -->
+                            <a href="https://padifalass.itch.io/elementalis-matter-magic" class="btn btn-secondary">Find on Itch.io</a>
+                        </div>
+                    </article>
+                   
                 </li>
 
                
@@ -91,7 +121,7 @@
                 <!-- Project 1 -->
                 <li class="project-card h-entry">
                    
-                    <img src="../images/narrative-project1.jpg" alt="Interactive story Screenshot" class="u-photo">
+                    <img src="../images/writing-blog01.png" alt="Interactive story Screenshot" class="u-photo">
                     <article class="project-content">
                         <h3 class="p-name">The Door is Locked. Good.</h3>
                         <p class="p-summary">This short-form essay explores how locked doors in games serve as powerful narrative tools, not just mechanical barriers.

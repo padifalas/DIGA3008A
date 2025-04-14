@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-
     <meta name="description" content="Explore insightful blogs on web development, media theory, interaction design, and website design processes. Learn and reflect on creative and technical journeys.">
     <meta name="keywords" content="Blogs, Web Development, Media Theory, Interaction Design, Website Design Process, UX Design">
     <meta name="author" content="Padi Falas-Maifala">
@@ -18,63 +17,65 @@
     <title>Blogs</title>
 </head>
 
-<body>
+<body class="blog-page">
     <nav>
+        <div class="logo">
+            <img src="../images/profile-icon.png" alt="Padi Falas-Maifala Logo">
+            <h3>padi.codes</h3>
+        </div>
         <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="../essays/index.html">Essays</a></li>
-            <li class="active">Blogs</li>
-
+            <li class="active"><a href="index.html">Blogs</a></li>
             <li class="dropdown">
-                <a href="../portfolio/index.html">Portfolio ▾</a>
-                <ul class="dropdown-content">
+                <a href="../portfolio/index.html">Portfolio</a>
+                <!-- <ul class="dropdown-content">
                     <li style="--i:1"><a href="portfolio/game-dev.html">Game Development</a></li>
                     <li style="--i:2"><a href="portfolio/narratives.html">Writing & Interactivity</a></li>
-                </ul>
+                </ul> -->
             </li>
             <li><a href="../design-process/index.html">Design-Process</a></li>
             <li><a href="../index.html#about">About</a></li>
-
         </ul>
     </nav>
     
     <main> 
         <h2 class="blog-subheading">Insights into Web Development, Media Theory, and Design Processes</h2>
-        <section class="blogss">
-         
-           
+        
+        <section class="blogs">
             <section class="blog-grid">
                 <!-- Blog Card 1 -->
-                <section class="blog-card">
-                   
-                    <img src="../images/github.jpg" alt="GitHub Setup Blog Thumbnail">
+                <article class="blog-card">
+                    <img src="../images/git-set.png" alt="GitHub Setup Blog Thumbnail">
                     <section class="blog-card-content">
                         <h3>Setting Up GitHub</h3>
                         <section class="subhead">A Web Publishing Experience</section>
                         <p>My journey learning how to set up GitHub and publish my first website online.</p>
+                        <time datetime="2024-01-20">January 20, 2024</time>
+
                         <section class="blog-card-tags">
                             <span class="blog-tag">Web Development</span>
                             <span class="blog-tag">GitHub</span>
                         </section>
+
                         <section class="main-takeaway">
                             <strong>Main Takeaway:</strong> Version control is essential for web development projects.
                         </section>
+
                         <section class="card-buttons">
-                            <button class="btn btn-secondary">This Button dont work</button>
-                            <!-- <button class="btn btn-primary">Read More</button> -->
+                            <a href="blog01.html" class="btn btn-secondary">Read More</a>
+                            
                         </section>
-                        </section>
+                    </section>
                     <a href="../blogs/blog01.html" class="card-link" aria-label="Read blog about setting up GitHub"></a>
-                    
-                        </section>
+                </article>
                 
                 <!-- Blog Card 2 -->
-                <section class="blog-card">
-                    
+                <article class="blog-card">
                     <img src="../images/blog02-thumb.jpg" alt="Hypertext Laws of Media Thumbnail">
                     <section class="blog-card-content">
                         <h3>Hypertext and the Laws of Media</h3>
-                        <section class="subhead">Digital Communication Theory</section>
+                        <div class="subhead">Digital Communication Theory</div>
                         <p>Exploring the relationship between hypertext and McLuhan's laws of media in the digital age.</p>
                         <section class="blog-card-tags">
                             <span class="blog-tag">Media Theory</span>
@@ -84,17 +85,14 @@
                             <strong>Main Takeaway:</strong> McLuhan's theories remain relevant in understanding digital media.
                         </section>
                         <section class="card-buttons">
-                            <button class="btn btn-secondary">This Button dont work</button>
-                            <!-- <button class="btn btn-primary">Read More</button> -->
+                            <a href="blog02.html" class="btn btn-secondary">Read More</a>
                         </section>
-                        </section>
+                    </section>
                     <a href="../blogs/blog02.html" class="card-link" aria-label="Read blog about hypertext and laws of media"></a>
-                 
-                        </section>
+                </article>
                 
                 <!-- Blog Card 3 -->
-                <section class="blog-card">
-                  
+                <article class="blog-card">
                     <img src="../images/blog03-thumb.jpg" alt="Interaction Design Thumbnail">
                     <section class="blog-card-content">
                         <h3>Interaction Design</h3>
@@ -108,17 +106,14 @@
                             <strong>Main Takeaway:</strong> User-centered design creates more effective digital experiences.
                         </section>
                         <section class="card-buttons">
-                            <button class="btn btn-secondary">This Button dont work</button>
-                            <!-- <button class="btn btn-primary">Read More</button> -->
+                            <a href="blog03.html" class="btn btn-secondary">Read More</a>
                         </section>
-                        </section>
+                    </section>
                     <a href="../blogs/blog03.html" class="card-link" aria-label="Read blog about interaction design"></a>
-                    
-                        </section>
+                </article>
                 
                 <!-- Blog Card 4 -->
-                <section class="blog-card">
-                    
+                <article class="blog-card">
                     <img src="../images/blog04-thumb.jpg" alt="Website Design Process Thumbnail">
                     <section class="blog-card-content">
                         <h3>Website Design Process</h3>
@@ -128,27 +123,46 @@
                             <span class="blog-tag">Process</span>
                             <span class="blog-tag">Reflection</span>
                         </section>
-
                         <section class="main-takeaway">
                             <strong>Main Takeaway:</strong> Iterative design improves final project outcomes.
                         </section>
-
                         <section class="card-buttons">
-                            <button class="btn btn-secondary">This Button dont work</button>
-                            <!-- <button class="btn btn-primary">Read More</button> -->
+                            <a href="blog04.html" class="btn btn-secondary">Read More</a>
                         </section>
-                        </section>
-                    <a href="../blogs/blog04.html" class="card-link" aria-label="Read blog about website design process"></a>
-                  
                     </section>
-                </section>
+                    <a href="../blogs/blog04.html" class="card-link" aria-label="Read blog about website design process"></a>
+                </article>
+
+                <!-- Blog Card 4 -->
+<article class="blog-card">
+    <img src="../images/blog01-thumb.jpg" alt="Website Review Thumbnail">
+    <section class="blog-card-content">
+        <h3>UI/UX Analysis: Cape Town Opera & Pinnacle Website Review</h3>
+        <div class="subhead">Web Design Critique</div>
+        <p>A personal analysis of two websites—highlighting navigation, layout, and design pros and cons.</p>
+        <time datetime="2024-01-20">January 30, 2025</time>
+        <section class="blog-card-tags">
+            <span class="blog-tag">UX/UI</span>
+            <span class="blog-tag">Web Design</span>
+        </section>
+        <section class="main-takeaway">
+            <strong>Main Takeaway:</strong> Good design balances clarity and creativity—minimalism and visual engagement are key.
+        </section>
+        <section class="card-buttons">
+            <a href="blog07.html" class="btn btn-secondary">Read More</a>
+        </section>
+    </section>
+    <a href="../blogs/blog07.html" class="card-link" aria-label="Read blog about Cape Town Opera and Pinnacle websites"></a>
+</article>
+
+            </section>
         </section>
     </main>
 
     <footer>
         &copy; Padi Falas-Maifala Portfolio
         
-        <section class="social-icons">
+        <div class="social-icons">
             <a href="https://padifalass.itch.io" target="_blank" aria-label="Itch.io">
                 <i class="fab fa-itch-io"></i>
             </a>
@@ -157,9 +171,8 @@
             </a>
             <a href="https://linkedin.com/in/padi-maifala" target="_blank" aria-label="LinkedIn">
                 <i class="fab fa-linkedin"></i>
-
             </a>
-        </section>
+        </div>
     </footer>
 </body>
 </html>

@@ -1,291 +1,552 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dive into the detailed design process behind the creation of Padi Falas-Maifala's portfolio website. Learn about wireframes, user flows, and brand identity development.">
-    <meta name="keywords" content="design process, wireframes, user experience mapping, portfolio development">
-    <meta name="author" content="Padi Falas-Maifala">
-    <meta property="og:title" content="Design Process | Padi Falas-Maifala Portfolio">
-    <meta property="og:description" content="Explore the detailed design process behind the creation of this portfolio website.">
-
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dive into the detailed design process behind the creation of Padi Falas-Maifala's portfolio website. Learn about wireframes, user flows, and brand identity development."/>
+    <meta name="keywords"content="design process, wireframes, user experience mapping, portfolio development"/>
+    <meta name="author" content="Padi Falas-Maifala" />
+    <meta property="og:title" content="Design Process | Padi Falas-Maifala Portfolio"/>
+    <meta property="og:description"content="Explore the detailed design process behind the creation of this portfolio website."
+    />
     <title>Design-Process</title>
     <link href="../styles.css" rel="stylesheet" /> <!-- Global CSS  -->
-    <link href="design-process.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-
-<body>
-
-
+    <link href="design-process.css" rel="stylesheet" />
+    <link href="blogs.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body class="design-process-page">
     <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            
-            <li><a href="../essays/index.html">Essays</a></li>
-            <li><a href="../blogs/index.html">Blogs</a></li>
-            
-            <li class="dropdown">
-                <a href="../portfolio/index.html">Portfolio ▾</a>
-                <ul class="dropdown-content">
-                    <li style="--i:1"><a href="portfolio/game-dev.html">Game Development</a></li>
-                    <li style="--i:2"><a href="portfolio/narratives.html">Writing & Interactivity</a></li>
-                </ul>
-            </li>
-            <li class="active">Design Process</li>
-            <li><a href="../index.html#about">About</a></li>
-            
-        </ul>
+      <div class="logo">
+        <img src="../images/profile-icon.png" alt="Padi Falas-Maifala Logo" />
+        <h3>padi.codes</h3>
+      </div>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../essays/index.html">Essays</a></li>
+        <li><a href="../blogs/index.html">Blogs</a></li>
+        <li class="dropdown">
+          <a href="../portfolio/index.html">Portfolio</a>
+          <!-- <ul class="dropdown-content">
+<li style="--i:1"><a href="portfolio/game-dev.html">Game Development</a></li>
+<li style="--i:2"><a href="portfolio/narratives.html">Writing & Interactivity</a></li>
+</ul> -->
+        </li>
+        <li class="active">Design Process</li>
+        <li><a href="../index.html#about">About</a></li>
+      </ul>
     </nav>
-   
-<main>
- 
-   <article class="h-entry">
-    <section class="e-content">
-        <h2>User Alignment</h2>
-        <h3>My Goals with this website is to:</h3>
-        <ul>
-            <li>Showcase my technical and creative work, that being my writing, and game design/development etc.</li>
-            <li>I also want to establish my professional and creative identity as well as make my work accessible and organized based on what category it is in.</li>
-            <li>Provide an organized and user friendly experience for visitors.</li>
-        </ul>
-    </section>
-    
-    <section class="e-content">
-        <h2>Target Users & Needs</h2>
-        <h3>Potential Users for my website include:</h3>
-        <ul>
-            <li>Employers & Clients: Looking for a structured portfolio and design process documentation.</li>
-            <li>Peers & Writers: Interested in narrative writing, game mechanics, and blog insights.</li>
-            <li>Game Developers: Want to see interactive projects, game concepts, and case studies. </li>
-           
-        </ul>
-        
-        <p>These various users would visit the website to:</p>
-        <ul>
+    <main>
+      <h2 class="process-subheading">
+        Insights into Web Development, Media Theory, and Design Processes
+      </h2>
+      <article class="h-entry">
+        <section class="e-content">
+          <h2>User Alignment</h2>
+          <h3>My Goals with this website is to:</h3>
+          <ul>
+            <li>
+              Showcase my technical and creative work, that being my writing,
+              and game design/development etc.
+            </li>
+            <li>
+              I also want to establish my professional and creative identity as
+              well as make my work accessible and organized based on what
+              category it is in.
+            </li>
+            <li>
+              Provide an organized and user friendly experience for visitors.
+            </li>
+          </ul>
+        </section>
+        <section class="e-content">
+          <h2>Target Users & Needs</h2>
+          <h3>Potential Users for my website include:</h3>
+          <ul>
+            <li>
+              Employers & Clients: Looking for a structured portfolio and design
+              process documentation.
+            </li>
+            <li>
+              Peers & Writers: Interested in narrative writing, game mechanics,
+              and blog insights.
+            </li>
+            <li>
+              Game Developers: Want to see interactive projects, game concepts,
+              and case studies.
+            </li>
+          </ul>
+          <p>These various users would visit the website to:</p>
+          <ul>
             <li>explore the projects found in my portfolio</li>
             <li>to evaluate my quality of work and style.</li>
-            <li>If anyone is interested in my design process; they would also have access to that detail.</li>
-        </ul>
-    </section>
-    
-    <section class="e-content">
-        <h2>Informayion Structure - Content Mapping:</h2>
-        <p>Since my website will have a navigation bar that will take users to different pages; which will have their respective content; my content map will include:</p>
-       
-            <img src="../images/web-Flow.png" class="u-photo" alt="Web Flow and Folder Structure Diagram" width="500" height="300">
-            
-     
-
-        <ul>
-            <li>Essays - researched pieces both formal, for academic assignments and informal.</li>
-            <li>Blogs - opinion based, and some discussing my design process.</li>
-            <li>Portfolio - will consists of Game design projects; Short stories & Narratives etc.</li>
-            <li>Design Process- documenting the design process for my website; which various iterations and details of wireframes.</li>
-            <li>About - contact information and brief professional biography.</li>
-        </ul>
-    </section>
-    
-    <section class="e-content">
-        <h2>User Experience Mapping:</h2>
-        
-        <h3>Basic user flow of website:</h3>
-        <ul>
+            <li>
+              If anyone is interested in my design process; they would also have
+              access to that detail.
+            </li>
+          </ul>
+        </section>
+        <section class="e-content">
+          <h2>Information Structure - Content Mapping:</h2>
+          <p>
+            Since my website will have a navigation bar that will take users to
+            different pages; which will have their respective content; my
+            content map will include:
+          </p>
+          <img
+            src="../images/web-Flow.png"
+            class="u-photo"
+            alt="Web Flow and Folder Structure Diagram"
+            width="500"
+            height="300"
+          />
+          <ul>
+            <li>
+              Essays - researched pieces both formal, for academic assignments
+              and informal.
+            </li>
+            <li>
+              Blogs - opinion based, and some discussing my design process.
+            </li>
+            <li>
+              Portfolio - will consists of Game design projects; Short stories &
+              Narratives etc.
+            </li>
+            <li>
+              Design Process- documenting the design process for my website;
+              which various iterations and details of wireframes.
+            </li>
+            <li>
+              About - contact information and brief professional biography.
+            </li>
+          </ul>
+        </section>
+        <section class="e-content">
+          <h2>User Experience Mapping:</h2>
+          <h3>Basic user flow of website:</h3>
+          <ul>
             <li>User lands on homepage</li>
-            <li>They can navigate to any page/section through the navigation bar; including Essays, Blogs, Portfolio, Design Process and/or About page.</li>
-            <li>If they choose Blogs page; they will find various several links to their respective blogs.</li>
-        </ul>
-        <img src="../images/user_flow.png" class="u-photo" alt="User Flow and Folder Structure Diagram" width="500" height="300">
-        
-        <h3>Interface Elements:</h3>
-        <ul>
-            <li>Navigation components including Main Navigation bar and tags for blogs & essays.</li>
-            <li>Information components including project cards for blogs, essays etc. and preview snippets</li>
+            <li>
+              They can navigate to any page/section through the navigation bar;
+              including Essays, Blogs, Portfolio, Design Process and/or About
+              page.
+            </li>
+            <li>
+              If they choose Blogs page; they will find various several links to
+              their respective blogs.
+            </li>
+          </ul>
+          <img
+            src="../images/user_flow.png"
+            class="u-photo"
+            alt="User Flow and Folder Structure Diagram"
+            width="500"
+            height="300"
+          />
+          <h3>Interface Elements:</h3>
+          <ul>
+            <li>
+              Navigation components including Main Navigation bar and tags for
+              blogs & essays.
+            </li>
+            <li>
+              Information components including project cards for blogs, essays
+              etc. and preview snippets
+            </li>
             <li>Modal windows/Notification pop ups</li>
-        </ul>
-        
-        <h3>Input Controls:</h3>
-        <ul>
-            <li>I would like to add the Portfolio page to have a filter/dropdown button</li>
-        </ul>
-        
-        <h3>Info Components:</h3>
-        <ul>
-            <li>Blogs; Essays and Portfolio page will have project cards with thumbnails</li>
+          </ul>
+          <h3>Input Controls:</h3>
+          <ul>
+            <li>
+              I would like to add the Portfolio page to have a filter/dropdown
+              button
+            </li>
+          </ul>
+          <h3>Info Components:</h3>
+          <ul>
+            <li>
+              Blogs; Essays and Portfolio page will have project cards with
+              thumbnails
+            </li>
             <li>Maybe preview snippets for projects</li>
-            <li>Modal windows to show project detail, like when you hover over a project card it would show more detail.</li>
-        </ul>
-    </section>
-    
-    <section class="e-content">
-        <h2>Connection Structure & URL Scheme:</h2>
-        <ul>
+            <li>
+              Modal windows to show project detail, like when you hover over a
+              project card it would show more detail.
+            </li>
+          </ul>
+        </section>
+        <section class="e-content">
+          <h2>Connection Structure & URL Scheme:</h2>
+          <ul>
             <li><code>/</code> (Home Page)</li>
             <li><code>/essays/</code> (Essays landing page)</li>
-            <li><code>/essays/topic-name/essay-title</code> (Individual essay)</li>
+            <li>
+              <code>/essays/topic-name/essay-title</code> (Individual essay)
+            </li>
             <li><code>/blogs/</code> (Blogs landing Page)</li>
-            <li><code>/blogs/category-name/post-title</code> (Individual blog post)</li>
-            <li><code>/portfolio/</code> (which is the entire portfolio landing page; showing all Portfolio projects)</li>
-            <li><code>/portfolio/game-design/project1</code> (Game design project)</li>
-            <li><code>/portfolio/short-stories-narratives/story-name</code> (Short story)</li>
+            <li>
+              <code>/blogs/category-name/post-title</code> (Individual blog
+              post)
+            </li>
+            <li>
+              <code>/portfolio/</code> (which is the entire portfolio landing
+              page; showing all Portfolio projects)
+            </li>
+            <li>
+              <code>/portfolio/game-design/project1</code> (Game design project)
+            </li>
+            <li>
+              <code>/portfolio/short-stories-narratives/story-name</code> (Short
+              story)
+            </li>
             <li><code>/design-process/</code> (Design process page)</li>
             <li><code>/about/</code> (About page)</li>
-        </ul>
-        
-        <h3>The URL scheme I'm using:</h3>
-        <p>illustrates the content categories' sequential relationship. makes the site's organization easy to understand and/or intuitive. It helps with SEO by semantically and logically structuring material.</p>
-    </section>
-    
-    <section class="e-content">
-        <h2>Semantic Markup:</h2>
-        <p>It is the process of showing the meaning of content on a web page using HTML tags. It helps in the comprehension of a web page's structure by users, search engines, and assistive technology.</p>
-        <p>For the semantic markup...</p>
-    </section>
-    
-    <section class="e-content">
-        <h2>Development Progress Reflection:</h2>
-        <p>My current implementation aligns with the structure of the website that I have planned on exploring. It does not exactly align with it though. Since I have drafted my wireframes; the navigation bar clearly communicates the structure of the website. The basic HTML can be found on my page but I have not implemented any of the functionality.</p>
-    </section>
-    
-    <section class="e-content">
-        <h2>Style Guide:</h2>
-        <p><strong>Statement:</strong>My website seamlessly blends coding and storytelling, creating an engaging and user-friendly experience that captivates every visitor.</p>
-    </section>
-    
-    <section class="e-content">
-        <h2><strong>Brand Identity:</strong></h2>
-        <p>The website's design emphasizes storytelling by creating an engaging yet unobtrusive visual experience that highlights interactive media, including short stories, game narratives, and game design projects. A minimalist aesthetic ensures that portfolio pieces, blog posts, and essays remain the focal points without being overshadowed. This balance enhances both the narrative-driven presentation and usability, making the site intuitive, accessible, and easy to navigate while immersing visitors in the creative work.</p>
-        <p>This website shows my brand identity, which reflects:</p>
-        <ul>
-            <li>Structure & Functionality - </li>
-            <li>Creativity & Expression - Inspired by storytelling, I want it the site to be imaginative and inviting.</li>
-            <li>Intuitive & Engaging - I want the website to have seamless interaction and exploration</li>
-        </ul>
-    </section>
-
-    <section class="e-content">
-        <h2><strong>Color Palette:</strong></h2>
-        <img src="../images/color-palette.png" class="u-photo" alt="Image showing color Palette" width="900" height="600">
+          </ul>
+          <h3>The URL scheme I'm using:</h3>
+          <p>
+            illustrates the content categories' sequential relationship. makes
+            the site's organization easy to understand and/or intuitive. It
+            helps with SEO by semantically and logically structuring material.
+          </p>
         </section>
-
-
-    <section class="e-content">
-            <h2><strong>Typography:</strong></h2>
-            <p>The Typography I have planned on using was chosen to reflect both technical structure and literary/creative expression.</p>
-            <img src="../images/monsterrat-font.png" class="u-photo" alt="Image showing monsterrat-font" width="500" height="300">
-            <img src="../images/playfair-font.png" class="u-photo" alt="Image showing playfair-font" width="500" height="300">
-            <img src="../images/source-font.png" class="u-photo" alt="Image showing source-font" width="500" height="300">
-            </section>
-
-      <section class="e-content">
-      <h2><strong>Typography Principles:</strong></h2>
-     <ul>
-        <li><strong>Clear Hierarchy:</strong>H1, H2, H3 sizes for headings & sections.</li>
-        <li><strong>Left Aligned Text:</strong>For readability in essays and blogs</li>
-        <li><strong>Consistent Font Weights:</strong>To guide the visitor's eyes naturally</li>
-     </ul>
+        <section class="e-content">
+          <h2>Semantic Markup:</h2>
+          <p>
+            It is the process of showing the meaning of content on a web page
+            using HTML tags. It helps in the comprehension of a web page's
+            structure by users, search engines, and assistive technology.
+          </p>
+          <p>For the semantic markup...</p>
+        </section>
+        <section class="e-content">
+          <h2>Development Progress Reflection:</h2>
+          <p>
+            My current implementation aligns with the structure of the website
+            that I have planned on exploring. It does not exactly align with it
+            though. Since I have drafted my wireframes; the navigation bar
+            clearly communicates the structure of the website. The basic HTML
+            can be found on my page but I have not implemented any of the
+            functionality.
+          </p>
+        </section>
+        <section class="e-content">
+          <h2>Style Guide:</h2>
+          <p>
+            <strong>Statement:</strong> My website seamlessly blends coding and
+            storytelling, creating an engaging and user-friendly experience that
+            captivates every visitor.
+          </p>
+          <h2><strong>Brand Identity:</strong></h2>
+          <p>
+            The website's design emphasizes storytelling by creating an engaging
+            yet unobtrusive visual experience that highlights interactive media,
+            including short stories, game narratives, and game design projects.
+            A minimalist aesthetic ensures that portfolio pieces, blog posts,
+            and essays remain the focal points without being overshadowed. This
+            balance enhances both the narrative-driven presentation and
+            usability, making the site intuitive, accessible, and easy to
+            navigate while immersing visitors in the creative work.
+          </p>
+          <p>This website shows my brand identity, which reflects:</p>
+          <ul>
+            <li>Structure & Functionality -</li>
+            <li>
+              Creativity & Expression - Inspired by storytelling, I want it the
+              site to be imaginative and inviting.
+            </li>
+            <li>
+              Intuitive & Engaging - I want the website to have seamless
+              interaction and exploration
+            </li>
+          </ul>
+        </section>
+        <section class="e-content">
+          <h2><strong>Color Palette:</strong></h2>
+          <h3>Initial Color Palette</h3>
+          <img
+            src="../images/color-palette.png"
+            class="u-photo"
+            alt="Image showing initial color Palette"
+            width="900"
+            height="600"
+          />
+          <h3>Current Color Palette</h3>
+          <img
+            src="../images/color-palette02.png"
+            class="u-photo"
+            alt="Image showing current Palette"
+            width="600"
+            height="300"
+          />
+        </section>
+        <section class="e-content">
+          <h2><strong>Typography:</strong></h2>
+          <p>
+            The Typography I have planned on using was chosen to reflect both
+            technical structure and literary/creative expression.
+          </p>
+          <img
+            src="../images/monsterrat-font.png"
+            class="u-photo"
+            alt="Image showing monsterrat-font"
+            width="500"
+            height="300"
+          />
+          <img
+            src="../images/playfair-font.png"
+            class="u-photo"
+            alt="Image showing playfair-font"
+            width="500"
+            height="300"
+          />
+          <img
+            src="../images/source-font.png"
+            class="u-photo"
+            alt="Image showing source-font"
+            width="500"
+            height="300"
+          />
+        </section>
+        <section class="e-content">
+          <h2><strong>Typography Principles:</strong></h2>
+          <ul>
+            <li>
+              <strong>Clear Hierarchy:</strong> H1, H2, H3 sizes for headings &
+              sections.
+            </li>
+            <li>
+              <strong>Left Aligned Text:</strong> For readability in essays and
+              blogs
+            </li>
+            <li>
+              <strong>Consistent Font Weights:</strong> To guide the visitor's
+              eyes naturally
+            </li>
+          </ul>
+        </section>
+        <section class="e-content">
+          <h2><strong>UI Components & Interactive Elements:</strong></h2>
+          <ul>
+            <li>
+              <p><strong>Navigation Bar:</strong></p>
+              <p>
+                The Nav Bar is a critical component of the user experience,
+                providing a consistent and intuitive way for visitors to explore
+                different pages. Positioned at the top of the page, it remains
+                fixed as users scroll, ensuring seamless navigation. In the
+                Portfolio Page, The bar will feature dropdown menus for
+                filtering portfolio content, such as game projects and short
+                stories, allowing users to find specific work efficiently. Hover
+                effects will highlight active links, and a slight animation will
+                provide visual feedback when a selection is made. For
+                accessibility, high contrast will be maintained between the text
+                and background, and a clear, readable font will be used.
+              </p>
+            </li>
+            <li>
+              <p><strong>Project Cards:</strong></p>
+              <p>
+                These serve as interactive thumbnails for website content and
+                items, offering a structured and visually appealing way to
+                present work. Each card will display a representative image,
+                title, and short description. When a user hovers over a card,
+                the background color will subtly shift or expand, and a short
+                preview of additional details will fade in. Clicking a card will
+                either expand it into a modal window or redirect the user to a
+                dedicated project page. These cards will also include small tags
+                or icons indicating the category of work (e.g., "Game Design,"
+                "Short Story," "Essay"), helping visitors navigate content based
+                on their interests.
+              </p>
+            </li>
+            <li>
+              <p><strong>Call To Action Elements (Rounded Buttons):</strong></p>
+              <p>
+                CTA's such as rounded buttons will guide users toward key
+                interactions, such as exploring the portfolio, reading blog
+                posts, or contacting the me. Buttons will be designed with soft,
+                rounded edges to maintain a friendly and approachable aesthetic.
+                Each button will have a designated color based on its
+                importance—primary actions like "View Portfolio" will be in warm
+                peach, while secondary actions like "Read More" will use muted
+                lilac. To reinforce interactivity, buttons will have a slight
+                hover and press effect when clicked, giving the impression of
+                real-world touch feedback.
+              </p>
+            </li>
+            <li>
+              <p><strong>Hover Animations:</strong></p>
+              <p>
+                Microinteractions will be integrated throughout the website to
+                create an engaging and responsive experience. When users hover
+                over a button, it will slightly darken or shift in color,
+                indicating interactivity. Icons will feature a subtle bounce or
+                color transition when hovered over, providing visual feedback.
+                Project and Blog cards may have a gentle zoom effect when
+                hovered to create a sense of depth. These small interactions
+                ensure that users feel connected to the interface without
+                overwhelming them with excessive motion or distractions
+              </p>
+            </li>
+            <li>
+              <p><strong>Icons:</strong></p>
+              <p>
+                These will play an important role in the navigation and
+                interaction design, serving as visual guides for users. The
+                design will maintain consistency by using outlined icons
+                throughout the site. These icons will include social media links
+                such as GitHub and Itch.io back and forward arrows for
+                navigation, and play or download buttons for interactive
+                content. To ensure clarity, all icons will be kept at a
+                consistent size, with sufficient spacing between elements to
+                prevent visual clutter.
+              </p>
+            </li>
+          </ul>
+          <p>
+            These dynamic components work together to keep the website
+            interesting, user-friendly, and accessible. A well-designed
+            navigation system will make it easy for users to browse the website,
+            and the animations and transitions i have planned will hopefully
+            make interactions feel fluid and natural. The objective is to
+            produce an experience that captures the dual character of the my
+            work work: Immersive and Expressive like storytelling, but also
+            Structured and Logical.
+          </p>
+        </section>
+        <section class="e-content">
+          <h2><strong>Layout & Composition:</strong></h2>
+          <p>
+            I want to create an ideally structured but visually interesting
+            experienceing for the visitors of the website. To this I am planning
+            on making using of the following:
+          </p>
+          <ul>
+            <li>
+              <strong>Grid-Based Layout -</strong> The Project and Blog Cards
+              will be organized in this manner.
+            </li>
+            <li>
+              <strong>Use of White Space -</strong> This is to ensure that the
+              site feels clean, breathable and not overwhelming.
+            </li>
+            <li>
+              <strong>Information Hierarchy -</strong> Clear Typography,
+              spacing, and good focus on complementing colors.
+            </li>
+            <li>
+              <strong>Balance - </strong>I also want to there to be a balance
+              between Tech and Creative Visuals, near pastel-dark fantasy
+              aesthetics meet structured UI to match my brand Identity of being
+              both a Storyteller; and Game & Web Developer
+            </li>
+          </ul>
+        </section>
+        <section class="e-content">
+          <h2><strong>Initial Wireframe:</strong></h2>
+          <img
+            src="../images/wire2.PNG"
+            class="u-photo"
+            alt="Image showing initial home page wireframe"
+            width="500"
+            height="300"
+          />
+          <img
+            src="../images/wire1.PNG"
+            class="u-photo"
+            alt="Image showing initial essays page wireframe"
+            width="500"
+            height="300"
+          />
+          <img
+            src="../images/wire3.PNG"
+            class="u-photo"
+            alt="Image showing initial blogs page wireframe"
+            width="500"
+            height="300"
+          />
+          <h2><strong>Wireframes & Layout Planning:</strong></h2>
+          <img
+            src="../images/blogs-wire.png"
+            class="u-photo"
+            alt="Image showing blogs page wireframe"
+            width="500"
+            height="300"
+          />
+          <img
+            src="../images/game-wire.png"
+            class="u-photo"
+            alt="Image showing game development page wireframe"
+            width="500"
+            height="300"
+          />
+        </section>
+        <section class="e-content">
+          <h2><strong>Reference Material & Design Inspiration:</strong></h2>
+          <p>
+            The design was influenced by a combination of game UI trends,
+            storytelling-focused portfolios, and developer-friendly layouts.
+          </p>
+          <img
+            src="../images/playtester-pic.png"
+            class="u-photo"
+            alt="Image showing screenshot of Playtester.io website"
+            width="500"
+            height="300"
+          />
+          <p>
+            I especially like the layout of how the game projects were
+            showcased. With the genre and description included.
+          </p>
+          <br />
+          <img
+            src="../images/emshort.png"
+            class="u-photo"
+            alt="Image showing screenshot of emshort.blog website"
+            width="500"
+            height="300"
+          />
+          <p>
+            I like how that the cover of the short story/narrative is show as a
+            thumbnail. The author, published date genre and name of the piece is
+            also highlighted on the left. The synopsis is also descripbed just
+            on the bottom. The website also has Recent Posts and a categories
+            filter and search section which I want to include in my Portfolio
+            page.
+          </p>
+          <p>
+            Find Above Reference Material
+            <a href="https://emshort.blog/" target="_blank">Here</a>.
+          </p>
+        </section>
+      </article>
+    </main>
+    <footer>
+      &copy; Padi Falas-Maifala Portfolio
+      <section class="social-icons">
+        <a
+          href="https://padifalass.itch.io"
+          target="_blank"
+          aria-label="Itch.io"
+        >
+          <i class="fab fa-itch-io"></i>
+        </a>
+        <a
+          href="https://github.com/padifalas"
+          target="_blank"
+          aria-label="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://linkedin.com/in/padi-maifala"
+          target="_blank"
+          aria-label="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
       </section>
-
-
-    <section class="e-content">
-    <h2><strong>UI Components & Interactive Elements:</strong></h2>
-    <ul>
-        <li><p><strong>Navigation Bar:</strong></p>
-        <p>The Nav Bar is a critical component of the user experience, providing a consistent and intuitive way for visitors to explore different pages.
-             Positioned at the top of the page, it remains fixed as users scroll, ensuring seamless navigation.
-              In the Portfolio Page, The bar will feature dropdown menus for filtering portfolio content, such as game projects and short stories, allowing users to find specific work efficiently.
-               Hover effects will highlight active links, and a slight animation will provide visual feedback when a selection is made. For accessibility, high contrast will be maintained between the text and background, and a clear, readable font will be used.</p>
-            </li>
-
-            <li>
-                <p><strong>Project Cards:</strong></p>
-                <p>These serve as interactive thumbnails for website content and items, offering a structured and visually appealing way to present work. 
-                Each card will display a representative image, title, and short description. When a user hovers over a card, the background color will subtly shift or expand, and a short preview of additional details will fade in. Clicking a card will either expand it into a modal window or redirect the user to a dedicated project page. These cards will also include small tags or icons indicating the category of work (e.g., "Game Design," "Short Story," "Essay"), helping visitors navigate content based on their interests.</p>
-            </li>
-
-            <li>
-                <p><strong>Call To Action Elements (Rounded Buttons):</strong></p>
-                <p>CTA's such as rounded buttons will guide users toward key interactions, such as exploring the portfolio, reading blog posts, or contacting the me.
-                     Buttons will be designed with soft, rounded edges to maintain a friendly and approachable aesthetic. Each button will have a designated color based on its importance—primary actions like "View Portfolio" will be in warm peach, while secondary actions like "Read More" will use muted lilac. 
-                     To reinforce interactivity, buttons will have a slight hover and press effect when clicked, giving the impression of real-world touch feedback.</p>
-            </li>
-
-            <li>
-                <p><strong>Hover Animations:</strong></p>
-                <p>Microinteractions will be integrated throughout the website to create an engaging and responsive experience. When users hover over a button, it will slightly darken or shift in color, indicating interactivity. Icons will feature a subtle bounce or color transition when hovered over, providing visual feedback. 
-                    Project and Blog cards may have a gentle zoom effect when hovered to create a sense of depth. These small interactions ensure that users feel connected to the interface without overwhelming them with excessive motion or distractions</p>
-            </li>  
-            <li>
-                <p><strong>Icons:</strong></p>
-                <p>These will play an important role in the navigation and interaction design, serving as visual guides for users. The design will maintain consistency by using  outlined icons throughout the site. These icons will include social media links such as GitHub and Itch.io back and forward arrows for navigation, and play or download buttons for interactive content. 
-                    To ensure clarity, all icons will be kept at a consistent size, with sufficient spacing between elements to prevent visual clutter.</p>
-            </li>  
-    </ul>
-    <p>These dynamic components work together to keep the website interesting, user-friendly, and accessible.
-         A well-designed navigation system will make it easy for users to browse the website, and the animations and transitions i have planned will hopefully make interactions feel fluid and natural. 
-         The objective is to produce an experience that captures the dual character of the my work work: Immersive and Expressive like storytelling, but also Structured and Logical.</p>
-
-    
-     </section>
-
-     <section class="e-content">
-        <h2><strong>Layout & Composititon:</strong></h2>
-        <p>I want to create an ideally structured but visually interesting experienceing for the visitors of the website. To this I am planning on making using of the following:</p>
-        <ul>
-            <li><strong>Grid-Based Layout -</strong> The Project and Blog Cards will be organized in this manner.</li>
-            <li><strong>Use of White Space -</strong> This is to ensure that the site feels clean, breathable and not overwhelming.</li>
-            <li><strong>Information Hierarchy -</strong> Clear Typography, spacing, and good focus on complementing colors.</li>
-            <li><strong>Balance - </strong>I also want to there to be a balance between Tech and Creative Visuals, near pastel-dark fantasy aesthetics meet structured UI to match my brand Identity of being both a Storyteller; and Game & Web Developer</li>
-        </ul>
-        </section>
-
-        <section class="e-content">
-            <h2><strong>Initial Wireframe:</strong></h2>
-            <img src="../images/wire2.PNG" class="u-photo" alt="Image showing initial home page wireframe" width="500" height="300">
-            <img src="../images/wire1.PNG" class="u-photo" alt="Image showing initial essays page wireframe" width="500" height="300">
-            <img src="../images/wire3.PNG" class="u-photo" alt="Image showing initial blogs page wireframe" width="500" height="300">
-            
-            <h2><strong>Wireframes & Layout Planning:</strong></h2>
-            <img src="../images/blogs-wire.png" class="u-photo" alt="Image showing blogs page wireframe" width="500" height="300">
-            <img src="../images/game-wire.png" class="u-photo" alt="Image showing game developmentpage wireframe" width="500" height="300">
-            
-        </section>
-
-        <section class="e-content">
-            <h2><strong>Reference Material & Design Inspiration:</strong></h2>
-            <p>The design was influenced by a combination of game UI trends, storytelling-focused portfolios, and developer-friendly layouts.</p>
-            <img src="../images/playtester-pic.png" class="u-photo" alt="Image showing screenshot of Playtester.io website" width="500" height="300">
-            <p>I especially like the layout of how the game projects were showcased. With the genre and description included.</p>
-           
-            <br>
-            <img src="../images/emshort.png" class="u-photo" alt="Image showing screenshot of emshort.blog website" width="500" height="300">
-            <p>I like how that the cover of the short story/narrative is show as a thumbnail. The author, published date genre and name of the piece is also highlighted on the left. The synopsis is also descripbed just on the bottom. The website also has Recent Posts and a categories filter and search section which I want to include in my Portfolio page.</p>
-            <p>Find Above Reference Material <a href="https://emshort.blog/" target="_blank">Here</a>.</p>
-
-        </section>
-</article>
-
-</main>
- 
-    
-
-    
-<footer>
-    &copy; Padi Falas-Maifala Portfolio
-    
-    <section class="social-icons">
-        <a href="https://padifalass.itch.io" target="_blank" aria-label="Itch.io">
-            <i class="fab fa-itch-io"></i>
-        </a>
-        <a href="https://github.com/padifalas" target="_blank" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="https://linkedin.com/in/padi-maifala" target="_blank" aria-label="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-
-        </a>
-    </section>
-</footer>
-</body>
+    </footer>
+  </body>
 </html>
