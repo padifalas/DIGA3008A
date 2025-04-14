@@ -1,6 +1,8 @@
 
 
 :root {
+    --nav-font: 'Fraunces', 'Avenir', sans-serif;
+    --nav-font-size: 14px;
     
     --card-bg: var(--cream);
     --card-shadow: rgba(0, 0, 0, 0.08);
@@ -46,7 +48,7 @@ body.blog-page main:after {
     left: 0;
     width: 100%;
     text-align: center;
-    font-family: 'Studio Ghibli', 'Marcellus', serif;
+    font-family: 'Marcellus', serif;
     font-size: 60px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -57,7 +59,7 @@ body.blog-page main:after {
 }
 
 .blog-subheading {
-    font-family: 'Studio Ghibli', 'Marcellus', serif;
+    font-family:  'Marcellus', serif;
     font-size: 25px;
     margin: 100px 0 30px;
     color: var(--accent-color);
@@ -97,7 +99,7 @@ section.blogs::before {
 }
 
 section.blogs h2 {
-    font-family: 'Studio Ghibli', 'Marcellus', serif;
+    font-family:  'Marcellus', serif;
     font-size: 28px;
     margin-bottom: 30px;
     color: var(--accent-color);

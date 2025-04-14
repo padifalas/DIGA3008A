@@ -1,5 +1,7 @@
 
 :root {
+    --nav-font: 'Fraunces', 'Avenir', sans-serif;
+    --nav-font-size: 14px;
    
     --card-bg: var(--cream);
     --card-shadow: rgba(0, 0, 0, 0.08);
