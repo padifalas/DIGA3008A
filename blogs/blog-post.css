@@ -228,6 +228,14 @@ header nav ul li a:hover:after {
     width: 100%;
 }
 
+nav ul li.dropdown > a:after {
+    content: "⌄";
+    font-size: 10px;
+    margin-left: 5px;
+    vertical-align: middle;
+    display: inline-block; 
+}
+
 
 main {
     max-width: 800px;
