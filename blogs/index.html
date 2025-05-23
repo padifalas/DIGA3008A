@@ -14,42 +14,38 @@
     <link href="../styles.css" rel="stylesheet" /> <!-- Global CSS  -->
     <link href="blogs.css" rel="stylesheet" /> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Marcellus&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Marcellus&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&family=Poppins:wght@400;500;600;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
 
     <title>Blogs</title>
 </head>
 
 <body class="blog-page">
-    <nav>
-        <!-- Logo and branding -->
-    <div class="logo">
+   <nav>
+    <section class="logo">
         <img src="../images/branding.png" alt="Padi Falas-Maifala Logo">
-    </div>
+    </section>
 
-           <!-- CSS-only Hamburger Menu -->
-           <input type="checkbox" id="menu-toggle">
-           <label class="hamburger" for="menu-toggle">
-               <span></span>
-               <span></span>
-               <span></span>
-               <span></span>
-           </label>
+    <input type="checkbox" id="menu-toggle">
+    <label class="hamburger" for="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
 
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../essays/index.html">Essays</a></li>
-            <li class="active"><a href="index.html">Blogs</a></li>
-            <li> <a href="../portfolio/index.html">Portfolio</a></li>
-               
-               
-            </li>
-            <li><a href="../design-process/index.html">Design-Process</a></li>
-            <li><a href="../index.html#about">About</a></li>
-        </ul>
-    </nav>
+    <ul id="nav-menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../essays/index.html">Essays</a></li>
+        <li class="active"><a href="blogs/index.html">Blogs</a></li>
+        <li><a href="../portfolio/index.html">Portfolio</a></li>
+        <li><a href="../design-process/index.html">Design-Process</a></li>
+          <li><a href="../index.html#about">About</a></li>
+    </ul>
+</nav>
     
     <main> 
         <h2 class="blog-subheading">Insights into Web Development, Media Theory, and Design Processes</h2>
@@ -63,7 +59,7 @@
                         <h3>Setting Up GitHub</h3>
                         <section class="subhead">A Web Publishing Experience</section>
                         <p>My journey learning how to set up GitHub and publish my first website online.</p>
-                        <time datetime="2025-17-25">February 17, 2025</time>
+                        <time datetime="2025-02-25">February 17, 2025</time>
 
                         <section class="blog-card-tags">
                             <span class="blog-tag">Web Development</span>
@@ -87,7 +83,7 @@
                     <img src="https://i.pinimg.com/474x/7d/25/48/7d2548a11fdee2c9fafc868f9700f03d.jpg" alt="Hypertext Laws of Media Thumbnail">
                     <section class="blog-card-content">
                         <h3>Hypertext and the Laws of Media</h3>
-                        <div class="subhead">Digital Communication Theory</div>
+                        <section class="subhead">Digital Communication Theory</section>
                         <p>Exploring the relationship between hypertext and McLuhan's laws of media in the digital age.</p>
                         <time datetime="2025-02-25">February 24, 2025</time>
 
@@ -151,12 +147,12 @@
                     <a href="../blogs/blog04.html" class="card-link" aria-label="Read blog about website design process"></a>
                 </article>
 
-                <!-- Blog Card 4 -->
+                <!-- Blog Card 5 -->
 <article class="blog-card">
     <img src="https://i.pinimg.com/474x/21/41/19/214119a5cce860d2a131c62b1e64958f.jpg" alt="Website Review Thumbnail">
     <section class="blog-card-content">
         <h3>UI/UX Analysis: Cape Town Opera & Pinnacle Website Review</h3>
-        <div class="subhead">Web Design Critique</div>
+        <section class="subhead">Web Design Critique</section>
         <p>A personal analysis of two websites—highlighting navigation, layout, and design pros and cons.</p>
         <time datetime="2024-03-31">March 31, 2025</time>
         <section class="blog-card-tags">
@@ -178,7 +174,7 @@
     <img src="https://i.pinimg.com/736x/fb/33/aa/fb33aa713463d8d487cd5c23f9d024cc.jpg" alt="Internet Access Rights Thumbnail">
     <section class="blog-card-content">
         <h3>Critical Response to "Internet Access is a Fundamental Right"</h3>
-        <div class="subhead">Digital Rights Analysis</div>
+        <section class="subhead">Digital Rights Analysis</section>
         <p>An examination of Kasapis's argument for internet access as a human right and its implications during the pandemic.</p>
         <time datetime="2025-04-18">April 18, 2025</time>
         <section class="blog-card-tags">
@@ -199,15 +195,15 @@
     <img src="https://i.pinimg.com/736x/d9/cf/d7/d9cfd743b099377bc07b28d290b06242.jpg" alt="Picture of globe with computer text">
     <section class="blog-card-content">
         <h3>Critical Response to "The Need for Global Internet Connectivity"</h3>
-        <div class="subhead">Digital Divide Analysis</div>
-        <p>A critical examination of Daniolou's article on global internet access and the multidimensional nature of digital divides.</p>
+        <section class="subhead">Digital sectionide Analysis</section>
+        <p>A critical examination of Daniolou's article on global internet access and the multidimensional nature of digital sectionides.</p>
         <time datetime="2025-04-18">April 18, 2025</time>
         <section class="blog-card-tags">
-            <span class="blog-tag">Digital Divide</span>
+            <span class="blog-tag">Digital sectionide</span>
             <span class="blog-tag">Rural Connectivity</span>
         </section>
         <section class="main-takeaway">
-            <strong>Main Takeaway:</strong> Addressing digital divides requires focusing beyond access to include participation, representation, and community agency.
+            <strong>Main Takeaway:</strong> Addressing digital sectionides requires focusing beyond access to include participation, representation, and community agency.
         </section>
         <section class="card-buttons">
             <a href="blog10.html" class="btn btn-secondary">Read More</a>
@@ -221,7 +217,7 @@
     <img src="https://i.pinimg.com/474x/e6/88/c1/e688c1d0d0b717993bc297b4c8546f08.jpg" alt="Illustration of people on computers with city view">
     <section class="blog-card-content">
         <h3>Close Reading: "Internet Access is a Fundamental Right. Especially, Amidst a Pandemic."</h3>
-        <div class="subhead">Digital Rights Analysis</div>
+        <section class="subhead">Digital Rights Analysis</section>
         <p>A critical examination of Kasapis' argument for internet access as a fundamental right, particularly during the COVID-19 pandemic.</p>
         <time datetime="2025-04-28">April 28, 2025</time>
         <section class="blog-card-tags">
@@ -241,10 +237,10 @@
 
 <!-- blog card for Blog 9  -->
 <article class="blog-card">
-    <img src="https://i.pinimg.com/736x/c5/49/97/c54997430fe3aa851225dae6df3f12db.jpg" alt="Illustration of digital divide with people using computers">
+    <img src="https://i.pinimg.com/736x/c5/49/97/c54997430fe3aa851225dae6df3f12db.jpg" alt="Illustration of digital sectionide with people using computers">
     <section class="blog-card-content">
         <h3>Critical Reflection on Digital Inequalities in the Age of AI and Big Data</h3>
-        <div class="subhead">Digital Divide Analysis</div>
+        <section class="subhead">Digital sectionide Analysis</section>
         <p>A critical examination of Lutz's framework for understanding digital inequalities and the power dynamics embedded in emerging technological systems.</p>
         <time datetime="2025-05-04">May 5, 2025</time>
         <section class="blog-card-tags">
@@ -261,24 +257,58 @@
     </section>
     <a href="../blogs/blog12.html" class="card-link" aria-label="Read blog about digital inequalities in the age of AI"></a>
 </article>
+<!-- blog card for Blog 10 week 12  -->
+<article class="blog-card">
+    <img src="https://i.pinimg.com/736x/62/30/c4/6230c4738a21965a638e315844c172c7.jpg" alt="Illustration of digital sectionide with people using computers">
+    <section class="blog-card-content">
+        <h3>Incorporating JavaScript & Reflecting on Decolonial Coding Practices</h3>
+        <section class="subhead">Incorporating JavaScript</section>
+        <p>Reflecting on Decolonial Coding Practices</p>
+        <time datetime="2025-05-12">May 12, 2025</time>
+        <section class="blog-card-tags">
+            <span class="blog-tag">JavaScript</span>
+            <span class="blog-tag">Decolonial Coding</span>
+           
+        </section>
+        <section class="main-takeaway">
+            <strong>Main Takeaway:</strong> JavaScript enhances portfolio interactivity while mindful coding practices challenge embedded colonial perspectives in technology.
+        </section>
+        <section class="card-buttons">
+            <a href="blog13.html" class="btn btn-secondary">Read More</a>
+        </section>
+    </section>
+    <a href="../blogs/blog13.html" class="card-link" aria-label="Read blog about digital inequalities in the age of AI"></a>
+</article>
+<!-- blog card for blog 1.. an Ethical Internet: Vision and Principles -->
+<article class="blog-card">
+    <img src="https://i.pinimg.com/736x/75/fd/42/75fd42e5295799726aa9f1cbd40ec71a.jpg" alt="Illustration of ethical internet principles with interconnected digital elements">
+    <section class="blog-card-content">
+        <h3>An Ethical Internet: Vision and Principles</h3>
+        <section class="subhead">Ethical Web Development</section>
+        <p>Exploring fundamental principles for creating a more ethical internet through responsible design and development practices.</p>
+        <time datetime="2025-05-22">May 22, 2025</time>
+        <section class="blog-card-tags">
+            <span class="blog-tag">Ethics</span>
+            <span class="blog-tag">Privacy</span>
+            <span class="blog-tag">Accessibility</span>
+            <span class="blog-tag">Sustainability</span>
+        </section>
+        <section class="main-takeaway">
+            <strong>Main Takeaway:</strong> An ethical internet prioritizes human dignity and well-being through privacy protection, accessibility, transparency, and environmental sustainability.
+        </section>
+        <section class="card-buttons">
+            <a href="blog14.html" class="btn btn-secondary">Read More</a>
+        </section>
+    </section>
+    <a href="../blogs/blog14.html" class="card-link" aria-label="Read blog about ethical internet principles and vision"></a>
+</article>
+
             </section>
         </section>
     </main>
 
-    <footer>
-        &copy; Padi Falas-Maifala Portfolio
-        
-        <div class="social-icons">
-            <a href="https://padifalass.itch.io" target="_blank" aria-label="Itch.io">
-                <i class="fab fa-itch-io"></i>
-            </a>
-            <a href="https://github.com/padifalas" target="_blank" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://linkedin.com/in/padi-maifala" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-        </div>
-    </footer>
+   
+      <script src="../javascripts/main.js"></script> 
+   
 </body>
 </html>

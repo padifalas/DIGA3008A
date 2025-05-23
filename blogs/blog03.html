@@ -10,24 +10,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="blog-page">
-    <nav>
-          <!-- Logo and branding -->
-    <div class="logo">
+      <nav>
+   
+    <section class="logo">
         <img src="../images/branding.png" alt="Padi Falas-Maifala Logo">
-    </div>
+    </section>
+
+    
+    <input type="checkbox" id="menu-toggle">
+    <label class="hamburger" for="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
         <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="../essays/index.html">Essays</a></li>
-            <li class="dropdown active">
-                <a href="index.html">Blogs</a>
-                <ul class="dropdown-content">
-                    <li style="--i:0"><a href="blog01.html">Blog 1</a></li>
-                    <li style="--i:0"><a href="blog01.html">Blog 2</a></li>
-                    <li style="--i:1" class="active"><a href="blog03.html">Blog 3</a></li>
-                    <li style="--i:2"><a href="blog04.html">Blog 4</a></li>
-                    <li style="--i:3"><a href="blog07.html">Blog 5</a></li>
-                </ul>
-            </li>
+            <li class="active"><a href="index.html">Blogs</a></li>
             <li><a href="../portfolio/index.html">Portfolio</a></li>
             <li><a href="../design-process/index.html">Design-Process</a></li>
             <li><a href="../index.html#about">About</a></li>
@@ -121,9 +121,9 @@
                 <ul>
                     <li><code>/</code> (Home Page)</li>
                     <li><code>/essays/</code> (Essays landing page)</li>
-                    <li><code>/essays/topic-name/essay-title</code> (Individual essay)</li>
+                    <li><code>/essays/topic-name/essay-title</code> (Insectionidual essay)</li>
                     <li><code>/blogs/</code> (Blogs landing Page)</li>
-                    <li><code>/blogs/category-name/post-title</code> (Individual blog post)</li>
+                    <li><code>/blogs/category-name/post-title</code> (Insectionidual blog post)</li>
                     <li><code>/portfolio/</code> (which is the entire portfolio landing page; showing all Portfolio projects)</li>
                     <li><code>/portfolio/game-design/project1</code> (Game design project)</li>
                     <li><code>/portfolio/short-stories-narratives/story-name</code> (Short story)</li>
@@ -159,21 +159,8 @@
             </footer>
         </article>
     </main>
-    
-    <footer>
-        &copy; 2025 Padi Falas-Maifala Portfolio
-        
-        <section class="social-icons">
-            <a href="https://padifalass.itch.io" target="_blank" aria-label="Itch.io">
-                <i class="fab fa-itch-io"></i>
-            </a>
-            <a href="https://github.com/padifalas" target="_blank" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://linkedin.com/in/padi-maifala" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-        </section>
-    </footer>
+
+      <script src="../javascripts/main.js"></script> 
+    <script src="../javascripts/blogs.js"></script>
 </body>
 </html>

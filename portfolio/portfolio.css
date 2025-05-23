@@ -14,6 +14,10 @@
     --text-accent: #4a4236; 
     --portfolio-accent: #4a4236; 
     --highlight-color: #FF921C; 
+    --game-accent: #5e9d8c;
+    --writing-accent: #8b6ebd;
+    --game-glow: rgba(94, 157, 140, 0.3);
+    --writing-glow: rgba(139, 110, 189, 0.3);
 }
 
 /* main Content - for to portfolio */
@@ -76,7 +80,7 @@ body.portfolio-page main:after {
     font-family: 'Studio Ghibli', 'Marcellus', serif;
     font-size: 25px;
     margin: 100px 0 30px;
-    color: var(--accent-color);
+    color: var(--card-1-bg);
     text-align: center; 
 }
 
@@ -92,11 +96,11 @@ body.portfolio-page main:after {
 }
 
 .portfolio-section#game-dev {
-    border-top: 4px solid #5e9d8c;
+      border-top: 4px solid var(--game-accent);
 }
 
 .portfolio-section#narratives {
-    border-top: 4px solid #8b6ebd;
+     border-top: 4px solid var(--writing-accent);
 }
 
 .portfolio-section h2 {
@@ -117,7 +121,14 @@ body.portfolio-page main:after {
     height: 3px;
     background-color: var(--portfolio-accent);
 }
+/* game deev  vibezz  */
+#game-dev h2:after {
+    background: linear-gradient(90deg, var(--game-accent), transparent);
+}
 
+#narratives h2:after {
+    background: linear-gradient(90deg, var(--writing-accent), transparent);
+}
 /* project Grid */
 .project-grid {
     display: grid;
@@ -134,9 +145,10 @@ body.portfolio-page main:after {
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: 0 4px 10px var(--card-shadow);
-    transition: all 0.3s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     border: 1px solid #000;
+    transform-style: preserve-3d;
 }
 
 .project-card:nth-child(3n+1) {
@@ -273,22 +285,6 @@ body.portfolio-page main:after {
     background-color: rgba(74, 106, 141, 0.05);
 }
 
-/* Visual elements */
-.views-count {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: rgba(255,255,255,0.8);
-    border-radius: 25px;
-    padding: 5px 10px;
-    font-size: 12px;
-    font-weight: bold;
-    color: var(--portfolio-accent);
-    z-index: 5;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
 
 
 
@@ -335,4 +331,82 @@ body.portfolio-page main:after {
         font-size: 42px;
         padding: 30px 0 15px;
     }
+
+    /* filter btn Container */
+#filter-buttons {
+    text-align: center;
+    margin: 40px 0 50px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* filterr btn sty */
+.filter-btn {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #333;
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-family: var(--body-font);
+    font-weight: 600;
+    font-size: 14px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* def state for All button */
+.filter-btn[data-filter="all"] {
+    background-color: #333;
+    color: #fff;
+}
+
+/* hover stuff */
+.filter-btn:hover {
+    background-color: var(--highlight-color);
+    border-color: var(--highlight-color);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* actiive states */
+.filter-btn.active {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+@media screen and (max-width: 600px) {
+    .filter-btn {
+        padding: 8px 18px;
+        font-size: 13px;
+    }
+    
+    #filter-buttons {
+        margin: 30px 0;
+    }
+}
+
+/* filtering animations*/
+.project-card {
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.portfolio-section {
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 }

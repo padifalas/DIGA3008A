@@ -1,0 +1,77 @@
+/* filtee byns holder/container */
+#filter-buttons {
+    text-align: center;
+    margin: 40px 0 50px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* filter btnsz style */
+.filter-btn {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #333;
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-family: var(--body-font);
+    font-weight: 600;
+    font-size: 14px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* initial default state for all button */
+.filter-btn[data-filter="all"] {
+    background-color: #333;
+    color: #fff;
+}
+
+
+.filter-btn:hover {
+    background-color: var(--highlight-color);
+    border-color: var(--highlight-color);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+
+.filter-btn.active {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+@media screen and (max-width: 600px) {
+    .filter-btn {
+        padding: 8px 18px;
+        font-size: 13px;
+    }
+    
+    #filter-buttons {
+        margin: 30px 0;
+    }
+}
+
+/* filtering animadmx*/
+.project-card {
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.portfolio-section {
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

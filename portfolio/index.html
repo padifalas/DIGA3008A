@@ -11,6 +11,8 @@
     <title>Portfolio - Padi Falas-Maifala</title>
     <link href="../styles.css" rel="stylesheet"> <!-- Global CSS -->
     <link href="portfolio.css" rel="stylesheet">
+    <link href="filter-styles.css" rel="stylesheet"> 
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Marcellus&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -19,66 +21,66 @@
 </head>
 
 <body class="portfolio-page">
-    <nav aria-label="Main navigation">
-        <!-- Logo and branding -->
-    <div class="logo">
+      <nav>
+    <section class="logo">
         <img src="../images/branding.png" alt="Padi Falas-Maifala Logo">
-    </div>
+    </section>
 
-           <!-- CSS-only Hamburger Menu -->
-           <input type="checkbox" id="menu-toggle">
-           <label class="hamburger" for="menu-toggle">
-               <span></span>
-               <span></span>
-               <span></span>
-               <span></span>
-           </label>
-        
-        <ul>
+    <input type="checkbox" id="menu-toggle">
+    <label class="hamburger" for="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <ul id="nav-menu">
             <li><a href="../index.html">Home</a></li>
             <li><a href="../essays/index.html">Essays</a></li>
             <li><a href="../blogs/index.html">Blogs</a></li>
             <li class="active"><a href="index.html">Portfolio</a></li>
-                <!-- <ul class="dropdown-content">
-                    <li style="--i:1"><a href="../portfolio/game-dev.html">Game Development Projects</a></li>
-                    <li style="--i:2"><a href="../portfolio/narratives.html">Writing & Interactivity</a></li>
-                </ul> -->
-            </li>
             <li><a href="../design-process/index.html">Design-Process</a></li>
             <li><a href="../index.html#about">About</a></li>
         </ul>
     </nav>
 
     <main>
-        <!-- Game Development Projects Section -->
+        
         <h2 class="portfolio-subheading">Showcasing Game Development, Narrative Design, and Web Projects</h2>
+        
+        <!-- filter Buttons -->
+        <section id="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="game-dev">Game Development</button>
+            <button class="filter-btn" data-filter="narratives">Writing & Interactivity</button>
+        </section>
+
+        <!-- Game Development Projects Section -->
         <section class="portfolio-section" id="game-dev">
             <h2>Game Development Projects</h2>
             <ul class="project-grid">
                 <!-- Project 1 -->
                 <li class="project-card h-entry">
-            
                     <img src="../images/broken-bonds.png" alt="3D Platform Game Screenshot" class="u-photo">
                     <article class="project-content">
                         <h3 class="p-name">Broken Bonds</h3>
-                        <p class="p-summary">3d game blah blah</p>
+                        <p class="p-summary">A heartfelt first-person 3D adventure where you play as a worn-out teddy bear slowly losing stuffing. Navigate a teen's bedroom from a toy’s perspective, overcoming playful obstacles and emotional hurdles to reunite with your original owner, Apollo. As the rivalry between two brothers unfolds, you must collect lost pieces and prove where you truly belong—before it’s too late to be repaired.</p>
+
                         <ul class="project-tags">
                             <li class="project-tag p-category">Enviromental Storytelling</li>
                             <li class="project-tag p-category">3D Platformer</li>
-                          
+                              <li class="project-tag p-category">Student Project</li>
+                                <li class="project-tag p-category">Collaboration</li>
                         </ul>
                         <p class="p-description"></p>
                         <section class="project-actions">
-                            
-                            <a href="https://padifalass.itch.io/broken-bonds" class="btn btn-secondary">Find on Itch.io</a>
+                            <a href="https://padifalass.itch.io/broken-bonds" class="btn btn-secondary" target="_blank">Find on Itch.io</a>
                         </section>
                     </article>
-                   
                 </li>
 
                 <!-- Project 2 -->
                 <li class="project-card h-entry">
-            
                     <img src="../images/tuned-battle.png" alt="3D Platform Game Screenshot" class="u-photo">
                     <article class="project-content">
                         <h3 class="p-name">Tuned For Battle</h3>
@@ -86,22 +88,21 @@
                              primary weapon. With fast-paced reflex-based gameplay and a heartfelt quest to become the ultimate musician,
                               this game blends platforming action with musical combat in a colorful, immersive experience.</p>
                         <ul class="project-tags">
+                              <li class="project-tag p-category">Game Jam</li>
                             <li class="project-tag p-category">Music-Based Combat</li>
                             <li class="project-tag p-category">2D Platformer</li>
                             <li class="project-tag p-category">Indie</li>
+                                  <li class="project-tag p-category">Collaboration</li>
                         </ul>
                         <p class="p-description"></p>
-                        <div class="project-actions">
-                            <!-- <a href="game-dev.html#project1" class="btn btn-primary">View Project</a> -->
-                            <a href="https://padifalass.itch.io/tuned-for-battle-a-2d-platformer" class="btn btn-secondary">Find on Itch.io</a>
-                        </div>
+                        <section class="project-actions">
+                            <a href="https://padifalass.itch.io/tuned-for-battle-a-2d-platformer" class="btn btn-secondary" target="_blank">Find on Itch.io</a>
+                        </section>
                     </article>
-               
                 </li>
 
-                  <!-- Project 1 -->
-                  <li class="project-card h-entry">
-            
+                <!-- Project 3 -->
+                <li class="project-card h-entry">
                     <img src="../images/elementalist-game.png" alt="3D Platform Game Screenshot" class="u-photo">
                     <article class="project-content">
                         <h3 class="p-name">Elementalist: Matter & Magic</h3>
@@ -110,34 +111,91 @@
                         <ul class="project-tags">
                             <li class="project-tag p-category">Prototype</li>
                             <li class="project-tag p-category">3D Platformer</li>
-                          
+                                  <li class="project-tag p-category">Student Project</li>
                         </ul>
                         <p class="p-description"></p>
-                        <div class="project-actions">
-                            <!-- <a href="game-dev.html#project1" class="btn btn-primary">View Project</a> -->
-                            <a href="https://padifalass.itch.io/elementalis-matter-magic" class="btn btn-secondary">Find on Itch.io</a>
-                        </div>
+                        <section class="project-actions">
+                            <a href="https://padifalass.itch.io/elementalis-matter-magic" class="btn btn-secondary" target="_blank">Find on Itch.io</a>
+                        </section>
                     </article>
-                   
-                </li>
 
-               
+                    <!-- Project 4 -->
+<li class="project-card h-entry">
+    <img src="../images/deaths-due.png" alt="Death's Due Game Screenshot" class="u-photo">
+    <article class="project-content">
+        <h3 class="p-name">Death's Due</h3>
+        <p class="p-summary">In this narrative-driven prototype, you play as Death's Emissary looking to get a promotion and become the new Death—not the grim reaper, but the cosmic judge who maintains the fragile balance between Order, Emotion, and Entropy. 
+            Each soul that crosses your threshold has a final request. Your choices determine the fate of reality itself.</p>
+        <ul class="project-tags">
+            <li class="project-tag p-category">Narrative Game</li>
+            <li class="project-tag p-category">Moral Choices</li>
+            <li class="project-tag p-category">Prototype</li>
+            <li class="project-tag p-category">Indie</li>
+            <li class="project-tag p-category">Student Project</li>
+        </ul>
+        <p class="p-description">
+            <!-- <strong>Features:</strong><br>
+            - Weigh Each Soul's Fate: Listen to final requests at the end of a mortal journey<br>
+            - Maintain Cosmic Balance: Every decision alters Order, Emotion, and Entropy<br>
+            - Multiple Soul Types: Encounter sectionerse souls with unique stories<br>
+            - Dynamic Throne Room: See your domain shift with your decisions<br>
+            - Multiple Endings: The dominant force shapes the final reality<br><br>
+            <strong>Gameplay:</strong><br>
+            Souls will plead for:<br>
+            - Life Extension<br>
+            - Accident Prevention<br>
+            - Dream Fulfillment<br>
+            - Memory Erasure<br>
+            - Moment Replay<br><br>
+            Every decision is a moral dilemma—there are no perfect answers, only the balance you choose to maintain.
+        </p> -->
+        <section class="project-actions">
+            <a href="https://padifalass.itch.io/deaths-due" class="btn btn-secondary" target="_blank">Find on Itch.io</a>
+        </section>
+    </article>
+</li>
+
+                </li>
             </ul>
         </section>
-
 
         <!-- Writing & Interactivity Section -->
         <section class="portfolio-section" id="narratives">
             <h2>Writing & Interactivity</h2>
             <ul class="project-grid">
-                <!-- Project 1 -->
+
+                <!-- project 1: Pandora's Paranormal Pursuit -->
+<li class="project-card h-entry">
+    <img src="../images/pandora.png" alt="A blue-haired woman with camera equipment standing outside a mysterious glowing bakery at night" class="u-photo">
+    <article class="project-content">
+        <h3 class="p-name">Pandora's Paranormal Pursuit</h3>
+        <p class="p-summary">
+            A paranormal content creator investigates a mysterious bakery that only appears at 2AM. What she finds there will challenge everything she thought she knew about fame, truth, and authentic connection.
+        </p>
+
+        <ul class="project-tags">
+            <li class="project-tag p-category">Interactive Fiction</li>
+            <li class="project-tag p-category">Choice-Based</li>
+            <li class="project-tag p-category">Supernatural Mystery</li>
+            <li class="project-tag p-category">Script Adaptation</li>
+        </ul>
+
+        <p class="p-description">
+            An atmospheric interactive story exploring the tension between viral fame and genuine discovery. Your choices shape Pandora's journey as she navigates the paranormal investigation that will define who she becomes.
+        </p>
+        <p class="key-feature">Based on an original script—where chasing ghosts for content leads to finding something far more valuable than views.</p>
+        <section class="project-actions">
+            <a href="https://padifalass.itch.io/pandoras-paranormal-pursuit" class="btn btn-primary" target="_blank">Play on Itch.io</a>
+        </section>
+    </article>
+</li>
+                <!-- Project 2 -->
                 <li class="project-card h-entry">
-                   
                     <img src="../images/writing-blog01.png" alt="Interactive story Screenshot" class="u-photo">
                     <article class="project-content">
                         <h3 class="p-name">The Door is Locked. Good.</h3>
                         <p class="p-summary">This short-form essay explores how locked doors in games serve as powerful narrative tools, not just mechanical barriers.
-                             I reflect on how seemingly small design choices; like a door that won’t open; can create curiosity, tension, and a sense of worldbuilding. 
+                             I reflect on how seemingly small design choices; like a door that won't open; can create curiosity, tension, and a sense of worldbuilding. 
                              It's a meditation on player psychology, storytelling through level design, and the quiet magic of being told "not yet."</p>
 
                         <ul class="project-tags">
@@ -145,141 +203,103 @@
                             <li class="project-tag p-category">Level Design</li>
                             <li class="project-tag p-category">Player Psychology</li>
                             <li class="project-tag p-category">Blog</li>
-
                         </ul>
                         <p class="p-description">A narrative reflection on the power of locked doors in games & how they build curiosity, tension, and world depth.</p>
                         <p class="key-feature">Inspired while designing and developing a game for a personal project.</p>
                         <section class="project-actions">
                             <a href="https://open.substack.com/pub/padifalas/p/the-door-is-locked-good?r=5i57j7&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false" class="btn btn-primary" target="_blank">Read on Substack</a>
                         </section>
-                    </article >
-                    
+                    </article>
                 </li>
 
-                <!-- Project 2 -->
+                <!-- Project 3 -->
                 <li class="project-card h-entry">
-                   
                     <img src="https://i.pinimg.com/736x/8b/ec/75/8bec7593fdc8efb85659a6c2f0b63674.jpg" alt="Screen with Game Over on it" class="u-photo">
                     <article class="project-content">
                         <h3 class="p-name">How I Break My Worlds on Purpose</h3>
                         <p class="p-summary">A reflection on the intentional flaws and oddities I build into game worlds — not as bugs, but as narrative texture. 
-                            This post explores how deliberate “imperfections” create friction, personality, and emotional depth in interactive spaces.</p>
+                            This post explores how deliberate "imperfections" create friction, personality, and emotional depth in interactive spaces.</p>
 
                         <ul class="project-tags">
                             <li class="project-tag p-category">Narrative Design</li>
                             <li class="project-tag p-category">Player Experience</li>
                             <li class="project-tag p-category">Game Feel</li>
                             <li class="project-tag p-category">Blog</li>
-
                         </ul>
                         <p class="p-description">Not every game world should run like a machine. 
                             In this post, I unpack the idea of designing for texture — adding rules that bend, moments that contradict, and characters that repeat 
-                            themselves just enough to feel strange and real. When something “feels off” on purpose, it lingers.</p>
+                            themselves just enough to feel strange and real. When something "feels off" on purpose, it lingers.</p>
 
                         <p class="key-feature">Explores: intentional friction, narrative texture, and how off-kilter design choices can enhance immersion.</p>
                         <section class="project-actions">
                             <a href="https://open.substack.com/pub/padifalas/p/how-i-break-my-worlds-on-purpose?r=5i57j7&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false" class="btn btn-primary" target="_blank">Read on Substack</a>
                         </section>
-                    </article >
-                    
+                    </article>
                 </li>
-                <!-- Project 3 -->
-                
+                <!-- project 4 -->
 <li class="project-card h-entry">
-    
-    <img src="https://i.pinimg.com/736x/0d/fd/b4/0dfdb43107f2f2891136e243e30cfe62.jpg" alt="A boy and girl by a river with a notebook" class="u-photo">
+    <img src="../images/hogwarts.png" alt="Hogwarts Legacy title card screenshot" class="u-photo">
     <article class="project-content">
-        <h3 class="p-name">The Words That Don’t Twist</h3>
+        <h3 class="p-name">Hogwarts Legacy: A Game Design Literacy Analysis</h3>
         <p class="p-summary">
-            A short narrative about Ramon, a boy who struggles with words, and Monica, a deaf girl who communicates through writing. 
-            Their connection transforms his relationship with language and reveals a quiet mystery hidden in a letter.
+            An in-depth analytical essay examining Hogwarts Legacy through the lens of game design literacy, exploring how mechanical systems, thematic elements, and player agency intersect in this ambitious open-world adaptation of the wizarding world.
         </p>
-
         <ul class="project-tags">
-            <li class="project-tag p-category">Short Story</li>
-            <li class="project-tag p-category">Disability Representation</li>
-            <li class="project-tag p-category">Coming of Age</li>
-            <li class="project-tag p-category">Narrative Fiction</li>
+            <li class="project-tag p-category">Game Analysis</li>
+            <li class="project-tag p-category">Design Criticism</li>
+            <li class="project-tag p-category">Academic Writing</li>
+            <li class="project-tag p-category">Blog</li>
+            
         </ul>
-
         <p class="p-description">
-            A gentle exploration of language, perception, and connection—this story reflects on how communication can transcend sound and how one sentence can change everything.
+            A comprehensive examination of how Hogwarts Legacy balances innovative gameplay mechanics with nostalgic fan service, analyzing everything from spell-casting systems to environmental storytelling through Zagal's framework of game design literacy.
         </p>
-        <p class="key-feature">Inspired by the idea that reading can become an act of courage and love.</p>
+        <p class="key-feature">Explores the tension between thematic coherence and conventional open-world design patterns in licensed game adaptations.</p>
         <section class="project-actions">
-            <a href="https://open.substack.com/pub/padifalas/p/the-words-that-dont-twist-a-short?r=5i57j7&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false" class="btn btn-primary" target="_blank">Read on Substack</a>
+            <a href="https://open.substack.com/pub/padifalas/p/hogwarts-legacy-agency-and-world?r=5i57j7&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false" class="btn btn-primary" target="_blank">Read on Substack</a>
         </section>
     </article>
 </li>
+                <!-- Project 5 -->
+                <li class="project-card h-entry">
+                    <img src="https://i.pinimg.com/736x/0d/fd/b4/0dfdb43107f2f2891136e243e30cfe62.jpg" alt="A boy and girl by a river with a notebook" class="u-photo">
+                    <article class="project-content">
+                        <h3 class="p-name">The Words That Don't Twist</h3>
+                        <p class="p-summary">
+                            A short narrative about Ramon, a boy who struggles with words, and Monica, a deaf girl who communicates through writing. 
+                            Their connection transforms his relationship with language and reveals a quiet mystery hidden in a letter.
+                        </p>
 
+                        <ul class="project-tags">
+                            <li class="project-tag p-category">Short Story</li>
+                            <li class="project-tag p-category">Disability Representation</li>
+                            <li class="project-tag p-category">Coming of Age</li>
+                            <li class="project-tag p-category">Narrative Fiction</li>
+                        </ul>
+
+                        <p class="p-description">
+                            A gentle exploration of language, perception, and connection—this story reflects on how communication can transcend sound and how one sentence can change everything.
+                        </p>
+                        <p class="key-feature">Inspired by the idea that reading can become an act of courage and love.</p>
+                        <section class="project-actions">
+                            <a href="https://open.substack.com/pub/padifalas/p/the-words-that-dont-twist-a-short?r=5i57j7&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false" class="btn btn-primary" target="_blank">Read on Substack</a>
+                        </section>
+                    </article>
+                </li>
             </ul>
         </section>
 
-         <!-- Web Dev stuff -->
-         <section class="portfolio-section" id="game-dev">
+        <!-- Web Development Projects Section -->
+        <section class="portfolio-section" id="webdev">
             <h2>Web Development Projects</h2>
             <ul class="project-grid">
-                <!-- Project 1 -->
-                <!-- <li class="project-card h-entry">
-            
-                    <img src="../images/game-project1.jpg" alt="3D Platform Game Screenshot" class="u-photo">
-                    <article class="project-content">
-                        <h3 class="p-name">Broken Bonds</h3>
-                        <p class="p-summary">3d game blah blah</p>
-                        <ul class="project-tags">
-                            <li class="project-tag p-category">Enviromental Storytelling</li>
-                            <li class="project-tag p-category">3D Platformer</li>
-                          
-                        </ul>
-                        <p class="p-description"></p>
-                        <div class="project-actions">
-                            <!- <a href="game-dev.html#project1" class="btn btn-primary">View Project</a> -->
-                            <!-- <a href="#" class="btn btn-secondary">GitHub</a> -->
-                        <!-- </div>
-                    </article>
-                
-                </li> --> 
-
-                <!-- Project 2 -->
-                <!-- <li class="project-card h-entry">
-            
-                    <img src="../images/game-project1.jpg" alt="3D Platform Game Screenshot" class="u-photo">
-                    <article class="project-content">
-                        <h3 class="p-name">Broken Bonds</h3>
-                        <p class="p-summary">3d game blah blah</p>
-                        <ul class="project-tags">
-                            <li class="project-tag p-category">Enviromental Storytelling</li>
-                            <li class="project-tag p-category">3D Platformer</li>
-                        </ul>
-                        <p class="p-description"></p>
-                        <div class="project-actions">
-                            <!- <a href="game-dev.html#project1" class="btn btn-primary">View Project</a> -->
-                            <!-- <a href="#" class="btn btn-secondary">GitHub</a>
-                        </div>
-                    </article>
-                   
-                </li> -->
-
-               
+              
             </ul>
         </section>
     </main>
 
-    <footer>
-        &copy; Padi Falas-Maifala Portfolio
-        
-        <section class="social-icons">
-            <a href="https://padifalass.itch.io" target="_blank" aria-label="Itch.io">
-                <i class="fab fa-itch-io"></i>
-            </a>
-            <a href="https://github.com/padifalas" target="_blank" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://linkedin.com/in/padi-maifala" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
 
-            </a>
-        </section>
-    </footer>
+    <script src="../javascripts/main.js"></script> 
+    <script src="../javascripts/portfolio.js"></script>
 </body>
 </html>

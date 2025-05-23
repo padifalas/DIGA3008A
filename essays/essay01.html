@@ -3,32 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="/styles.css" rel="stylesheet"/>
-    <link href="essays-post.css" rel="stylesheet"/>
-    <link href="../blogs/blog-post.css" rel="stylesheet" /> 
-    <link href="../blogs/blogs.css" rel="stylesheet" /> 
+     <link href="../styles.css" rel="stylesheet" /> <!-- Global CSS  -->
+    <link href="essays.css" rel="stylesheet" /> 
+    <link href="../blogs/blog-post.css" rel="stylesheet"/> <!--using this style sheet so i can use side bar navigation similar to the one in blogss-->
+    <link href="essays-post.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title>Essay 1:</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Marcellus&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Essay 1: Ethics, UI, UX & Interaction</title>
 </head>
-<main>
-    
-    <footer>
-        &copy; 2025 Padi Falas-Maifala Portfolio
+ <nav>
+        <!-- Logo and branding -->
+    <section class="logo">
+        <img src="../images/branding.png" alt="Padi Falas-Maifala Logo">
+    </section>
+
+        <!-- CSS-only Hamburger Menu -->
+    <input type="checkbox" id="menu-toggle">
+    <label class="hamburger" for="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
         
-        <section class="social-icons">
-            <a href="https://padifalass.itch.io" target="_blank" aria-label="Itch.io">
-                <i class="fab fa-itch-io"></i>
-            </a>
-            <a href="https://github.com/padifalas" target="_blank" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://linkedin.com/in/padi-maifala" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-        </section>
-    </footer>
+    <ul id="nav-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li class="active"><a href="index.html">Essays</a></li>
+            <li><a href="../blogs/index.html">Blogs</a></li>
+            <li class="dropdown">
+                <a href="../portfolio/index.html">Portfolio</a>
+            </li>
+            <li><a href="../design-process/index.html">Design-Process</a></li>
+            <li><a href="../index.html#about">About</a></li>
+        </ul>
+    </nav>     
+<body class="essay-page">
+    <section class="reading-progress"></section>
     
-</main>
+    <main>
+        <article class="h-entry">
+            <header class="essay-header">
+                <section class="essay-metadata">
+                    <time class="dt-published" datetime="2025-04-21">April 21, 2025</time>
+                    <span class="essay-category">UI & UX Reseacrh Essay</span>
+                </section>
+                <h1 class="p-name">Ethics, UI, UX & Interaction: A Case Study of Standard Bank South Africa's Digital Banking Platform on Desktop</h1>
+                <section class="p-author">by Padi Falas-Maifala</section>
+                <section class="essay-abstract">
+                    <strong>Abstract:</strong> This essay examines the intersection of ethics, user interface design, and user experience in Standard Bank South Africa's digital banking platform. Through the lens of established UI/UX principles and ethical frameworks, this analysis evaluates how the platform balances user needs with business objectives while navigating the complex South African digital landscape characterized by sectionerse digital literacy levels and significant socioeconomic disparities.
+                </section>
+            </header>
+
+            <section class="e-content">
+                <section>
+                    <h2>Introduction</h2>
+                    <p class="essay-intro">Over the past ten years, there has been a notable change in the digital landscape, which has shaped how people use websites and apps. In South Africa, where over 68% of people have access to the internet (Kemp, 2024), financial institutions have made significant investments in their online presence to satisfy consumer demands. With ethical considerations taking centre stage in design decisions, user interface (UI) and user experience (UX) design concepts have emerged as essential elements in producing successful digital interactions. In the context of financial services, where trust, accessibility, and security are paramount, ethical considerations in interaction design become even more critical.</p>
+
+                    <p>In this essay, I will analyse the UI and UX of Standard Bank's website and examine the ethical design of its principles. As one of the "big four" banks in South Africa, Standard Bank offers a fascinating case study because it caters to a wide range of customers with different levels of digital literacy in a sectionerse and unequal economy like South Africa. To evaluate how well the website strikes a balance between user requirements and business objectives while considering ethical considerations specific to the South African context, the analysis will make use of known UI/UX concepts and ethical frameworks.</p>
+                </section>
+
+                <section>
+                    <h2>Context of Case Study</h2>
+                    <p>Standard Bank is a core component of our country's financial sector. It serves millions of customers across personal and business banking. Its website serves as a primary touchpoint for digital banking, offering services ranging from account management to loan applications. It operates within a complex South African context characterized by notable differences between urban and rural populations' access to the internet and level of digital literacy, as our country grapples with huge digital sectionides; only a certain percentage of the population has access to the internet (Gillwald et al., 2023). It is also characterized by its compliance with the Protection of Personal Information Act (POPIA) and other financial regulations.</p>
+
+                    <p>The bank's website serves as both an informational platform and a gateway to its digital banking services, requiring a careful balance between security, usability, and inclusivity. This analysis focuses more on the desktop version of this website and evaluates through the lenses of UI/UX best practices and ethical frameworks and navigates these contextual factors through its design choices.</p>
+                </section>
+
+                <section>
+                    <h2>UI Analysis</h2>
+                    
+                    <h3>Visual Design and Information Architecture</h3>
+                    <p>Standard Bank website uses a clean, professional aesthetic that is dominated by the brand's blue and white colour scheme, reflects its brand identity. The website displays an organized information structure with the main navigation at the top, promotional content in the middle and product categories arranged by user segments personal, business, etc.</p>
+
+                    <p>Applying the Von Restorff Effect (Rafee, 2025), the website effectively uses visual contrast to highlight call-to-action (CTA) buttons. The "Sign In" button appears in a distinctive light blue against a darker blue background, making it immediately noticeable. This aligns with the principle that "when multiple similar objects are present, the one that differs from the rest is most likely to be remembered" (Rafee, 2025).</p>
+
+                    <figure style="margin: 30px 0; text-align: center;">
+                        <img src="../images/stBankSignIn.png" alt="Screenshot showing Standard Bank's Sign in button with visual contrast highlighting" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
+                        <figcaption style="margin-top: 10px; font-style: italic; color: #666; font-size: 14px;">Figure 1: Screenshot showing 'Sign in' button.</figcaption>
+                    </figure>
+
+                    <p>Hick's Law, which states that "the time it takes to make a decision increases with the number and complexity of choices," may be triggered by the homepage's abundance of options, which include banking products, promotions, tools, and resources (Rafee, 2025). Users may become overwhelmed by this cognitive overload, particularly those with low levels of computer literacy.</p>
+
+                    <h3>Navigation and Interaction Design</h3>
+                    <p>On content pages, the navigation system combines contextual sidebar navigation, dropdown sub-menus, and horizontal main menus. Users may become confused because of having to figure out various site navigation patterns, even while this offers multiple routes to content.</p>
+
+                    <p>The website's button design complies with to Fitts' Law, which ensures that interactive elements are big enough and positioned appropriately for effortless selection. According to (Raffee, 2025), "Larger and closer targets are faster and easier to interact with." On a financial website, where selection accuracy is crucial, this is especially crucial.</p>
+
+                    <section class="key-points">
+                        <h3>Key Design Principles Applied</h3>
+                        <p>Touch targets must be big enough for precise selection, with sufficient distance between targets to avoid mistakes, and positioned in sections of the interface that are simple to reach, like those that fall within a user's thumb or cursor's natural range (Raffee, 2025). This is particularly important on a banking website where accuracy in selection is important and critical.</p>
+                    </section>
+
+                    <p>The website makes use of breadcrumb navigation and shows the user their progress for multiple processes, like applying for loans, etc., efficiently using the Zeignarik Effect, which explains that "People remember uncompleted or interrupted tasks better than completed tasks" (Raffee, 2025). Because users can see where they are in a process and what more they must complete, the design of this website helps and maintains engagement, and minimizes the rate of them abandoning the website.</p>
+
+                    <figure style="margin: 30px 0; text-align: center;">
+                        <img src="../images/stBankNav.png" alt="Screenshot showing breadcrumb navigation on Standard Bank website" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
+                        <figcaption style="margin-top: 10px; font-style: italic; color: #666; font-size: 14px;">Figure 2: A screenshot of a website presenting breadcrumb navigation.</figcaption>
+                    </figure>
+
+                    <h3>Responsiveness & Accessibility</h3>
+                    <p>The standard bank website successfully presents responsive design principles, it adapts and responds across various screen sizes, including mobile and/or desktop screens, etc. There are however, inconsistencies when viewing using mobile screens; some elements become too small and thus difficult to interact with. This contradicts and violates Fitt's Law regarding spacing and target sizing which states that "The time to acquire a target is a function of the distance to and size of the target " (Raffee, 2025). Targets that are closer and larger can be interacted with more quickly.</p>
+
+                    <p>It has some accessibility features, including alternative texts for images, although some images don't have that, which is insufficient for users that are blind. Some interactive elements, like buttons have low contrast for users with visual impairments like colour blindness. This brings up concerns, ethically in regards to inclusivity, especially in South Africa where banking services should be inclusive in accessibility to everyone including people with various disabilities.</p>
+                </section>
+
+                <section>
+                    <h2>Ethical Considerations in Interaction Design</h2>
+                    
+                    <h3>Privacy & Data Ethics</h3>
+                    <p>A lot of user data is collected by Standard Bank's website, both explicitly through forms and secretly through cookies and other tracking technology. Although the website has cookie consent procedures and privacy statements, many users may not fully understand them because they are sometimes written in complex, legal terms. In a nation where many people have differing degrees of digital literacy, this calls into question informed consent.</p>
+
+                    <blockquote>
+                        <p>Personal information has not remained personal, as our private information is widely available to large corporations. It is the UX designers' duties to make effective use of this knowledge.</p>
+                        <cite>— Ghanchi (2021)</cite>
+                    </blockquote>
+
+                    <p>The ethical problem attempts to strike a balance between the advantages of personalization and privacy preservation. The website shows a dedication to protecting customer data by utilizing security measures like encryptions and automated session timeouts. However, the high number of marketing consent choices in registration procedures raises the possibility of a conflict between user privacy and the company's objectives.</p>
+
+                    <h3>Persuasive Design and Dark Patterns</h3>
+                    <p>Subtle persuasive design components can be found by analysing the credit card and loan application processes; and the setting up of auto payments. Psychological concepts are used to influence user decisions through pre-selected options, a focus on benefits and advantages rather than costs, and urgency messages. These components pose moral concerns regarding the distribution of power between the organization and its clients, even when they are not outwardly-lying.</p>
+
+                    <blockquote>
+                        <p>The boundary between white-hat persuasion and grey-hat or black-hat persuasion sometimes becomes obscured.</p>
+                        <cite>— Ghanchi (2021)</cite>
+                    </blockquote>
+
+                    <p>Though some attractive aspects may persuade consumers to make financial decisions without fully considering the repercussions, Standard Bank generally avoids the more troublesome dark patterns, such as forced continuity or hidden fees. You can find pop-ups that advertise pre-approved loans which in a way emphasize urgency to entice people to make quick decisions. Users could avoid Debt traps if the website is more transparent with in disclosing risks of debt.</p>
+
+                    <section class="example-box">
+                        <h4>Examples of Ethical Concerns</h4>
+                        <ul>
+                            <li><strong>Quick Invest Feature:</strong> Although the "Quick Invest" function makes buying financial goods easier, it does not provide contextual alerts about market dangers. Including required risk assessments would be in line with ethical design principles and enable well-informed decision-making.</li>
+                            <li><strong>Cookie Consent:</strong> With the "Manage Preferences" link in low contrast grey, the cookie banner's default setting is "Accept All Cookies." This encourages users to give up data without giving their informed consent, which is against POPIA's mandate for "explicit, voluntary" opt-ins (POPIA, 2020).</li>
+                        </ul>
+                    </section>
+
+                    <figure style="margin: 30px 0; text-align: center;">
+                        <img src="../images/stBankCookies.png" alt="Screenshot showing Manage Preferences Banner with low contrast" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
+                        <figcaption style="margin-top: 10px; font-style: italic; color: #666; font-size: 14px;">Figure 3: Screenshot showing Manage Preferences Banner.</figcaption>
+                    </figure>
+
+                    <h3>Inclusivity and Accessibility</h3>
+                    <p>Providing services to the sectionerse population of South Africa presents special challenges for Standard Bank. Even though the country has eleven official languages, the website exclusively provides content in English. This raises serious ethical questions about inclusivity and accessibility since it could exclude non-native English speakers from equal access to financial services.</p>
+
+                    <p>The website's performance optimization indicates that visitors with limited internet access are taken into consideration, which is a crucial ethical factor in South Africa where data costs are still high. Users can start reading while images load because pages load gradually, with text content coming before heavy media elements.</p>
+
+                    <blockquote>
+                        <p>Ethical design involves avoiding all kinds of discriminatory messaging through your design solutions.</p>
+                        <cite>— Ghanchi (2021)</cite>
+                    </blockquote>
+
+                    <p>Although Standard Bank's marketing imagery depicts a variety of South African demographics, certain groups of people may be at a disadvantage due to the English-only content and complicated financial language.</p>
+
+                    <h3>Transparency and Trust</h3>
+                    <p>Users are entitled to know how their information is being used. To facilitate informed decision-making, UX designers should guarantee openness by presenting data collection, processing, and usage in plain terms (GeekforGeeks, 2024).</p>
+
+                    <p>Because financial decisions have such large consequences, openness on financial websites needs special attention. Standard Bank helps consumers make educated decisions by offering calculators, comparison tools, and product information. Bank fees are occasionally displayed on secondary pages that require extra clicks to access; a design principle/decision that may compromise transparency.</p>
+
+                    <figure style="margin: 30px 0; text-align: center;">
+                        <img src="../images/stBankFees.png" alt="Screenshot showing fees displayed on secondary page" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
+                        <figcaption style="margin-top: 10px; font-style: italic; color: #666; font-size: 14px;">Figure 4: Screenshot of website showing Fees on secondary page.</figcaption>
+                    </figure>
+
+                    <p>It reflects what Ghanchi (2021) refers to as ethical design that respects users' time by giving feedback about background operations through the regular use of loading indicators and system status messages throughout interactive procedures. Gaining users' trust is facilitated by this system state transparency.</p>
+
+                    <section class="key-points">
+                        <h3>Recommendations for Ethical Improvement</h3>
+                        <p>To improve the ethics of the website, I would recommend they have more language options on the website, especially for important financial information and application processes. To guarantee full understanding and consent, the privacy notices and consent procedures should be rewritten using straightforward language and clear visual aids. Persuasion could also be balanced to make sure they educate rather than deceive users, especially when it comes to credit products. Accessibility could also be improved to be more inclusive and better assist all demographics and people with disabilities. Important details such as costs and conditions should be given the same visual attention as benefits and advantages.</p>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Conclusion</h2>
+                    <p>The website of Standard Bank South Africa exemplifies the expert application of UI/UX principles while battling challenging ethical issues. For educated consumers, an effective interface is produced using psychological design principles such as Fitts' Law, the Von Restorff Effect, and the Zeigarnik Effect. But striking a balance between corporate goals and the demands of South Africa's varied population still presents ethical difficulties.</p>
+
+                    <blockquote>
+                        <p>Balancing your professional goals and moral values when designing user experiences is what ethical design is all about.</p>
+                        <cite>— Ghanchi (2021)</cite>
+                    </blockquote>
+
+                    <p>Although Standard Bank has made progress in this complex balancing act, it could strengthen its ethical position even further by giving sectionersity, transparency, and honest informed consent greater attention.</p>
+
+                    <p>This case study is a prime example of the tension between ethical responsibility and decent design. Although its UI/UX promotes usability, shortcomings in user control, transparency, and inclusivity highlight areas for improvement. Financial platforms like the Standard Bank website may create fair digital spaces and user-friendly interfaces by including ethical considerations into every design decision, from colour contrast to data consent. Ethical design is a moral requirement and about actively supporting fair accessibility and transparency at a time and country where technology influences financial well-being.</p>
+                </section>
+            </section>
+
+            <footer class="essay-footer">
+                <h2>References</h2>
+                <ol class="p-bibliography">
+                    <li class="h-cite">
+                        <span class="p-name">Personal and business banking</span> (no date a) Personal and Business Banking. Available at: https://www.standardbank.co.za/southafrica/personal (Accessed: 16 April 2025).
+                    </li>
+                    <li class="h-cite">
+                        <span class="p-author">Ghanchi, J.</span> (2021). <span class="p-name">Ethical Design: Why Is It Critical for UX Designers? :: UXmatters</span>. [online] www.uxmatters.com. Available at: https://www.uxmatters.com/mt/archives/2021/02/ethical-design-why-is-it-critical-for-ux-designers.php (Accessed: 16 April 2025).
+                    </li>
+                    <li class="h-cite">
+                        <span class="p-author">Kemp, S.</span> (2024). <span class="p-name">Digital 2024: South Africa</span>. [online] DataReportal – Global Digital Insights. Available at: https://datareportal.com/reports/digital-2024-south-africa (Accessed: 16 April 2025).
+                    </li>
+                    <li class="h-cite">
+                        https://researchictafrica.net/author/alison-gillwald (2018). <span class="p-name">The state of ICT in South Africa</span>. [online] Research ICT Africa. Available at: https://researchictafrica.net/research/state-of-ict-in-south-africa/ (Accessed: 17 April 2025).
+                    </li>
+                    <li class="h-cite">
+                        <span class="p-author">Rafee, I.</span> (2025). <span class="p-name">UX Principles – Module 2: Ethical UI & UX / CSS [pdf]</span>. University of the Witwatersrand. Available at: https://ulwazi.wits.ac.za/files/8542810/download?download_frd=1 (Accessed: 17 April 2025).
+                    </li>
+                    <li class="h-cite">
+                        <span class="p-author">GeeksforGeeks.</span> (2024). <span class="p-name">Ethical Considerations in UX Design</span>. [online] Available at: https://www.geeksforgeeks.org/ethical-considerations-in-ux-design/ (Accessed: 17 April 2025).
+                    </li>
+                    <li class="h-cite">
+                        www.saica.org.za. (n.d.). <span class="p-name">Protection of Personal Information Act (POPIA)</span>. [online] Available at: https://www.saica.org.za/resources/legislation-and-governance/protection-of-personal-information-act-popia (Accessed: 18 April 2025).
+                    </li>
+                </ol>
+            </footer>
+        </article>
+    </main>
+
+    
+
+    <script>
+        //  progress indicator
+        window.addEventListener('scroll', () => {
+            const article = document.querySelector('article');
+            const progressBar = document.querySelector('.reading-progress');
+            const scrollTop = window.pageYOffset;
+            const documentHeight = article.offsetHeight;
+            const windowHeight = window.innerHeight;
+            const scrollPercent = scrollTop / (documentHeight - windowHeight);
+            const scrollPercentRounded = Math.round(scrollPercent * 100);
+            
+            if (scrollPercentRounded <= 100) {
+                progressBar.style.width = scrollPercentRounded + '%';
+            }
+        });
+    </script>
+    <script src="../javascripts/main.js"></script> 
+    <script src="../javascripts/blogs.js"></script>
 </body>
 </html>

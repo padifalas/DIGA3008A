@@ -1,28 +1,27 @@
 :root {
-    /* Base colors - enhanced from blog styling for essays */
     --essay-bg: #f9f7f3;
     --essay-content-bg: #ffffff;
-    --essay-border: rgba(0, 0, 0, 0.1);
+    --essay-border:  rgba(0, 0, 0, 0.08);
     --essay-shadow: rgba(0, 0, 0, 0.08);
     --heading-color: #2d2d2d;
     --text-color: #333333;
-    --accent-color: #3a6d7c; /* Teal instead of green for distinction */
-    --secondary-accent: #d97843; /* Warm orange as contrast */
-    --tertiary-accent: #f2a276; /* Lighter orange for hover effects */
-    --link-color: #3a6d7c;
-    --link-hover: #2c535f;
+    --accent-color: #3a6d7c; 
+    --secondary-accent: #d97843; 
+    --tertiary-accent: #f2a276; 
+      --link-color: #fff;
+    --link-hover: #3a6b42;
     --quote-bg: #f7f5f2;
     --code-bg: #f5f5f5;
     
-    /* Original blog variables we need to maintain compatibility */
+    
     --dark-text: #333333;
     --cream: #f9f7f3;
     --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     
-    /* Enhanced gradients */
-    --gradient-scholarly: linear-gradient(120deg, #3a6d7c, #5a9bab); /* Teal gradient */
-    --gradient-accent: linear-gradient(120deg, #d97843, #f2a276); /* Orange gradient */
-    --gradient-light: linear-gradient(120deg, #e4e8ed, #f9f7f3); /* Subtle light gradient */
+  
+    --gradient-scholarly: linear-gradient(120deg, #3a6d7c, #5a9bab); 
+    --gradient-accent: linear-gradient(120deg, #d97843, #f2a276); 
+    --gradient-light: linear-gradient(120deg, #e4e8ed, #f9f7f3); 
     --gradient-hero: linear-gradient(135deg, #3a6d7c, #5a9bab, #f2a276, #d97843);
     
     --border-radius: 12px;
@@ -38,7 +37,7 @@ body.essay-page {
     padding: 0;
 }
 
-/* Reading progress indicator - enhanced */
+/*  progress indicator -  */
 .reading-progress {
     position: fixed;
     top: 0;
@@ -50,7 +49,7 @@ body.essay-page {
     transition: width 0.2s ease;
 }
 
-/* Main content layout */
+
 main {
     max-width: 850px;
     margin: 40px auto 80px;
@@ -65,7 +64,7 @@ article.h-entry {
     position: relative;
 }
 
-/* Stylish essay header */
+
 .essay-header {
     background: none;
     box-shadow: none;
@@ -156,7 +155,7 @@ article.h-entry {
     line-height: 1.8;
 }
 
-/* Special treatment for intro paragraph */
+
 .essay-intro {
     font-size: 19px;
     line-height: 1.7;
@@ -165,7 +164,7 @@ article.h-entry {
     padding-left: 20px;
 }
 
-/* Key points highlight */
+
 .key-points {
     background: linear-gradient(to right, rgba(58, 109, 124, 0.05), rgba(58, 109, 124, 0.15));
     border-radius: 8px;
@@ -189,7 +188,7 @@ article.h-entry {
     position: relative;
 }
 
-/* Example box */
+
 .example-box {
     background-color: rgba(217, 120, 67, 0.08);
     border-radius: 8px;
@@ -216,7 +215,7 @@ article.h-entry {
     color: var(--secondary-accent);
 }
 
-/* Enhanced blockquote */
+
 .e-content blockquote {
     margin: 30px 0;
     padding: 30px 40px;
@@ -251,16 +250,17 @@ article.h-entry {
 
 /* References section */
 .essay-footer {
-    margin-top: 50px;
-    padding-top: 30px;
+    margin-top: 40px;
+    padding-top: 20px;
     border-top: 1px solid var(--essay-border);
 }
 
 .essay-footer h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
+    font-size: 22px;
+    font-weight: 600;
     color: var(--heading-color);
-    margin: 0 0 25px;
+    margin: 0 0 20px;
 }
 
 .p-bibliography {
@@ -282,7 +282,7 @@ article.h-entry {
     font-style: italic;
 }
 
-/* Links within essay content */
+/* links within essay stuff */
 .e-content a {
     color: var(--accent-color);
     text-decoration: none;
@@ -296,20 +296,10 @@ article.h-entry {
     border-bottom: 1px solid var(--link-hover);
 }
 
-/* Make sure footer is styled correctly */
-footer {
-    padding: 40px 20px 30px;
-    border-top: none;
-    text-align: center;
-    margin-top: 0;
-    font-size: 16px;
-    background: var(--gradient-scholarly); /* Use scholarly gradient for essays */
-    color: white;
-    position: relative;
-    overflow: hidden;
-}
 
-/* Social icons in footer */
+
+
+
 .social-icons a {
     color: white;
     margin: 0 15px;
@@ -324,7 +314,7 @@ footer {
     filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.2));
 }
 
-/* Responsive adjustments */
+
 @media screen and (max-width: 900px) {
     article.h-entry {
         padding: 40px 35px;
@@ -398,7 +388,7 @@ footer {
     }
 }
 
-/* Print styles */
+
 @media print {
     body {
         background: white;
