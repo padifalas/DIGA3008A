@@ -595,7 +595,7 @@ nav .dropdown > a:after {
     left: 0;
     top: 20px;
     transform: translateX(-100%);
-    background: white;
+    background: var(--accent-color);
     border: none;
     width: 50px;
     height: 50px;

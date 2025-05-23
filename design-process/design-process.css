@@ -1,5 +1,3 @@
-
-
 :root {
     
     --process-bg: #f8f5f0;
@@ -177,7 +175,7 @@ body.design-process-page main:after {
     border-bottom: 1px solid var(--accent-color);
 }
 
-/* this is so webste is responsive */
+/* this is so webste is responsive... not perfect*/
 @media screen and (max-width: 992px) {
     body.design-process-page main:after {
         font-size: 48px;

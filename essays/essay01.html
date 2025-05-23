@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link href="../styles.css" rel="stylesheet" /> <!-- Global CSS  -->
     <link href="essays.css" rel="stylesheet" /> 
-    <link href="../blogs/blog-post.css" rel="stylesheet"/> <!--using this style sheet so i can use side bar navigation similar to the one in blogss-->
     <link href="essays-post.css" rel="stylesheet" />
+     <link href="../blogs/blog-post.css" rel="stylesheet"/> <!--using this style sheet so i can use side bar navigation similar to the one in blogss-->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Marcellus&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,13 +17,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <title>Essay 1: Ethics, UI, UX & Interaction</title>
 </head>
- <nav>
-        <!-- Logo and branding -->
+<nav>
+    <!-- nav bar in the essay page doesnt seem to be inheriting the main navigation styling - the ::before section title is also overwritten so th
+     the title "Essays" shows up on the essay-post...its not supposed to lol -->
+
+      
     <section class="logo">
         <img src="../images/branding.png" alt="Padi Falas-Maifala Logo">
     </section>
 
-        <!-- CSS-only Hamburger Menu -->
+      
     <input type="checkbox" id="menu-toggle">
     <label class="hamburger" for="menu-toggle">
         <span></span>
@@ -82,9 +86,9 @@
 
                     <p>Applying the Von Restorff Effect (Rafee, 2025), the website effectively uses visual contrast to highlight call-to-action (CTA) buttons. The "Sign In" button appears in a distinctive light blue against a darker blue background, making it immediately noticeable. This aligns with the principle that "when multiple similar objects are present, the one that differs from the rest is most likely to be remembered" (Rafee, 2025).</p>
 
-                    <figure style="margin: 30px 0; text-align: center;">
-                        <img src="../images/stBankSignIn.png" alt="Screenshot showing Standard Bank's Sign in button with visual contrast highlighting" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
-                        <figcaption style="margin-top: 10px; font-style: italic; color: #666; font-size: 14px;">Figure 1: Screenshot showing 'Sign in' button.</figcaption>
+          <figure class="screenshot-figure">
+           <img src="../images/stBankSignIn.png" alt="Screenshot showing Standard Bank's Sign in button with visual contrast highlighting" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
+          <figcaption  class="screenshot-caption">Figure 1: Screenshot showing 'Sign in' button.</figcaption>
                     </figure>
 
                     <p>Hick's Law, which states that "the time it takes to make a decision increases with the number and complexity of choices," may be triggered by the homepage's abundance of options, which include banking products, promotions, tools, and resources (Rafee, 2025). Users may become overwhelmed by this cognitive overload, particularly those with low levels of computer literacy.</p>
@@ -101,9 +105,9 @@
 
                     <p>The website makes use of breadcrumb navigation and shows the user their progress for multiple processes, like applying for loans, etc., efficiently using the Zeignarik Effect, which explains that "People remember uncompleted or interrupted tasks better than completed tasks" (Raffee, 2025). Because users can see where they are in a process and what more they must complete, the design of this website helps and maintains engagement, and minimizes the rate of them abandoning the website.</p>
 
-                    <figure style="margin: 30px 0; text-align: center;">
+           <figure class="screenshot-figure">
                         <img src="../images/stBankNav.png" alt="Screenshot showing breadcrumb navigation on Standard Bank website" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
-                        <figcaption style="margin-top: 10px; font-style: italic; color: #666; font-size: 14px;">Figure 2: A screenshot of a website presenting breadcrumb navigation.</figcaption>
+                 <figcaption  class="screenshot-caption">Figure 2: A screenshot of a website presenting breadcrumb navigation.</figcaption>
                     </figure>
 
                     <h3>Responsiveness & Accessibility</h3>
@@ -143,9 +147,9 @@
                         </ul>
                     </section>
 
-                    <figure style="margin: 30px 0; text-align: center;">
+                    <figure class="screenshot-figure">
                         <img src="../images/stBankCookies.png" alt="Screenshot showing Manage Preferences Banner with low contrast" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
-                        <figcaption style="margin-top: 10px; font-style: italic; color: #666; font-size: 14px;">Figure 3: Screenshot showing Manage Preferences Banner.</figcaption>
+                        <figcaption  class="screenshot-caption">Figure 3: Screenshot showing Manage Preferences Banner.</figcaption>
                     </figure>
 
                     <h3>Inclusivity and Accessibility</h3>
@@ -165,9 +169,9 @@
 
                     <p>Because financial decisions have such large consequences, openness on financial websites needs special attention. Standard Bank helps consumers make educated decisions by offering calculators, comparison tools, and product information. Bank fees are occasionally displayed on secondary pages that require extra clicks to access; a design principle/decision that may compromise transparency.</p>
 
-                    <figure style="margin: 30px 0; text-align: center;">
+                    <figure class="screenshot-figure">
                         <img src="../images/stBankFees.png" alt="Screenshot showing fees displayed on secondary page" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
-                        <figcaption style="margin-top: 10px; font-style: italic; color: #666; font-size: 14px;">Figure 4: Screenshot of website showing Fees on secondary page.</figcaption>
+                        <figcaption  class="screenshot-caption">Figure 4: Screenshot of website showing Fees on secondary page.</figcaption>
                     </figure>
 
                     <p>It reflects what Ghanchi (2021) refers to as ethical design that respects users' time by giving feedback about background operations through the regular use of loading indicators and system status messages throughout interactive procedures. Gaining users' trust is facilitated by this system state transparency.</p>
@@ -222,24 +226,6 @@
         </article>
     </main>
 
-    
-
-    <script>
-        //  progress indicator
-        window.addEventListener('scroll', () => {
-            const article = document.querySelector('article');
-            const progressBar = document.querySelector('.reading-progress');
-            const scrollTop = window.pageYOffset;
-            const documentHeight = article.offsetHeight;
-            const windowHeight = window.innerHeight;
-            const scrollPercent = scrollTop / (documentHeight - windowHeight);
-            const scrollPercentRounded = Math.round(scrollPercent * 100);
-            
-            if (scrollPercentRounded <= 100) {
-                progressBar.style.width = scrollPercentRounded + '%';
-            }
-        });
-    </script>
     <script src="../javascripts/main.js"></script> 
     <script src="../javascripts/blogs.js"></script>
 </body>

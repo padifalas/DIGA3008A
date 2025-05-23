@@ -37,33 +37,190 @@ body.essay-page {
     padding: 0;
 }
 
+/* Hide the "Essays" text for individual essay pages */
+body.essay-page.individual-essay main::before {
+    display: none !important;
+}
+
+/* Apply index page styling to individual essay pages */
+body.essay-page.individual-essay {
+    background: var(--essay-bg);
+    min-height: 100vh;
+}
+
+body.essay-page.individual-essay main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Essay grid styling for individual essay pages */
+body.essay-page.individual-essay .essays {
+    margin-top: 40px;
+}
+
+body.essay-page.individual-essay .essay-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    padding: 20px 0;
+}
+
+body.essay-page.individual-essay .essay-card {
+    background: var(--essay-content-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    position: relative;
+    border: 1px solid var(--essay-border);
+}
+
+body.essay-page.individual-essay .essay-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+body.essay-page.individual-essay .essay-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+body.essay-page.individual-essay .essay-card:hover img {
+    transform: scale(1.05);
+}
+
+body.essay-page.individual-essay .essay-card-content {
+    padding: 30px;
+}
+
+body.essay-page.individual-essay .essay-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--heading-color);
+    margin: 0 0 15px;
+    line-height: 1.3;
+}
+
+body.essay-page.individual-essay .essay-card time {
+    display: block;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+body.essay-page.individual-essay .essay-card-tags {
+    margin: 20px 0;
+}
+
+body.essay-page.individual-essay .essay-tag {
+    background: var(--gradient-scholarly);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-right: 8px;
+}
+
+body.essay-page.individual-essay .main-takeaway {
+    margin: 20px 0;
+    padding: 15px;
+    background: linear-gradient(to right, rgba(58, 109, 124, 0.05), rgba(58, 109, 124, 0.1));
+    border-radius: 8px;
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+body.essay-page.individual-essay .card-buttons {
+    margin-top: 25px;
+}
+
+body.essay-page.individual-essay .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+body.essay-page.individual-essay .btn-secondary {
+    background: var(--gradient-scholarly);
+    color: white;
+}
+
+body.essay-page.individual-essay .btn-secondary:hover {
+    background: var(--gradient-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+body.essay-page.individual-essay .card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+body.essay-page.individual-essay .card-buttons a {
+    position: relative;
+    z-index: 2;
+}
+
+/* Subheading styling for individual essay pages */
+body.essay-page.individual-essay .essay-subheading {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--heading-color);
+    margin: 40px 0 20px;
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 /*  progress indicator -  */
 .reading-progress {
     position: fixed;
     top: 0;
     left: 0;
-    height: 4px;
+    height: 16px;
     background: var(--gradient-hero);
     z-index: 1001;
-    width: 0;
+    width: 5;
     transition: width 0.2s ease;
 }
 
-
-main {
+/*only appply to non-individual-essay pages */
+body.essay-page:not(.individual-essay) main {
     max-width: 850px;
-    margin: 40px auto 80px;
-    padding: 0 20px;
+    margin:  auto;
+    /* padding: 0 20px; */
 }
 
-article.h-entry {
+body.essay-page:not(.individual-essay) article.h-entry {
     background-color: var(--essay-content-bg);
     border-radius: var(--border-radius);
     padding: 50px;
     box-shadow: 0 5px 30px var(--essay-shadow);
     position: relative;
 }
-
 
 .essay-header {
     background: none;
@@ -126,7 +283,7 @@ article.h-entry {
     color: #444;
 }
 
-/* Content styling - enhanced from blog */
+
 .e-content h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 26px;
@@ -155,7 +312,6 @@ article.h-entry {
     line-height: 1.8;
 }
 
-
 .essay-intro {
     font-size: 19px;
     line-height: 1.7;
@@ -163,7 +319,6 @@ article.h-entry {
     border-left: 4px solid var(--secondary-accent);
     padding-left: 20px;
 }
-
 
 .key-points {
     background: linear-gradient(to right, rgba(58, 109, 124, 0.05), rgba(58, 109, 124, 0.15));
@@ -187,7 +342,6 @@ article.h-entry {
     margin-bottom: 12px;
     position: relative;
 }
-
 
 .example-box {
     background-color: rgba(217, 120, 67, 0.08);
@@ -215,7 +369,6 @@ article.h-entry {
     color: var(--secondary-accent);
 }
 
-
 .e-content blockquote {
     margin: 30px 0;
     padding: 30px 40px;
@@ -226,17 +379,6 @@ article.h-entry {
     color: #444;
     border-left: 4px solid var(--accent-color);
 }
-
-/* .e-content blockquote::before {
-    content: """;
-    font-family: 'Georgia', serif;
-    position: absolute;
-    top: 10px;
-    left: 15px;
-    font-size: 60px;
-    color: rgba(58, 109, 124, 0.2);
-    line-height: 0.8;
-} */
 
 .e-content blockquote cite {
     display: block;
@@ -296,10 +438,6 @@ article.h-entry {
     border-bottom: 1px solid var(--link-hover);
 }
 
-
-
-
-
 .social-icons a {
     color: white;
     margin: 0 15px;
@@ -314,19 +452,27 @@ article.h-entry {
     filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.2));
 }
 
-
 @media screen and (max-width: 900px) {
-    article.h-entry {
+    body.essay-page:not(.individual-essay) article.h-entry {
         padding: 40px 35px;
     }
     
     .essay-header h1 {
         font-size: 32px;
     }
+    
+    body.essay-page.individual-essay .essay-list {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    body.essay-page.individual-essay .essay-subheading {
+        font-size: 32px;
+    }
 }
 
 @media screen and (max-width: 768px) {
-    article.h-entry {
+    body.essay-page:not(.individual-essay) article.h-entry {
         padding: 35px 30px;
     }
     
@@ -345,14 +491,22 @@ article.h-entry {
     .e-content blockquote {
         padding: 25px 30px;
     }
+    
+    body.essay-page.individual-essay .essay-card-content {
+        padding: 25px;
+    }
+    
+    body.essay-page.individual-essay .essay-subheading {
+        font-size: 28px;
+    }
 }
 
 @media screen and (max-width: 480px) {
-    main {
+    body.essay-page:not(.individual-essay) main {
         margin: 20px auto 60px;
     }
     
-    article.h-entry {
+    body.essay-page:not(.individual-essay) article.h-entry {
         padding: 25px 20px;
         border-radius: 8px;
     }
@@ -386,8 +540,24 @@ article.h-entry {
     .e-content blockquote {
         padding: 25px 20px;
     }
+    
+    body.essay-page.individual-essay main {
+        padding: 20px 15px;
+    }
+    
+    body.essay-page.individual-essay .essay-list {
+        gap: 25px;
+    }
+    
+    body.essay-page.individual-essay .essay-card-content {
+        padding: 20px;
+    }
+    
+    body.essay-page.individual-essay .essay-subheading {
+        font-size: 24px;
+        margin: 30px 0 15px;
+    }
 }
-
 
 @media print {
     body {
@@ -430,5 +600,181 @@ article.h-entry {
     .key-points, .example-box {
         border: 1px solid #ddd;
         background: none;
+    }
+}
+.screenshot-figure {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.screenshot-img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.screenshot-caption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+    font-size: 14px;
+}
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.lightbox.active .lightbox-content {
+    transform: scale(1);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 40px;
+    height: 40px;
+    background: #ff4757;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+    transition: all 0.3s ease;
+    z-index: 10000;
+}
+
+.lightbox-close:hover {
+    background: #ff3742;
+    transform: rotate(90deg) scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 71, 87, 0.4);
+}
+
+.lightbox-image {
+    max-width: 100%;
+    max-height: 70vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.lightbox-caption {
+    margin-top: 15px;
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 600px;
+}
+
+
+.screenshot-figure img {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.screenshot-figure img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+.screenshot-figure {
+    position: relative;
+}
+
+.screenshot-figure::after {
+    content: '🔍︎ + 🔍';
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 8px;
+    border-radius: 15px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.screenshot-figure:hover::after {
+    opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+    .lightbox-content {
+        max-width: 95%;
+        max-height: 95%;
+        padding: 15px;
+    }
+    
+    .lightbox-image {
+        max-height: 60vh;
+    }
+    
+    .lightbox-close {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+        top: -12px;
+        right: -12px;
+    }
+    
+    .screenshot-figure::after {
+        display: none; 
+    }
+}
+
+@media (max-width: 480px) {
+    .lightbox-content {
+        padding: 10px;
+    }
+    
+    .lightbox-image {
+        max-height: 50vh;
+    }
+    
+    .lightbox-caption {
+        font-size: 12px;
+        margin-top: 10px;
     }
 }

@@ -227,7 +227,7 @@ body.portfolio-page main:after {
     color: white;
 }
 
-/* Thematic Tags */
+/*  tagsss */
 #game-dev .project-tag {
     background-color: #c8e6c9; 
     color: #1b5e20; 
@@ -285,18 +285,6 @@ body.portfolio-page main:after {
     background-color: rgba(74, 106, 141, 0.05);
 }
 
-
-
-
-/* decorative elements */
-.project-icon {
-    position: absolute;
-    bottom: 10px;
-    right: 15px;
-    font-size: 30px;
-    opacity: 0.5;
-    transform: rotate(-10deg);
-}
 
 /* responsive design */
 @media screen and (max-width: 900px) {
@@ -409,4 +397,76 @@ body.portfolio-page main:after {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+}
+.game-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.game-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(94, 157, 140, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.game-card:hover::before {
+    opacity: 1;
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) rotate(45deg); }
+}
+
+.writing-card {
+    transition: all 0.4s ease-out;
+    position: relative;
+}
+
+.writing-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(139, 110, 189, 0.8), transparent);
+    transition: all 0.4s ease;
+    transform: translateX(-50%);
+}
+
+.writing-card:hover::after {
+    width: 80%;
+}
+
+.project-tag {
+    transition: all 0.2s ease;
+    user-select: none;
+    position: relative;
+    overflow: hidden;
+}
+
+#game-dev .project-tag:hover {
+    box-shadow: 0 0 10px rgba(94, 157, 140, 0.5);
+}
+
+#narratives .project-tag:hover {
+    box-shadow: 0 0 10px rgba(139, 110, 189, 0.5);
+}
+
+.game-card:hover {
+    background: linear-gradient(135deg, var(--card-bg) 0%, rgba(94, 157, 140, 0.1) 100%);
+}
+
+.writing-card:hover {
+    background: linear-gradient(135deg, var(--card-bg) 0%, rgba(139, 110, 189, 0.1) 100%);
 }

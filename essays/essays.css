@@ -334,7 +334,7 @@ section.essays:hover h2:after {
     }
     
     .essay-subheading {
-        margin-top: 80px;
+         margin-top: 10vh;
     }
     
     .essay-card {
