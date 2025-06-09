@@ -51,7 +51,8 @@ function createSideNav(pageType) {
             { id: 'blog08', title: 'Close Reading: "Internet Access is a Fundamental Right."', url: 'blog11.html' },
             { id: 'blog09', title: 'Critical Reflection on Digital Inequalities in the Age of AI and Big Data', url: 'blog12.html' },
             { id: 'blog10', title: 'Incorporating JavaScript & Reflecting on Decolonial Coding Practices', url: 'blog13.html' },
-            { id: 'blog11', title: 'An Ethical Internet: Vision and Principles', url: 'blog14.html' }
+            { id: 'blog11', title: 'An Ethical Internet: Vision and Principles', url: 'blog14.html' },
+                  { id: 'blog12', title: 'Approaching Justice and Ethics in my Artistic and Programming Practice', url: 'blog15.html' }
         ];
     } else if (pageType === 'essay') {
         items = [
@@ -97,5 +98,6 @@ function createSideNav(pageType) {
         } else {
             icon.className = 'fas fa-chevron-right';
         }
+
     });
 }

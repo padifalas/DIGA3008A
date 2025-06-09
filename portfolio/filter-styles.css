@@ -1,26 +1,26 @@
 /* filtee byns holder/container */
 #filter-buttons {
     text-align: center;
-    margin: 40px 0 50px;
+    margin: 2.5rem 0 3.125rem; 
     padding: 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 0.625rem; 
 }
 
-/* filter btnsz style */
+/* filter buttons style */
 .filter-btn {
     background-color: #fff;
     color: #333;
-    border: 2px solid #333;
-    padding: 10px 25px;
+    border: 0.125rem solid #333; 
+    padding: 0.625rem 1.5625rem; 
     cursor: pointer;
-    border-radius: 30px;
+    border-radius: 1.875rem; 
     transition: all 0.3s ease;
     font-family: var(--body-font);
     font-weight: 600;
-    font-size: 14px;
+    font-size: 0.875rem;
     position: relative;
     overflow: hidden;
 }
@@ -31,37 +31,34 @@
     color: #fff;
 }
 
-
 .filter-btn:hover {
     background-color: var(--highlight-color);
     border-color: var(--highlight-color);
     color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transform: translateY(-0.125rem); 
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15); 
 }
-
 
 .filter-btn.active {
     background-color: #333;
     border-color: #333;
     color: #fff;
     transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); 
 }
 
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 37.5rem) { 
     .filter-btn {
-        padding: 8px 18px;
-        font-size: 13px;
+        padding: 0.5rem 1.125rem; 
+        font-size: 0.8125rem; 
     }
-    
+
     #filter-buttons {
-        margin: 30px 0;
+        margin: 1.875rem 0; 
     }
 }
 
-/* filtering animadmx*/
+/* filtering animation */
 .project-card {
     transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
@@ -70,8 +67,13 @@
     transition: opacity 0.5s ease-in-out;
 }
 
-
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(0.625rem); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

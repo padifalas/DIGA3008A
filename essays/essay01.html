@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link href="../styles.css" rel="stylesheet" /> <!-- Global CSS  -->
+
     <link href="essays.css" rel="stylesheet" /> 
     <link href="essays-post.css" rel="stylesheet" />
      <link href="../blogs/blog-post.css" rel="stylesheet"/> <!--using this style sheet so i can use side bar navigation similar to the one in blogss-->
+    <link href="../styles.css" rel="stylesheet" /> <!-- Global CSS  -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Marcellus&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
@@ -17,16 +18,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <title>Essay 1: Ethics, UI, UX & Interaction</title>
 </head>
-<nav>
-    <!-- nav bar in the essay page doesnt seem to be inheriting the main navigation styling - the ::before section title is also overwritten so th
-     the title "Essays" shows up on the essay-post...its not supposed to lol -->
-
+ <nav>
       
     <section class="logo">
         <img src="../images/branding.png" alt="Padi Falas-Maifala Logo">
     </section>
 
-      
+   
     <input type="checkbox" id="menu-toggle">
     <label class="hamburger" for="menu-toggle">
         <span></span>
@@ -45,8 +43,9 @@
             <li><a href="../design-process/index.html">Design-Process</a></li>
             <li><a href="../index.html#about">About</a></li>
         </ul>
-    </nav>     
-<body class="essay-page">
+    </nav>  
+<body class="essay-page has-lightbox individual-essay">
+
     <section class="reading-progress"></section>
     
     <main>
@@ -219,7 +218,8 @@
                         <span class="p-author">GeeksforGeeks.</span> (2024). <span class="p-name">Ethical Considerations in UX Design</span>. [online] Available at: https://www.geeksforgeeks.org/ethical-considerations-in-ux-design/ (Accessed: 17 April 2025).
                     </li>
                     <li class="h-cite">
-                        www.saica.org.za. (n.d.). <span class="p-name">Protection of Personal Information Act (POPIA)</span>. [online] Available at: https://www.saica.org.za/resources/legislation-and-governance/protection-of-personal-information-act-popia (Accessed: 18 April 2025).
+                        www.saica.org.za. (n.d.). <span class="p-name">Protection of Personal Information Act (POPIA)</span>. [online] Available at:  <a class="u-url" href="https://www.saica.org.za/resources/legislation-and-governance/protection-of-personal-information-act-popia"target="_blank">
+                            https://www.saica.org.za/resources/legislation-and-governance/protection-of-personal-information-act-popia</a> (Accessed:<time datetime="2025-04-18"></time> 18 April 2025).
                     </li>
                 </ol>
             </footer>

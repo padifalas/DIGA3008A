@@ -20,7 +20,7 @@
     --gradient-forest: linear-gradient(120deg, #4d8c57, #8bb8a8); 
     --gradient-earth: linear-gradient(120deg, #9d7e67, #c4b7a6); 
     --gradient-hero: linear-gradient(135deg, #4d8c57, #8bb8a8, #a4c8e1, #e6a57e); 
-    --border-radius: 8px;
+    --border-radius: 0.5rem;
     --transition: all 0.3s ease;
 }
 
@@ -32,92 +32,7 @@ body {
     margin: 0;
     padding: 0;
 }
-/* Navigation */
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1.8px solid #000;
-    padding: 15px 0;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: var(--box-shadow);
-    border-radius: 1px;
-    margin-top: auto;
-    transition: all 0.4s cubic-bezier(0.33, 1, 0.68, 1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 25px;
-}
 
-nav:hover {
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 0;
-}
-
-.logo img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-}
-
-.logo h3 {
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--accent-color);
-}
-
-.logo:hover img {
-    transform: rotate(10deg);
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    padding: 0 20px;
-}
-
-nav ul li {
-    margin: 0 15px;
-    font-weight: 600;
-    position: relative;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-size: 14px;
-}
-
-nav ul li a, nav ul li {
-    text-decoration: none;
-    color: var(--dark-text);
-    padding: 8px 15px;
-    border-radius: 25px;
-    transition: all 0.5s cubic-bezier(0.33, 1, 0.68, 1);
-}
-
-nav ul li a:hover, nav ul li:hover {
-    background-color: var(--cream);
-    cursor: pointer;
-    transform: translateY(-3px);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-/* active  indicator */
-nav ul li.active, 
-nav ul li.active a {
-    background: var(--gradient-forest);
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: var(--box-shadow);
-}
 
 
 body.blog-page main:after {
@@ -171,70 +86,7 @@ body.blog-page main:after {
 .hamburger.open span:nth-child(3) {
     transform: rotate(-45deg);
 }
-/* Header styling */
-header {
-    background-color: var(--blog-content-bg);
-    box-shadow: 0 2px 10px var(--blog-shadow);
-    padding: 20px 0;
-    margin-bottom: 40px;
-}
 
-header h1 {
-    font-family: 'Playfair Display', 'Marcellus', serif;
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--heading-color);
-    text-align: center;
-    margin: 0 0 15px;
-}
-
-header nav {
-    display: flex;
-    justify-content: center;
-}
-
-header nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-header nav ul li {
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: var(--link-color);
-    font-weight: 600;
-    font-size: 16px;
-    transition: var(--transition);
-    position: relative;
-}
-
-header nav ul li a:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: var(--link-color);
-    transition: var(--transition);
-}
-
-header nav ul li a:hover:after {
-    width: 100%;
-}
-
-nav ul li.dropdown > a:after {
-    content: "⌄";
-    font-size: 10px;
-    margin-left: 5px;
-    vertical-align: middle;
-    display: inline-block; 
-}
 
 
 main {
@@ -416,7 +268,7 @@ footer.h-card {
 /*  styling for dates */
 time {
     font-style: italic;
-    color: #777;
+    color: #e9b004;
 }
 
 
@@ -440,132 +292,6 @@ code {
     transition: width 0.2s ease;
 }
 
-/* Footer */
-footer {
-    padding: 40px 20px 30px;
-    border-top: none;
-    text-align: center;
-    margin-top: 0;
-    font-size: 16px;
-    background: var(--gradient-forest);
-    color: white;
-    position: relative;
-    overflow: hidden;
-}
-
-
-footer::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50% 50% 0 0;
-}
-
-.social-icons {
-    margin-top: 25px;
-    position: relative;
-    z-index: 2;
-}
-
-.social-icons a {
-    color: white;
-    margin: 0 15px;
-    font-size: 1.8em;
-    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-    display: inline-block;
-}
-
-.social-icons a:hover {
-    color: var(--tertiary-accent);
-    transform: translateY(-10px) scale(1.3);
-    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.2));
-}
-
-/* Dropdown styling */
-nav .dropdown {
-    position: relative;
-}
-
-nav .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 10px 0;
-    z-index: 1001;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 5px;
-}
-
-nav .dropdown:hover .dropdown-content {
-    display: block;
-}
-
-nav .dropdown-content li {
-    display: block;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(-10px);
-    animation: fadeInItem 0.5s ease forwards;
-    animation-delay: calc(0.1s * var(--i));
-}
-
-nav .dropdown-content li a {
-    padding: 8px 15px;
-    display: block;
-    color: var(--dark-text);
-    text-transform: none;
-    letter-spacing: 1px;
-    font-size: 14px;
-    border-radius: 4px;
-    margin: 2px 8px;
-    transition: all 0.3s ease;
-}
-
-nav .dropdown-content li a:hover {
-    background-color: var(--cream);
-    transform: translateY(0);
-    box-shadow: none;
-}
-
-/* Active state for dropdown items */
-nav .dropdown-content li.active a {
-    background: var(--gradient-forest);
-    color: white;
-    transform: translateY(0);
-    box-shadow: none;
-}
-
-/* Dropdown indicator */
-nav .dropdown > a:after {
-    content: "▼";
-    font-size: 10px;
-    margin-left: 5px;
-    vertical-align: middle;
-}
-
-/* Animation for dropdown items */
-@keyframes fadeInItem {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 
 

@@ -1,3 +1,34 @@
+
+function initializeBackToTop() {
+   
+    const backToTopBtn = document.createElement('button');  // his its to createh the back to top button
+    backToTopBtn.className = 'back-to-top';
+    backToTopBtn.setAttribute('aria-label', 'Back to top');
+    backToTopBtn.innerHTML = `
+        <img src="../images/pandora.png" alt="Back to top" class="back-to-top-image">
+    `;
+    
+    // will add thee button to page
+    document.body.appendChild(backToTopBtn);
+    
+    // so it show/hide button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+    
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
 //footer so its consistent on all pages using java
 document.addEventListener("DOMContentLoaded", () => {
     const currentYear = new Date().getFullYear();
@@ -23,10 +54,16 @@ document.addEventListener("DOMContentLoaded", () => {
     initializeSmoothScrolling();
     initializeReadingProgress();
     initializeLightbox(); 
+      initializeBackToTop();
 });
 
 
 function initializeLightbox() {
+
+     // only make wirk on pages with lightbox class
+    if (!document.body.classList.contains('has-lightbox')) {
+        return;
+    }
    
     const lightboxHTML = `
         <div id="lightbox" class="lightbox">

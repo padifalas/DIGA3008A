@@ -141,20 +141,6 @@ section.blogs:hover h2:after {
     border: 2px solid #000;
 }
 
-/* .blog-card:nth-child(3n+1) {   i like the black borders more
-    background-color: var(--card-1-bg);
-    border-color: var(--accent-color);
-}
-
-.blog-card:nth-child(3n+2) {
-    background-color: var(--card-2-bg);
-    border-color: var(--secondary-accent);
-}
-
-.blog-card:nth-child(3n+3) {
-    background-color: var(--card-3-bg);
-    border-color: var(--tertiary-accent);
-} */
 
 .blog-card:hover {
     transform: translateY(-8px) scale(1.02);
