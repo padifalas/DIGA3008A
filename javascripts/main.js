@@ -5,7 +5,7 @@ function initializeBackToTop() {
     backToTopBtn.className = 'back-to-top';
     backToTopBtn.setAttribute('aria-label', 'Back to top');
     backToTopBtn.innerHTML = `
-        <img src="../images/pandora.png" alt="Back to top" class="back-to-top-image">
+        <img src="../images/back-to-top.png" alt="Back to top" class="back-to-top-image">
     `;
     
     // will add thee button to page

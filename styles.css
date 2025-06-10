@@ -897,8 +897,8 @@ footer *:last-child {
     transform: translateY(20px) scale(0.8);
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     padding: 0;
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(10px);
