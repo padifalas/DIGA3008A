@@ -310,9 +310,159 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     }
 
-   
+
+function mobileTouchSupport() {
+    // Touch support for project cards
+    projectCards.forEach(card => {
+        let touchStartTime = 0;
+        let touchMoved = false;
+        
+        card.addEventListener('touchstart', (e) => {
+            touchStartTime = Date.now();
+            touchMoved = false;
+            
+            // Trigger hover effect on touch start
+            const section = card.closest('.portfolio-section').id;
+            currentHoveredCard = card;
+            
+            if (section === 'game-dev') {
+                card.style.transform = 'translateY(-8px) scale(1.03) rotateX(2deg)';
+                card.style.boxShadow = '0 0 25px rgba(94, 157, 140, 0.6), 0 12px 20px rgba(0,0,0,0.2)';
+                card.style.filter = 'contrast(1.1) saturate(1.2)';
+            } else if (section === 'narratives') {
+                card.style.transform = 'translateY(-5px) scale(1.02)';
+                card.style.boxShadow = '0 15px 35px rgba(139, 110, 189, 0.3), 0 5px 15px rgba(0,0,0,0.1)';
+                
+                // Typewriter effect for mobile
+                const title = card.querySelector('h3');
+                if (title && !title.dataset.animated) {
+                    title.dataset.animated = 'true';
+                    const text = title.textContent;
+                    title.textContent = '';
+                    let i = 0;
+                    const typeWriter = setInterval(() => {
+                        title.textContent += text.charAt(i);
+                        i++;
+                        if (i >= text.length) clearInterval(typeWriter);
+                    }, 50);
+                }
+            }
+        });
+        
+        card.addEventListener('touchmove', () => {
+            touchMoved = true;
+        });
+        
+        card.addEventListener('touchend', (e) => {
+            const touchDuration = Date.now() - touchStartTime;
+            
+            // Reset hover effects
+            currentHoveredCard = null;
+            card.style.transform = '';
+            card.style.boxShadow = '';
+            card.style.filter = '';
+            
+            const title = card.querySelector('h3');
+            if (title) title.dataset.animated = 'false';
+            
+            // If it was a quick tap (not a scroll), trigger click
+            if (!touchMoved && touchDuration < 500) {
+                const section = card.closest('.portfolio-section').id;
+                if (section === 'game-dev') {
+                    card.style.transform = 'scale(0.98)';
+                    card.style.filter = 'brightness(1.3) hue-rotate(10deg)';
+                } else {
+                    card.style.transform = 'scale(0.99)';
+                }
+                
+                setTimeout(() => {
+                    card.style.transform = '';
+                    card.style.filter = '';
+                }, 150);
+            }
+        });
+    });
+    
+    // Touch support for project tags
+    projectTags.forEach(tag => {
+        let tagTouchStartTime = 0;
+        let tagTouchMoved = false;
+        
+        tag.addEventListener('touchstart', (e) => {
+            e.preventDefault(); // Prevent default touch behavior
+            tagTouchStartTime = Date.now();
+            tagTouchMoved = false;
+            
+            // Visual feedback on touch
+            const section = tag.closest('.portfolio-section').id;
+            if (section === 'game-dev') {
+                tag.style.transform = 'scale(1.05) rotate(1deg)';
+                tag.style.background = 'linear-gradient(45deg, rgba(94, 157, 140, 0.8), rgba(0, 255, 127, 0.6))';
+            } else {
+                tag.style.transform = 'scale(1.05)';
+                tag.style.background = 'linear-gradient(45deg, rgba(139, 110, 189, 0.8), rgba(186, 85, 211, 0.6))';
+            }
+            tag.style.color = 'white';
+        });
+        
+        tag.addEventListener('touchmove', () => {
+            tagTouchMoved = true;
+        });
+        
+        tag.addEventListener('touchend', (e) => {
+            const tagTouchDuration = Date.now() - tagTouchStartTime;
+            
+            // Reset visual state
+            tag.style.transform = '';
+            tag.style.background = '';
+            tag.style.color = '';
+            
+            // If it was a tap, trigger the filter
+            if (!tagTouchMoved && tagTouchDuration < 500) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const tagValue = tag.getAttribute('data-tag');
+                filterByTag(tagValue);
+                
+                // Touch feedback
+                const section = tag.closest('.portfolio-section').id;
+                if (section === 'game-dev') {
+                    tag.style.transform = 'scale(0.9)';
+                    tag.style.filter = 'hue-rotate(90deg)';
+                } else {
+                    tag.style.transform = 'scale(0.95)';
+                    tag.style.background = 'linear-gradient(45deg, var(--highlight-color), transparent)';
+                }
+                
+                setTimeout(() => {
+                    tag.style.transform = '';
+                    tag.style.filter = '';
+                    tag.style.background = '';
+                }, 150);
+            }
+        });
+    });
+    
+    // Touch support for filter buttons
+    filterButtons.forEach(button => {
+        button.addEventListener('touchend', (e) => {
+            // Add a small delay to make the button press feel more responsive
+            button.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                button.style.transform = '';
+            }, 100);
+        });
+    });
+}
+
+
+ mobileTouchSupport();
     applyPersonalityEffects();
     makeTagsClickable();
     createTagIndicator();
     setCursorByFilter('all');
+
+
+    
 });

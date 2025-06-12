@@ -470,3 +470,295 @@ body.portfolio-page main:after {
 .writing-card:hover {
     background: linear-gradient(135deg, var(--card-bg) 0%, rgba(139, 110, 189, 0.1) 100%);
 }
+
+/* contact form popup sty */
+.contact-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.contact-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contact-popup {
+    background: #faf7f2;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    padding: 2.5rem;
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.9) translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.contact-overlay.active .contact-popup {
+    transform: scale(1) translateY(0);
+}
+
+.contact-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.contact-close:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-icon {
+    width: 80px;
+    height: 80px;
+ background-color: var( --highlight-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 2rem;
+    color: #fff;
+    box-shadow: 0 8px 16px rgba(230, 185, 128, 0.3);
+}
+
+.contact-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.contact-subtitle {
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.form-input,
+.form-textarea {
+    padding: 0.875rem 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    color: #333;
+    transition: all 0.2s ease;
+    resize: vertical;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #e6b980;
+    box-shadow: 0 0 0 3px rgba(230, 185, 128, 0.1);
+}
+
+.form-textarea {
+    min-height: 120px;
+    max-height: 200px;
+}
+
+.form-submit {
+   background-color: var( --highlight-color);
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 50px;
+}
+
+.form-submit:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(230, 185, 128, 0.3);
+}
+
+.form-submit:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.form-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.submit-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.form-message {
+    padding: 1rem;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.form-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* contact mail thing btn */
+.contact-trigger {
+    position: fixed;
+    bottom: 2rem;
+    left: 1rem;
+    right: auto;
+  
+    background-color: var( --highlight-color);
+    color: #fff;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(230, 185, 128, 0.3);
+    transition: all 0.2s ease;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-trigger:hover {
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 12px 24px rgba(230, 185, 128, 0.4);
+}
+
+.contact-trigger:active {
+    transform: scale(1.05) translateY(0);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-popup {
+        padding: 2rem;
+        margin: 1rem;
+        width: calc(100% - 2rem);
+    }
+    
+    .contact-title {
+        font-size: 1.5rem;
+    }
+    
+    .contact-trigger {
+         bottom: 1rem;
+        left: 1rem;
+        right: auto;
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+    .contact-popup {
+        left: 1rem;
+        right: 1rem;
+        width: auto;
+        margin: 0;
+        padding: 2rem; }
+}
+
+/* Animation for form elements */
+.form-group {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: slideUp 0.3s ease forwards;
+}
+
+.form-group:nth-child(1) { animation-delay: 0.1s; }
+.form-group:nth-child(2) { animation-delay: 0.2s; }
+.form-group:nth-child(3) { animation-delay: 0.3s; }
+.form-group:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

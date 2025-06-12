@@ -1,46 +1,82 @@
+// storing references for cleanup
+const sideNavInstances = new Set();
+
 document.addEventListener('DOMContentLoaded', function() {
-   
     if (document.querySelector('.blog-page')) {
-        createSideNav('blog');
+        const blogNav = createSideNav('blog');
+        sideNavInstances.add(blogNav);
     }
     
     if (document.querySelector('.essay-page')) {
-        createSideNav('essay');
+        const essayNav = createSideNav('essay');
+        sideNavInstances.add(essayNav);
     }
 });
 
+//  function 4 cleanup for when page unloads or navigation changes
+window.addEventListener('beforeunload', function() {
+    sideNavInstances.forEach(instance => {
+        if (instance.cleanup) {
+            instance.cleanup();
+        }
+    });
+    sideNavInstances.clear();
+});
+
 function createSideNav(pageType) {
-    
+    //  non-reassigned variables
     const sideNav = document.createElement('section');
     sideNav.className = 'blog-side-nav';
     
-   
     const toggleBtn = document.createElement('button');
     toggleBtn.className = 'blog-nav-toggle';
     toggleBtn.innerHTML = '<i class="fas fa-chevron-right"></i>';
     toggleBtn.setAttribute('aria-label', `Toggle ${pageType} navigation`);
     
-    
     const navContent = document.createElement('section');
     navContent.className = 'blog-nav-content';
     
-
     const heading = document.createElement('h3');
     heading.textContent = pageType === 'blog' ? 'Blog Posts' : 'Essays';
     navContent.appendChild(heading);
     
-    
     const linkList = document.createElement('ul');
     
- 
     const currentPath = window.location.pathname;
     const currentPage = currentPath.split('/').pop();
     
+    // changed lets to const
+    const navigationItems = getNavigationItems(pageType);
     
-    let items = [];
     
-    if (pageType === 'blog') {
-        items = [
+    const listItems = navigationItems.map(item => createNavigationItem(item, currentPage));
+    listItems.forEach(listItem => linkList.appendChild(listItem));
+    
+    navContent.appendChild(linkList);
+    sideNav.appendChild(toggleBtn);
+    sideNav.appendChild(navContent);
+    document.body.appendChild(sideNav);
+    
+    // nav can close when page/blog is selected
+    const toggleHandler = createToggleHandler(sideNav);
+    toggleBtn.addEventListener('click', toggleHandler);
+    
+   
+    return {
+        element: sideNav,
+        cleanup: function() {
+            toggleBtn.removeEventListener('click', toggleHandler);
+            if (sideNav.parentNode) {
+                sideNav.parentNode.removeChild(sideNav);
+            }
+        }
+    };
+}
+
+
+function getNavigationItems(pageType) {
+    const items = {
+        blog: [
             { id: 'blog01', title: 'Setting Up GitHub: A Web Publishing Experience', url: 'blog01.html' },
             { id: 'blog02', title: 'Reflection on Moulthrop: Hypertext and the Laws of Media', url: 'blog02.html' },
             { id: 'blog03', title: 'Interaction Design', url: 'blog03.html' },
@@ -52,52 +88,43 @@ function createSideNav(pageType) {
             { id: 'blog09', title: 'Critical Reflection on Digital Inequalities in the Age of AI and Big Data', url: 'blog12.html' },
             { id: 'blog10', title: 'Incorporating JavaScript & Reflecting on Decolonial Coding Practices', url: 'blog13.html' },
             { id: 'blog11', title: 'An Ethical Internet: Vision and Principles', url: 'blog14.html' },
-                  { id: 'blog12', title: 'Approaching Justice and Ethics in my Artistic and Programming Practice', url: 'blog15.html' }
-        ];
-    } else if (pageType === 'essay') {
-        items = [
+            { id: 'blog12', title: 'Approaching Justice and Ethics in my Artistic and Programming Practice', url: 'blog15.html' }
+        ],
+        essay: [
             { id: 'essay01', title: 'Ethics, UI, UX & Interaction: A Case Study of Standard Bank', url: 'essay01.html' },
-            { id: 'essay02', title: 'Essay 2: Coming Soon', url: 'essay02.html' }
-        ];
+            { id: 'essay02', title: ' Internet Geographies & Digital Coloniality', url: 'essay02.html' },
+             { id: 'essay03', title: 'Portfolio Website Implementation Reflection', url: 'essay03.html' }
+        ]
+    };
+    
+    return items[pageType] || [];
+}
+
+//individual navv items
+function createNavigationItem(item, currentPage) {
+    const listItem = document.createElement('li');
+    const link = document.createElement('a');
+    link.href = item.url;
+    link.textContent = item.title;
+    
+    if (currentPage === item.url) {
+        listItem.className = 'active';
+        link.setAttribute('aria-current', 'page');
     }
     
+    listItem.appendChild(link);
+    return listItem;
+}
 
-    items.forEach(item => {
-        const listItem = document.createElement('li');
-        const link = document.createElement('a');
-        link.href = item.url;
-        link.textContent = item.title;
-        
-    
-        if (currentPage === item.url) {
-            listItem.className = 'active';
-            link.setAttribute('aria-current', 'page');
-        }
-        
-        listItem.appendChild(link);
-        linkList.appendChild(listItem);
-    });
-    
-    navContent.appendChild(linkList);
-    
-   
-    sideNav.appendChild(toggleBtn);
-    sideNav.appendChild(navContent);
-    
-   
-    document.body.appendChild(sideNav);
-    
-    
-    toggleBtn.addEventListener('click', function() {
+
+function createToggleHandler(sideNav) {
+    return function() {
         sideNav.classList.toggle('open');
         
-        
         const icon = this.querySelector('i');
-        if (sideNav.classList.contains('open')) {
-            icon.className = 'fas fa-chevron-left';
-        } else {
-            icon.className = 'fas fa-chevron-right';
-        }
-
-    });
+       
+        icon.className = sideNav.classList.contains('open') 
+            ? 'fas fa-chevron-left' 
+            : 'fas fa-chevron-right';
+    };
 }

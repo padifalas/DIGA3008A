@@ -18,6 +18,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <script src="../javascripts/main.js" defer></script> 
+    <script src="../javascripts/portfolio.js" defer></script>
+   <script src="../javascripts/form-api.js" defer></script>
+   
+   
 </head>
 
 <body class="portfolio-page">
@@ -134,21 +140,6 @@
             <li class="project-tag p-category">Student Project</li>
         </ul>
         <p class="p-description">
-            <!-- <strong>Features:</strong><br>
-            - Weigh Each Soul's Fate: Listen to final requests at the end of a mortal journey<br>
-            - Maintain Cosmic Balance: Every decision alters Order, Emotion, and Entropy<br>
-            - Multiple Soul Types: Encounter sectionerse souls with unique stories<br>
-            - Dynamic Throne Room: See your domain shift with your decisions<br>
-            - Multiple Endings: The dominant force shapes the final reality<br><br>
-            <strong>Gameplay:</strong><br>
-            Souls will plead for:<br>
-            - Life Extension<br>
-            - Accident Prevention<br>
-            - Dream Fulfillment<br>
-            - Memory Erasure<br>
-            - Moment Replay<br><br>
-            Every decision is a moral dilemma—there are no perfect answers, only the balance you choose to maintain.
-        </p> -->
         <section class="project-actions">
             <a href="https://padifalass.itch.io/deaths-due" class="btn btn-secondary" target="_blank">Find on Itch.io</a>
         </section>
@@ -289,17 +280,88 @@
             </ul>
         </section>
 
-        <!-- Web Development Projects Section -->
-        <section class="portfolio-section" id="webdev">
-            <h2>Web Development Projects</h2>
-            <ul class="project-grid">
-              
-            </ul>
-        </section>
     </main>
 
+<!-- contact form stuff -->
+<section class="contact-overlay" id="contactOverlay" role="dialog" aria-labelledby="contactTitle" aria-hidden="true">
+    <section class="contact-popup">
+        <button class="contact-close" id="contactClose" aria-label="Close contact form">
+            ×
+        </button>
+        
+        <section class="contact-header">
+            <section class="contact-icon">
+                <i class="fas fa-envelope"></i>
+            </section>
+            <h2 class="contact-title" id="contactTitle">Let's Connect!</h2>
+            <p class="contact-subtitle">
+                What did you think of my work? I'd love to hear your thoughts, feedback, or you know... just say hello!
+            </p>
+        </section>
+        
+        <form class="contact-form" id="contactForm" novalidate>
+            <section class="form-group">
+                <label class="form-label" for="contactName">Name *</label>
+                <input 
+                    type="text" 
+                    id="contactName" 
+                    name="name" 
+                    class="form-input" 
+                    required 
+                    autocomplete="name"
+                    placeholder="Your name"
+                >
+            </section>
+            
+            <section class="form-group">
+                <label class="form-label" for="contactEmail">Email *</label>
+                <input 
+                    type="email" 
+                    id="contactEmail" 
+                    name="email" 
+                    class="form-input" 
+                    required 
+                    autocomplete="email"
+                    placeholder="youremail@whatever.com"
+                >
+            </section>
+            
+            <section class="form-group">
+                <label class="form-label" for="contactSubject">Subject</label>
+                <input 
+                    type="text" 
+                    id="contactSubject" 
+                    name="subject" 
+                    class="form-input" 
+                    placeholder="What's this about?"
+                >
+            </section>
+            
+            <section class="form-group">
+                <label class="form-label" for="contactMessage">Message *</label>
+                <textarea 
+                    id="contactMessage" 
+                    name="message" 
+                    class="form-textarea" 
+                    required 
+                    placeholder="tell me what you think about my projects, ask questions, or just say hi!"
+                ></textarea>
+            </section>
+            
+            <button type="submit" class="form-submit" id="submitButton">
+                <span class="submit-text">Send Message</span>
+            </button>
+            
+            <section class="form-message" id="formMessage" style="display: none;"></section>
+        </form>
+    </section>
+</section>
 
-    <script src="../javascripts/main.js"></script> 
-    <script src="../javascripts/portfolio.js"></script>
+<!-- Contact Trigger Button -->
+<button class="contact-trigger" id="contactTrigger" aria-label="Open contact form">
+    <i class="fas fa-envelope"></i>
+</button>
+
+
 </body>
 </html>

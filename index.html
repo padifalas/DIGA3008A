@@ -19,6 +19,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link rel="icon" href="images/profile-icon.png" type="image/x-icon">
+    
+<!-- now my javascript has defer as per Hanli's feedback -->
+    <script src="./javascripts/main.js" defer></script>
+    <script src="./javascripts/mood-generator-api.js" defer></script>
+<script src="./javascripts/home.js" defer></script>
 
     <title>Padi Falas-Maifala | Web & Game Designer</title>
 </head>
@@ -99,8 +104,41 @@
         </section>
     </main>
   
-  <script src="./javascripts/main.js"></script> 
-  <script src="./javascripts/home.js"></script>
+  <!-- color  generato overlay -->
+<button class="color-mood-toggle" id="colorMoodToggle" title="Color Mood Generator">
+    <i class="fas fa-palette"></i>
+</button>
+
+<div class="color-mood-overlay" id="colorMoodOverlay">
+    <div class="mood-popup">
+        <div class="mood-popup-header">
+            <h3>Match your Vibe</h3>
+            <button class="close-btn" id="closeMoodPopup">&times;</button>
+        </div>
+
+        
+        <div class="mood-toggle-section">
+            <button class="mood-btn active" data-mood="developer">
+                <i class="fas fa-code"></i> Developer
+            </button>
+            <button class="mood-btn" data-mood="writer">
+                <i class="fas fa-pen-fancy"></i> Writer
+            </button>
+        </div>
+
+        
+        <div class="color-presets" id="colorPresets">
+            <!-- colos  will be dynamically generated here -->
+        </div>
+
+<div class="mood-actions">
+    <button class="reset-btn" id="generateNewColors">
+        <i class="fas fa-sync-alt"></i> Generate New Colors
+    </button>
+    <button class="reset-btn" id="resetColors">
+        <i class="fas fa-undo"></i> Reset Colors
+    </button>
+</div>
 
 </body>
 </html>
