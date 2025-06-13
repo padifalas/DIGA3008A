@@ -24,28 +24,27 @@
 main {
     flex: 1;
     padding: 0 5%;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem; 
 }
 
 main:before {
     content: "Portfolio";
     font-family: var(--header-font);
-    font-size: 72px;
+    font-size: 4.5rem; 
     font-weight: 400;
     text-align: center;
     width: 100%;
-    padding: 60px 0 30px;
-    letter-spacing: 2px;
+    padding: 3.75rem 0 1.875rem; 
+    letter-spacing: 0.125rem; 
     display: block;
 }
 
 body.portfolio-page main {
     flex: 1;
     padding: 0 5%;
-    margin-bottom: 40px;
-    padding-top: 60px; 
+    margin-bottom: 2.5rem; 
+    padding-top: 3.75rem; 
 }
-
 
 body.portfolio-page main:before {
     content: "";
@@ -53,33 +52,33 @@ body.portfolio-page main:before {
     top: 0;
     left: 0;
     width: 100%;
-    height: 150px;
+    height: 9.375rem; 
     background: var(--gradient-forest);
     z-index: -1;
     animation: none;
 }
 
-
 body.portfolio-page main:after {
     content: "Portfolio";
     position: absolute;
-    top: 50px;
+    top: 3.125rem;
     left: 0;
     width: 100%;
     text-align: center;
     font-family: 'Studio Ghibli', 'Marcellus', serif;
-    font-size: 60px;
+    font-size: 3.75rem; 
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem; 
     color: var(--light-text);
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+    text-shadow: 0.125rem 0.125rem 0.625rem rgba(0,0,0,0.15); 
     animation: none;
     z-index: 1;
 }
+
 .portfolio-subheading {
     font-family: 'Studio Ghibli', 'Marcellus', serif;
-    font-size: 25px;
-    margin: 100px 0 30px;
+    font-size: 1.5625rem; 
+    margin: 6.25rem 0 1.875rem; 
     color: var(--card-1-bg);
     text-align: center; 
 }
@@ -88,25 +87,25 @@ body.portfolio-page main:after {
 .portfolio-section {
     background-color: var(--section-bg);
     border-radius: var(--border-radius);
-    padding: 25px;
+    padding: 1.5625rem; 
     position: relative;
     overflow: hidden;
-    border: 1px solid #ddd;
-    margin-bottom: 40px;
+    border: 0.0625rem solid #ddd; 
+    margin-bottom: 2.5rem; 
 }
 
 .portfolio-section#game-dev {
-      border-top: 4px solid var(--game-accent);
+    border-top: 0.25rem solid var(--game-accent); 
 }
 
 .portfolio-section#narratives {
-     border-top: 4px solid var(--writing-accent);
+    border-top: 0.25rem solid var(--writing-accent); 
 }
 
 .portfolio-section h2 {
     font-family: var(--header-font);
-    font-size: 28px;
-    margin-bottom: 30px;
+    font-size: 1.75rem; 
+    margin-bottom: 1.875rem; 
     color: var(--portfolio-accent);
     position: relative;
     display: inline-block;
@@ -115,13 +114,14 @@ body.portfolio-page main:after {
 .portfolio-section h2:after {
     content: "";
     position: absolute;
-    bottom: -5px;
+    bottom: -0.3125rem; 
     left: 0;
     width: 60%;
-    height: 3px;
+    height: 0.1875rem; 
     background-color: var(--portfolio-accent);
 }
-/* game deev  vibezz  */
+
+/* game dev vibezz */
 #game-dev h2:after {
     background: linear-gradient(90deg, var(--game-accent), transparent);
 }
@@ -129,11 +129,12 @@ body.portfolio-page main:after {
 #narratives h2:after {
     background: linear-gradient(90deg, var(--writing-accent), transparent);
 }
+
 /* project Grid */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 1.5625rem; 
     list-style: none;
     padding: 0;
     margin: 0;
@@ -144,10 +145,10 @@ body.portfolio-page main:after {
     background-color: var(--card-bg);
     border-radius: var(--border-radius);
     overflow: hidden;
-    box-shadow: 0 4px 10px var(--card-shadow);
+    box-shadow: 0 0.25rem 0.625rem var(--card-shadow);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
-    border: 1px solid #000;
+    border: 1px solid #000; 
     transform-style: preserve-3d;
 }
 
@@ -164,41 +165,41 @@ body.portfolio-page main:after {
 }
 
 .project-card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 12px 20px var(--card-hover-shadow);
+    transform: translateY(-0.3125rem) scale(1.02); 
+    box-shadow: 0 0.75rem 1.25rem var(--card-hover-shadow); 
 }
 
 .project-card img {
     width: 100%;
-    height: 220px;
+    height: 13.75rem; 
     object-fit: cover;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 0.0625rem solid #ddd; 
 }
 
 .project-content {
-    padding: 20px;
+    padding: 1.25rem; 
 }
 
 .project-card h3 {
-    margin-bottom: 8px;
-    font-size: 20px;
+    margin-bottom: 0.5rem; 
+    font-size: 1.25rem; 
     line-height: 1.3;
     font-weight: 700;
     color: var(--text-accent);
 }
 
 .project-card .p-summary {
-    font-size: 14px;
+    font-size: 0.875rem; 
     color: #666;
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem; 
     font-weight: 500;
     font-style: italic;
 }
 
 .project-card .p-description {
     color: #555;
-    font-size: 15px;
-    margin-bottom: 15px;
+    font-size: 0.9375rem; 
+    margin-bottom: 0.9375rem; 
     line-height: 1.4;
 }
 
@@ -206,8 +207,8 @@ body.portfolio-page main:after {
 .project-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin: 12px 0;
+    gap: 0.5rem; 
+    margin: 0.75rem 0; 
     padding: 0;
     list-style: none;
 }
@@ -215,9 +216,9 @@ body.portfolio-page main:after {
 .project-tag {
     background-color: var(--tag-bg);
     color: var(--tag-text);
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 12px;
+    padding: 0.25rem 0.75rem; 
+    border-radius: 1.25rem; 
+    font-size: 0.75rem; 
     font-weight: 500;
     transition: all 0.2s;
 }
@@ -227,28 +228,17 @@ body.portfolio-page main:after {
     color: white;
 }
 
-/*  tagsss */
-#game-dev .project-tag {
-    background-color: #c8e6c9; 
-    color: #1b5e20; 
-}
-
-#narratives .project-tag {
-    background-color: #d1c4e9; 
-    color: #311b92; 
-}
-
-/* cction buttons */
+/* section buttons */
 .project-actions {
     display: flex;
-    gap: 10px;
-    margin-top: 15px;
+    gap: 0.625rem; 
+    margin-top: 0.9375rem; 
 }
 
 .btn {
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 14px;
+    padding: 0.5rem 1rem; 
+    border-radius: 1.25rem; 
+    font-size: 0.875rem; 
     font-weight: 600;
     border: none;
     cursor: pointer;
@@ -270,96 +260,96 @@ body.portfolio-page main:after {
 
 .btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 0.125rem 0.3125rem rgba(0,0,0,0.2); 
     background-color: var(--highlight-color);
 }
 
 /* key feature section */
 .key-feature {
-    margin-top: 15px;
-    font-size: 14px;
+    margin-top: 0.9375rem; 
+    font-size: 0.875rem; 
     color: var(--portfolio-accent);
     font-weight: 500;
-    padding: 10px;
-    border-left: 3px solid var(--portfolio-accent);
+    padding: 0.625rem; 
+    border-left: 0.1875rem solid var(--portfolio-accent); 
     background-color: rgba(74, 106, 141, 0.05);
 }
 
-
 /* responsive design */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 56.25em) { 
     .project-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     
     .project-card h3 {
-        font-size: 18px;
+        font-size: 1.125rem; 
     }
     
     main:before {
-        font-size: 56px;
-        padding: 40px 0 20px;
+        font-size: 3.5rem; 
+        padding: 2.5rem 0 1.25rem; 
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 37.5em) { 
     .project-grid {
         grid-template-columns: 1fr;
     }
     
     .portfolio-section {
-        padding: 15px;
+        padding: 0.9375rem; 
     }
     
     .portfolio-section h2 {
-        font-size: 24px;
+        font-size: 1.5rem; 
     }
     
     main:before {
-        font-size: 42px;
-        padding: 30px 0 15px;
+        font-size: 2.625rem; 
+        padding: 1.875rem 0 0.9375rem; 
     }
+}
 
-    /* filter btn Container */
+/* filter btn Container */
 #filter-buttons {
     text-align: center;
-    margin: 40px 0 50px;
+    margin: 2.5rem 0 3.125rem; 
     padding: 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 0.625rem; 
 }
 
-/* filterr btn sty */
+/* filter btn styles */
 .filter-btn {
     background-color: #fff;
     color: #333;
-    border: 2px solid #333;
-    padding: 10px 25px;
+    border: 0.125rem solid #333; 
+    padding: 0.625rem 1.5625rem; 
     cursor: pointer;
-    border-radius: 30px;
+    border-radius: 1.875rem; 
     transition: all 0.3s ease;
     font-family: var(--body-font);
     font-weight: 600;
-    font-size: 14px;
+    font-size: 0.875rem; 
     position: relative;
     overflow: hidden;
 }
 
-/* def state for All button */
+/* default state for All button */
 .filter-btn[data-filter="all"] {
     background-color: #333;
     color: #fff;
 }
 
-/* hover stuff */
+/* hover effects */
 .filter-btn:hover {
     background-color: var(--highlight-color);
     border-color: var(--highlight-color);
     color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transform: translateY(-0.125rem); 
+    box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.15); 
 }
 
 /* actiive states */
@@ -368,7 +358,7 @@ body.portfolio-page main:after {
     border-color: #333;
     color: #fff;
     transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.1); 
 }
 
 
@@ -397,7 +387,7 @@ body.portfolio-page main:after {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
-}
+
 .game-card {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
@@ -479,7 +469,7 @@ body.portfolio-page main:after {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(0.25rem); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -496,15 +486,15 @@ body.portfolio-page main:after {
 
 .contact-popup {
     background: #faf7f2;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 1.25rem; 
+    box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.15); 
     padding: 2.5rem;
-    max-width: 500px;
+    max-width: 31.25rem; 
     width: 90%;
     max-height: 90vh;
     overflow-y: auto;
     position: relative;
-    transform: scale(0.9) translateY(20px);
+    transform: scale(0.9) translateY(1.25rem); 
     transition: transform 0.3s ease;
 }
 
@@ -521,8 +511,8 @@ body.portfolio-page main:after {
     font-size: 1.5rem;
     color: #666;
     cursor: pointer;
-    width: 40px;
-    height: 40px;
+    width: 2.5rem; 
+    height: 2.5rem; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -541,9 +531,9 @@ body.portfolio-page main:after {
 }
 
 .contact-icon {
-    width: 80px;
-    height: 80px;
- background-color: var( --highlight-color);
+    width: 5rem; 
+    height: 5rem;
+    background-color: var(--highlight-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -551,7 +541,7 @@ body.portfolio-page main:after {
     margin: 0 auto 1rem;
     font-size: 2rem;
     color: #fff;
-    box-shadow: 0 8px 16px rgba(230, 185, 128, 0.3);
+    box-shadow: 0 0.5rem 1rem rgba(230, 185, 128, 0.3); 
 }
 
 .contact-title {
@@ -591,8 +581,8 @@ body.portfolio-page main:after {
 .form-input,
 .form-textarea {
     padding: 0.875rem 1rem;
-    border: 2px solid #e0e0e0;
-    border-radius: 12px;
+    border: 0.125rem solid #e0e0e0; 
+    border-radius: 0.75rem; 
     background: #fff;
     font-family: 'Roboto', sans-serif;
     font-size: 0.95rem;
@@ -605,12 +595,12 @@ body.portfolio-page main:after {
 .form-textarea:focus {
     outline: none;
     border-color: #e6b980;
-    box-shadow: 0 0 0 3px rgba(230, 185, 128, 0.1);
+box-shadow: 0 0 0 0.1875rem rgba(230, 185, 128, 0.1);
 }
 
 .form-textarea {
-    min-height: 120px;
-    max-height: 200px;
+    min-height: 7.5rem; 
+    max-height: 12.5rem; 
 }
 
 .form-submit {
@@ -618,7 +608,7 @@ body.portfolio-page main:after {
     color: #fff;
     border: none;
     padding: 1rem 2rem;
-    border-radius: 12px;
+     border-radius: 0.75rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 1rem;
@@ -630,12 +620,12 @@ body.portfolio-page main:after {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    min-height: 50px;
+    min-height: 3.125rem;
 }
 
 .form-submit:hover:not(:disabled) {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(230, 185, 128, 0.3);
+    transform: translateY(-0.125rem); 
+    box-shadow: 0 0.5rem 1rem rgba(230, 185, 128, 0.3); 
 }
 
 .form-submit:active:not(:disabled) {
@@ -648,10 +638,10 @@ body.portfolio-page main:after {
 }
 
 .submit-spinner {
-    width: 20px;
-    height: 20px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-top: 2px solid #fff;
+    width: 1.25rem; 
+    height: 1.25rem; 
+    border: 0.125rem solid rgba(255, 255, 255, 0.3); 
+    border-top: 0.125rem solid #fff;
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
@@ -663,7 +653,7 @@ body.portfolio-page main:after {
 
 .form-message {
     padding: 1rem;
-    border-radius: 8px;
+   border-radius: 0.5rem;
     font-family: 'Roboto', sans-serif;
     font-size: 0.9rem;
     text-align: center;
@@ -688,16 +678,15 @@ body.portfolio-page main:after {
     bottom: 2rem;
     left: 1rem;
     right: auto;
-  
-    background-color: var( --highlight-color);
+    background-color: var(--highlight-color);
     color: #fff;
     border: none;
-    width: 60px;
-    height: 60px;
+    width: 3.75rem; 
+    height: 3.75rem; 
     border-radius: 50%;
     font-size: 1.5rem;
     cursor: pointer;
-    box-shadow: 0 8px 16px rgba(230, 185, 128, 0.3);
+    box-shadow: 0 0.5rem 1rem rgba(230, 185, 128, 0.3); 
     transition: all 0.2s ease;
     z-index: 999;
     display: flex;
@@ -706,8 +695,8 @@ body.portfolio-page main:after {
 }
 
 .contact-trigger:hover {
-    transform: scale(1.1) translateY(-2px);
-    box-shadow: 0 12px 24px rgba(230, 185, 128, 0.4);
+    transform: scale(1.1) translateY(-0.125rem); 
+    box-shadow: 0 0.75rem 1.5rem rgba(230, 185, 128, 0.4); 
 }
 
 .contact-trigger:active {
@@ -716,7 +705,7 @@ body.portfolio-page main:after {
 
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 48em) { 
     .contact-popup {
         padding: 2rem;
         margin: 1rem;
@@ -728,13 +717,13 @@ body.portfolio-page main:after {
     }
     
     .contact-trigger {
-         bottom: 1rem;
+        bottom: 1rem;
         left: 1rem;
-        right: auto;
-        width: 50px;
-        height: 50px;
+        width: 3.125rem; /* 50px → 3.125rem */
+        height: 3.125rem; /* 50px → 3.125rem */
         font-size: 1.25rem;
     }
+
     .contact-popup {
         left: 1rem;
         right: 1rem;
@@ -746,7 +735,7 @@ body.portfolio-page main:after {
 /* Animation for form elements */
 .form-group {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(0.625rem);
     animation: slideUp 0.3s ease forwards;
 }
 

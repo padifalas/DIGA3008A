@@ -49,21 +49,20 @@ body.essay-page.individual-essay {
 }
 
 body.essay-page.individual-essay main {
-    /* max-width: 1200px;
-    margin: 0 auto; */
-    padding: 40px 20px;
+
+    padding: 2.5rem 1.25rem;
 }
 
 /* essay grid styling for individual essay pages */
 body.essay-page.individual-essay .essays {
-    margin-top: 40px;
+    margin-top: 2.5rem;
 }
 
 body.essay-page.individual-essay .essay-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
-    padding: 20px 0;
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+    gap: 2.5rem;
+    padding: 1.25rem 0;
 }
 
 body.essay-page.individual-essay .essay-card {
@@ -77,13 +76,13 @@ body.essay-page.individual-essay .essay-card {
 }
 
 body.essay-page.individual-essay .essay-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.15);
 }
 
 body.essay-page.individual-essay .essay-card img {
     width: 100%;
-    height: 200px;
+    height: 12.5rem;
     object-fit: cover;
     transition: var(--transition);
 }
@@ -93,64 +92,64 @@ body.essay-page.individual-essay .essay-card:hover img {
 }
 
 body.essay-page.individual-essay .essay-card-content {
-    padding: 30px;
+    padding: 1.875rem;
 }
 
 body.essay-page.individual-essay .essay-card h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 24px;
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
     font-weight: 600;
     color: var(--heading-color);
-    margin: 0 0 15px;
+    margin: 0 0 0.9375rem;
     line-height: 1.3;
 }
 
 body.essay-page.individual-essay .essay-card time {
     display: block;
     color: #777;
-    font-size: 14px;
-    margin-bottom: 15px;
+    font-size: 0.875rem;
+    margin-bottom: 0.9375rem;
     font-style: italic;
 }
 
 body.essay-page.individual-essay .essay-card-tags {
-    margin: 20px 0;
+    margin: 1.25rem 0;
 }
 
 body.essay-page.individual-essay .essay-tag {
     background: var(--gradient-scholarly);
     color: white;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 12px;
+    padding: 0.375rem 0.75rem;
+    border-radius: 1.25rem;
+    font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-right: 8px;
+    letter-spacing: 0.03125rem;
+    margin-right: 0.5rem;
 }
 
 body.essay-page.individual-essay .main-takeaway {
-    margin: 20px 0;
-    padding: 15px;
+    margin: 1.25rem 0;
+    padding: 0.9375rem;
     background: linear-gradient(to right, rgba(58, 109, 124, 0.05), rgba(58, 109, 124, 0.1));
-    border-radius: 8px;
-    font-size: 15px;
+    border-radius: 0.5rem;
+    font-size: 0.9375rem;
     color: var(--text-color);
 }
 
 body.essay-page.individual-essay .card-buttons {
-    margin-top: 25px;
+    margin-top: 1.5625rem;
 }
 
 body.essay-page.individual-essay .btn {
     display: inline-block;
-    padding: 12px 24px;
-    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    border-radius: 1.5625rem;
     text-decoration: none;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 0.875rem;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.03125rem;
     transition: var(--transition);
     border: none;
     cursor: pointer;
@@ -163,8 +162,8 @@ body.essay-page.individual-essay .btn-secondary {
 
 body.essay-page.individual-essay .btn-secondary:hover {
     background: var(--gradient-accent);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.2);
 }
 
 body.essay-page.individual-essay .card-link {
@@ -185,14 +184,28 @@ body.essay-page.individual-essay .card-buttons a {
 body.essay-page.individual-essay .essay-subheading {
     text-align: center;
     font-family: 'Playfair Display', serif;
-    font-size: 36px;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
     font-weight: 600;
     color: var(--heading-color);
-    margin: 40px 0 20px;
+    margin: 2.5rem 0 1.25rem;
     background: var(--gradient-hero);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+@media (max-width: 768px) {
+    body.essay-page.individual-essay .essay-list {
+        gap: 1.5rem;
+    }
+    
+    body.essay-page.individual-essay .essay-card-content {
+        padding: 1.25rem;
+    }
+    
+    body.essay-page.individual-essay .essay-card img {
+        height: 10rem;
+    }
 }
 
 /*  progress indicator -  */
@@ -200,85 +213,83 @@ body.essay-page.individual-essay .essay-subheading {
     position: fixed;
     top: 0;
     left: 0;
-    height: 16px;
+    height: 0.5rem;
     background: var(--gradient-hero);
     z-index: 1001;
-    width: 5;
+    width: 0;
     transition: width 0.2s ease;
 }
 
 /*only appply to non-individual-essay pages */
 body.essay-page:not(.individual-essay) main {
-    max-width: 850px;
-    margin:  auto;
-    /* padding: 0 20px; */
+    max-width: 53.125rem;
+    margin: 0 auto;
 }
 
 body.essay-page:not(.individual-essay) article.h-entry {
     background-color: var(--essay-content-bg);
     border-radius: var(--border-radius);
-    padding: 50px;
-    box-shadow: 0 5px 30px var(--essay-shadow);
+    padding: 3.125rem;
+    box-shadow: 0 0.3125rem 1.875rem var(--essay-shadow);
     position: relative;
 }
 
 .essay-header {
     background: none;
     box-shadow: none;
-    margin-bottom: 40px;
-    padding: 0 0 30px 0;
+    margin-bottom: 2.5rem;
+    padding: 0 0 1.875rem 0;
     border-bottom: 1px solid var(--essay-border);
-    position: relative;
 }
 
 .essay-metadata {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    font-size: 14px;
-    letter-spacing: 0.5px;
+    margin-bottom: 1.25rem;
+    font-size: 0.875rem;
+    letter-spacing: 0.03125rem;
 }
 
 .essay-metadata time {
     color: #777;
-    margin-right: 20px;
+    margin-right: 1.25rem;
     font-style: italic;
 }
 
 .essay-category {
     background: var(--gradient-scholarly);
     color: white;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 12px;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1.25rem;
+    font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625rem;
 }
 
 .essay-header h1 {
     font-family: 'Playfair Display', 'Times New Roman', serif;
-    font-size: 36px;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
     font-weight: 700;
-    margin: 0 0 20px;
+    margin: 0 0 1.25rem;
     line-height: 1.2;
     color: var(--heading-color);
     text-align: left;
 }
 
 .essay-header .p-author {
-    font-size: 16px;
-    margin-bottom: 20px;
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
     color: #555;
 }
 
 .essay-abstract {
     background-color: var(--quote-bg);
-    border-left: 4px solid var(--accent-color);
-    padding: 20px 25px;
-    margin-top: 30px;
+    border-left: 0.25rem solid var(--accent-color);
+    padding: 1.25rem 1.5625rem;
+    margin-top: 1.875rem;
     font-style: italic;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.7;
     color: #444;
 }
@@ -286,83 +297,83 @@ body.essay-page:not(.individual-essay) article.h-entry {
 
 .e-content h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 26px;
+    font-size: clamp(1.375rem, 2.5vw, 1.625rem);
     font-weight: 600;
     color: var(--heading-color);
-    margin: 40px 0 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--accent-color);
+    margin: 2.5rem 0 1.25rem;
+    padding-bottom: 0.625rem;
+    border-bottom: 0.125rem solid var(--accent-color);
 }
 
 .e-content h3 {
-    font-size: 22px;
-    margin: 30px 0 15px;
+    font-size: clamp(1.25rem, 2vw, 1.375rem);
+    margin: 1.875rem 0 0.9375rem;
     color: var(--heading-color);
 }
 
 .e-content h4 {
-    font-size: 18px;
-    margin: 25px 0 15px;
+    font-size: clamp(1.125rem, 1.8vw, 1.25rem);
+    margin: 1.5625rem 0 0.9375rem;
     color: var(--heading-color);
 }
 
 .e-content p {
-    margin-bottom: 25px;
-    font-size: 17px;
+    margin-bottom: 1.5625rem;
+    font-size: 1.0625rem;
     line-height: 1.8;
 }
 
 .essay-intro {
-    font-size: 19px;
+    font-size: 1.1875rem;
     line-height: 1.7;
     color: #444;
-    border-left: 4px solid var(--secondary-accent);
-    padding-left: 20px;
+    border-left: 0.25rem solid var(--secondary-accent);
+    padding-left: 1.25rem;
 }
 
 .key-points {
     background: linear-gradient(to right, rgba(58, 109, 124, 0.05), rgba(58, 109, 124, 0.15));
-    border-radius: 8px;
-    padding: 20px 30px;
-    margin: 30px 0;
+    border-radius: 0.5rem;
+    padding: 1.25rem 1.875rem;
+    margin: 1.875rem 0;
 }
 
 .key-points h3 {
     color: var(--accent-color);
     margin-top: 0;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .key-points ul {
-    margin: 15px 0 5px;
-    padding-left: 20px;
+    margin: 0.9375rem 0 0.3125rem;
+    padding-left: 1.25rem;
 }
 
 .key-points li {
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
     position: relative;
 }
 
 .example-box {
     background-color: rgba(217, 120, 67, 0.08);
-    border-radius: 8px;
-    padding: 25px 30px;
-    margin: 30px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    border-radius: 0.5rem;
+    padding: 1.5625rem 1.875rem;
+    margin: 1.875rem 0;
+    box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.03);
 }
 
 .example-box h4 {
     color: var(--secondary-accent);
     margin-top: 0;
-    font-size: 19px;
+    font-size: 1.1875rem;
 }
 
 .example-box ul {
-    margin: 15px 0 5px;
+    margin: 0.9375rem 0 0.3125rem;
 }
 
 .example-box li {
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
 }
 
 .example-box li strong {
@@ -370,27 +381,26 @@ body.essay-page:not(.individual-essay) article.h-entry {
 }
 
 .e-content blockquote {
-    margin: 30px 0;
-    padding: 30px 40px;
+    margin: 1.875rem 0;
+    padding: 1.875rem 2.5rem;
     background-color: var(--quote-bg);
-    border-radius: 8px;
+    border-radius: 0.5rem;
     position: relative;
     font-style: italic;
     color: #444;
-    border-left: 4px solid var(--accent-color);
+    border-left: 0.25rem solid var(--accent-color);
 }
-
 .e-content blockquote cite {
     display: block;
     text-align: right;
-    margin-top: 10px;
-    font-size: 15px;
+    margin-top: 0.625rem;
+    font-size: 0.9375rem;
     font-style: normal;
     font-weight: 600;
     color: var(--accent-color);
 }
 
-y
+
 
 
 
@@ -430,46 +440,46 @@ y
 
 @media screen and (max-width: 768px) {
     body.essay-page:not(.individual-essay) article.h-entry {
-        padding: 35px 30px;
+        padding: 2.5rem 2.1875rem;
     }
     
     .essay-header h1 {
-        font-size: 28px;
+        font-size: 1.75rem;
     }
     
     .e-content h2 {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
     
     .essay-intro {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
     
     .e-content blockquote {
-        padding: 25px 30px;
+        padding: 1.5625rem 1.875rem;
     }
     
     body.essay-page.individual-essay .essay-card-content {
-        padding: 25px;
+        padding: 1.563rem;
     }
     
     body.essay-page.individual-essay .essay-subheading {
-        font-size: 28px;
+        font-size: 1.75rem;
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 30rem) {
     body.essay-page:not(.individual-essay) main {
-        margin: 20px auto 60px;
+        margin: 1.25rem auto 3.75rem;
     }
     
     body.essay-page:not(.individual-essay) article.h-entry {
-        padding: 25px 20px;
-        border-radius: 8px;
+        padding: 1.5625rem 1.25rem;
+        border-radius: 0.5rem;
     }
     
     .essay-header h1 {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
     
     .essay-metadata {
@@ -478,41 +488,41 @@ y
     }
     
     .essay-metadata time {
-        margin-bottom: 10px;
+        margin-bottom: 0.625rem;
     }
     
     .e-content h2 {
-        font-size: 22px;
+        font-size: 1.375rem;
     }
     
     .e-content p, .essay-intro {
-        font-size: 16px;
+        font-size: 1rem;
         line-height: 1.7;
     }
     
     .key-points, .example-box {
-        padding: 20px;
+         padding: 1.25rem;
     }
     
     .e-content blockquote {
-        padding: 25px 20px;
+        padding: 1.5625rem 1.25rem;
     }
     
     body.essay-page.individual-essay main {
-        padding: 20px 15px;
+        padding: 1.25rem 0.938rem;
     }
     
     body.essay-page.individual-essay .essay-list {
-        gap: 25px;
+        gap: 1.563rem;
     }
     
     body.essay-page.individual-essay .essay-card-content {
-        padding: 20px;
+        padding: 1.25rem;
     }
     
     body.essay-page.individual-essay .essay-subheading {
-        font-size: 24px;
-        margin: 30px 0 15px;
+        font-size: 1.5rem;
+        margin: 1.875rem 0 0.938rem;
     }
 }
 
@@ -560,22 +570,22 @@ y
     }
 }
 .screenshot-figure {
-    margin: 30px 0;
+    margin: 1.875rem 0;
     text-align: center;
 }
 
 .screenshot-img {
     max-width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.1);
 }
 
 .screenshot-caption {
-    margin-top: 10px;
+    margin-top: 0.625rem;
     font-style: italic;
     color: #666;
-    font-size: 14px;
 }
+
 /* Lightbox Styles */
 .lightbox {
     display: none;
@@ -599,12 +609,12 @@ y
 
 .lightbox-content {
     position: relative;
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 90vw;
+    max-height: 90vh;
     background: white;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border-radius: 0.75rem;
+    padding: 1.5em;
+    box-shadow: 0 1.25rem 3.75rem rgba(0, 0, 0, 0.5);
     transform: scale(0.8);
     transition: transform 0.3s ease;
 }
@@ -615,15 +625,15 @@ y
 
 .lightbox-close {
     position: absolute;
-    top: -15px;
-    right: -15px;
-    width: 40px;
-    height: 40px;
+    top: -1em;
+    right: -1em;
+    width: 2.5em;
+    height: 2.5em;
     background: #ff4757;
     border: none;
     border-radius: 50%;
     color: white;
-    font-size: 24px;
+    font-size: 1.2em;
     font-weight: bold;
     cursor: pointer;
     display: flex;
@@ -651,16 +661,17 @@ y
 }
 
 .lightbox-caption {
-    margin-top: 15px;
+    margin-top: 1em;
     text-align: center;
     font-style: italic;
     color: #666;
-    font-size: 14px;
+    font-size: 0.9em;
     line-height: 1.4;
-    max-width: 600px;
+    max-width: 80vw;
+    padding: 0 1em;
 }
 
-
+/* Screenshot figure hover effects */
 .screenshot-figure img {
     transition: all 0.3s ease;
     border-radius: 8px;
@@ -669,9 +680,8 @@ y
 
 .screenshot-figure img:hover {
     transform: scale(1.02);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.5rem 1.563rem rgba(0, 0, 0, 0.15);
 }
-
 
 .screenshot-figure {
     position: relative;
@@ -680,13 +690,13 @@ y
 .screenshot-figure::after {
     content: '🔍︎ + 🔍';
     position: absolute;
-    top: 10px;
-    right: 10px; 
+    top: 0.5em;
+    right: 0.5em;
     background: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 5px 8px;
-    border-radius: 15px;
-    font-size: 12px;
+    padding: 0.3em 0.5em;
+    border-radius: 1em;
+    font-size: 0.8em;
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
@@ -696,12 +706,12 @@ y
     opacity: 1;
 }
 
-
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .lightbox-content {
-        max-width: 95%;
-        max-height: 95%;
-        padding: 15px;
+        max-width: 95vw;
+        max-height: 95vh;
+        padding: 1em;
     }
     
     .lightbox-image {
@@ -709,21 +719,22 @@ y
     }
     
     .lightbox-close {
-        width: 35px;
-        height: 35px;
-        font-size: 20px;
-        top: -12px;
-        right: -12px;
+        width: 2em;
+        height: 2em;
+        font-size: 1em;
+        top: -0.8em;
+        right: -0.8em;
     }
     
     .screenshot-figure::after {
-        display: none; 
+        display: none;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 30rem) {
     .lightbox-content {
-        padding: 10px;
+        padding: 0.8em;
+        border-radius: 0.5rem;
     }
     
     .lightbox-image {
@@ -731,7 +742,7 @@ y
     }
     
     .lightbox-caption {
-        font-size: 12px;
-        margin-top: 10px;
+        font-size: 0.8em;
+        margin-top: 0.8em;
     }
 }

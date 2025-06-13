@@ -1,5 +1,4 @@
 :root {
-    
     --process-bg: #f8f5f0;
     --section-bg: #ffffff;
     --section-border: rgba(0, 0, 0, 0.08);
@@ -9,8 +8,11 @@
     --text-color: #4a4a4a;
     --accent-color: #4d8c57; 
     --secondary-accent: #a67c00; 
-    --border-radius: 8px;
+    --border-radius: 0.5rem;
     --transition: all 0.3s ease;
+    
+   
+    font-size: 16px;
 }
 
 body {
@@ -19,19 +21,18 @@ body {
 
 /* main content layout */
 main {
-    max-width: 1200px;
-    margin: 0 auto 60px;
-    padding: 0 30px;
+    max-width: 75rem; 
+    margin: 0 auto 3.75rem; 
+    padding: 0 1.875rem; /
 }
 
-/* main Content thatt specific to design process */
+/* main Content that specific to design process */
 body.design-process-page main {
     flex: 1;
     padding: 0 5%;
-    margin-bottom: 40px;
-    padding-top: 60px; /* this will remove the extra space from animated content */
+    margin-bottom: 2.5rem; 
+    padding-top: 3.75rem; /*  this will remove the extra space from animated content */
 }
-
 
 body.design-process-page main:before {
     content: "";
@@ -39,7 +40,7 @@ body.design-process-page main:before {
     top: 0;
     left: 0;
     width: 100%;
-    height: 150px;
+    height: 9.375rem; 
     background: var(--gradient-forest);
     z-index: -1;
     animation: none;
@@ -49,24 +50,24 @@ body.design-process-page main:before {
 body.design-process-page main:after {
     content: "Design Process";
     position: absolute;
-    top: 50px;
+    top: 3.125rem; 
     left: 0;
     width: 100%;
     text-align: center;
     font-family: 'Studio Ghibli', 'Marcellus', serif;
-    font-size: 60px;
+    font-size: clamp(2.25rem, 5vw, 3.75rem); 
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 0.125em; 
     color: var(--light-text);
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+    text-shadow: 0.125rem 0.125rem 0.625rem rgba(0,0,0,0.15);
     animation: none;
     z-index: 1;
 }
 
 .process-subheading {
     font-family: 'Studio Ghibli', 'Marcellus', serif;
-    font-size: 25px;
-    margin: 100px 0 30px;
+    font-size: clamp(1.25rem, 3vw, 1.5625rem); 
+    margin: 6.25rem 0 1.875rem; 
     color: var(--accent-color);
     text-align: center;
 }
@@ -75,58 +76,58 @@ body.design-process-page main:after {
 .e-content {
     background-color: var(--section-bg);
     border-radius: var(--border-radius);
-    padding: 30px 40px;
-    margin-bottom: 30px;
+    padding: 1.875rem 2.5rem; 
+    margin-bottom: 1.875rem; 
     border: 1px solid var(--section-border);
-    box-shadow: 0 4px 15px var(--section-shadow);
+    box-shadow: 0 0.25rem 0.9375rem var(--section-shadow);
     transition: var(--transition);
 }
 
 .e-content:hover {
-    box-shadow: 0 8px 25px var(--section-hover-shadow);
-    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1.5625rem var(--section-hover-shadow);
+    transform: translateY(-0.1875rem); 
 }
 
 /* section headings */
 .e-content h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 28px;
+    font-size: clamp(1.375rem, 2.5vw, 1.75rem); 
     font-weight: 600;
     color: var(--heading-color);
-    margin-bottom: 18px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid var(--accent-color);
+    margin-bottom: 1.125rem; 
+    padding-bottom: 0.75rem; 
+    border-bottom: 0.125rem solid var(--accent-color); 
     position: relative;
 }
 
 .e-content h3 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 22px;
+    font-size: clamp(1.125rem, 2vw, 1.375rem); 
     font-weight: 500;
     color: var(--heading-color);
-    margin: 25px 0 15px;
+    margin: 1.5625rem 0 0.9375rem; 
 }
 
-/*  styling texts */
+/* styling texts */
 .e-content p {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 16px;
+    font-size: clamp(0.9375rem, 1.5vw, 1rem); 
     line-height: 1.6;
     color: var(--text-color);
-    margin-bottom: 16px;
+    margin-bottom: 1rem; 
 }
 
-/*  styling for listss */
+/* styling for lists */
 .e-content ul {
-    padding-left: 20px;
-    margin-bottom: 20px;
+    padding-left: 1.25rem; 
+    margin-bottom: 1.25rem; 
 }
 
 .e-content li {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 16px;
+    font-size: clamp(0.9375rem, 1.5vw, 1rem); 
     line-height: 1.6;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem; 
     color: var(--text-color);
     position: relative;
 }
@@ -135,35 +136,34 @@ body.design-process-page main:after {
 .e-content code {
     font-family: 'Source Code Pro', monospace;
     background-color: #f5f5f5;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 14px;
+    padding: 0.125rem 0.375rem; 
+    border-radius: 0.25rem;
+    font-size: 0.875rem; 
     color: var(--secondary-accent);
 }
 
-/* imag styling */
+/* image styling */
 .e-content .u-photo {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 25px 0;
+    margin: 1.5625rem 0; 
     border-radius: var(--border-radius);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.1875rem 0.625rem rgba(0, 0, 0, 0.1);
     transition: var(--transition);
 }
 
 .e-content .u-photo:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.15);
     transform: scale(1.01);
 }
-
 
 .e-content strong {
     font-weight: 600;
     color: var(--heading-color);
 }
 
-/*  styling 4 links */
+/* styling for links */
 .e-content a {
     color: var(--accent-color);
     text-decoration: none;
@@ -175,66 +175,37 @@ body.design-process-page main:after {
     border-bottom: 1px solid var(--accent-color);
 }
 
-/* this is so webste is responsive... not perfect*/
-@media screen and (max-width: 992px) {
+
+@media screen and (max-width: 62rem) { /* 992px */
     body.design-process-page main:after {
-        font-size: 48px;
+        font-size: clamp(2rem, 4.5vw, 3rem); 
     }
     
     .process-subheading {
-        margin-top: 80px;
+        margin-top: 5rem; 
     }
     
     .e-content {
-        padding: 25px 30px;
-    }
-    
-    .e-content h2 {
-        font-size: 24px;
-    }
-    
-    .e-content h3 {
-        font-size: 20px;
+        padding: 1.5625rem 1.875rem; 
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48rem) { 
     main {
-        padding: 0 15px;
+        padding: 0 0.9375rem; 
     }
     
     .e-content {
-        padding: 20px 25px;
-    }
-    
-    .e-content h2 {
-        font-size: 22px;
-    }
-    
-    .e-content h3 {
-        font-size: 18px;
-    }
-    
-    .e-content p, .e-content li {
-        font-size: 15px;
+        padding: 1.25rem 1.5625rem; 
     }
 }
 
-@media screen and (max-width: 600px) {
-    body.design-process-page main:after {
-        font-size: 36px;
-    }
-    
+@media screen and (max-width: 37.5rem) { 
     .process-subheading {
-        margin-top: 60px;
-        font-size: 20px;
+        margin-top: 3.75rem; 
     }
     
     .e-content {
-        padding: 15px 20px;
-    }
-    
-    .e-content h2 {
-        font-size: 20px;
+        padding: 0.9375rem 1.25rem; 
     }
 }
