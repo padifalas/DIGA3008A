@@ -1,15 +1,15 @@
-# 🌐 Portfolio Website [padi.codes]
+# Portfolio Website [padi.codes]
 
 This repository contains the source code for my personal **portfolio website** — a dynamic, multi-disciplinary showcase of my work across:
 
-🎮 Game Design & Development  
-🌍 Web Development  
-✍️ Writing & Interactive Fiction  
-📚 Academic Essays & Blog Posts
+Game Design & Development  
+ Web Development  
+ Writing & Interactive Fiction  
+ Academic Essays & Blog Posts
 
 ---
 
-## 🧭 Site Purpose
+##  Site Purpose
 
 The website serves as a digital space to present my creative and technical projects, including:
 
@@ -20,7 +20,7 @@ The website serves as a digital space to present my creative and technical proje
 
 ---
 
-## 🛠️ Built With
+##  Built With
 
 - **Languages**: HTML5, CSS, JavaScript
 - **Version Control**: Git + GitHub
@@ -28,31 +28,31 @@ The website serves as a digital space to present my creative and technical proje
 
 ---
 
-## 🚀 Live Website
+##  Live Website
 
-🌍 Visit the site: https://padifalas.github.io/DIGA3008A/   
+ Visit the site: https://padifalas.github.io/DIGA3008A/   
 
 
 ---
 
-## 📁 Sections of the Portfolio
+## Sections of the Portfolio
 
 | Section | Description |
 |--------|-------------|
-| 🎮 Games | A curated list of original games, prototypes, and development logs. |
-| 🌐 Web | Web apps and interactive UIs I've built using modern frameworks. |
-| 🧾 Writing | Essays, devlogs, and narrative experiments. |
-| ✨ Interactive Fiction | Playable stories that explore emotion, choice, and consequence. |
+|  Games | A curated list of original games, prototypes, and development logs. |
+|  Web | Web apps and interactive UIs I've built using modern frameworks. |
+|  Writing | Essays, devlogs, and narrative experiments. |
+|  Interactive Fiction | Playable stories that explore emotion, choice, and consequence. |
 
 ---
 
-## 📬 Contact
+## Contact
 
 Feel free to reach out or follow for updates and new projects:
 
-- 📧 Email:padifalas@outlook.com
-- 🧠 LinkedIn:https://www.linkedin.com/in/padi-maifala
-- 📝 Substack:https://substack.com/@padifalas
+- Email:padifalas@outlook.com
+- LinkedIn:https://www.linkedin.com/in/padi-maifala
+- Substack:https://substack.com/@padifalas
 
 ---
 
